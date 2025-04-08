@@ -37,11 +37,11 @@ export default function LanginPage() {
         <div className="flex flex-col items-center gap-2 text-sm sm:text-base">
           <div className="flex items-center gap-2">
             <Phone size={18} className="text-purple-300" />
-            <span>+995 599 123 456</span>
+            <span className="text-gray-700">sales@pabellon.ge</span>
           </div>
           <div className="flex items-center gap-2">
             <Mail size={18} className="text-purple-300" />
-            <span>hello@yourdomain.com</span>
+            <span className="text-gray-700">555 390 393</span>
           </div>
         </div>
       </motion.div>
