@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+//
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,8 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        beige:"#EBE5D3"
       },
       screens: {
         "max-1400": {
@@ -82,6 +81,14 @@ const config: Config = {
         "max-300": {
           max: "300px",
         },
+      },
+      backgroundImage: {
+        hero: "url('/assets/WALNUT1.jpg 2.svg')",
+      },
+      fontFamily: {
+        sans: ["var(--font-geist-sans)"],
+        mono: ["var(--font-geist-mono)"],
+        serif: ["var(--font-noto-serif)"],
       },
     },
   },
