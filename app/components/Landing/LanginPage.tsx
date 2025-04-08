@@ -17,7 +17,7 @@ export default function LanginPage() {
         <h1 className="text-6xl md:text-7xl font-extrabold mb-6 drop-shadow-lg animate-bounce ">
           COMING SOON
         </h1>
-        <p className="text-gray-600 mb-8 text-lg font-medium">
+        <p className="text-gray-800 mb-8 text-lg font-medium">
           We’re launching something amazing. Stay tuned!
         </p>
         {/* <button
