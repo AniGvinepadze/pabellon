@@ -64,14 +64,24 @@ body {
     background-size: 220%;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 570px) {
   .coming-soon-bg {
-    background-size: 350%;
+    background-size: 340%;
   }
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 500px) {
   .coming-soon-bg {
-    background-size: 300%;
+    background-size: 380%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .coming-soon-bg {
+    background-size: 420%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .coming-soon-bg {
+    background-size: 500%;
   }
 }
 
@@ -82,7 +92,7 @@ body {
 } */
 @media only screen and (max-width: 350px) {
   .coming-soon-bg {
-    background-size: 500%;
+    background-size: 580%;
   }
 }
 
@@ -93,7 +103,7 @@ body {
 }
 @media only screen and (max-width: 280px) {
   .coming-soon-bg {
-    background-size: 640%;
+    background-size: 730%;
   }
 }
 @layer utilities {
