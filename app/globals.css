@@ -69,15 +69,31 @@ body {
     background-size: 350%;
   }
 }
+@media only screen and (max-width: 390px) {
+  .coming-soon-bg {
+    background-size: 300%;
+  }
+}
+
+/* @media only screen and (max-width: 300px) {
+  .coming-soon-bg {
+    background-size: 510%;
+  }
+} */
 @media only screen and (max-width: 350px) {
   .coming-soon-bg {
-    background-size: 420%;
+    background-size: 500%;
   }
 }
 
 @media only screen and (max-width: 300px) {
   .coming-soon-bg {
-    background-size: 480%;
+    background-size: 600%;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .coming-soon-bg {
+    background-size: 640%;
   }
 }
 @layer utilities {
