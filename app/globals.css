@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,7 +20,66 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+.font-mono-serif {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+}
 
+.font-serif-semibold {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+}
+.font-serif-medium {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+}
+.font-serif-normal {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+}
+
+.font-serif-thin {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+}
+.coming-soon-bg {
+  background-size: 130%;
+}
+@media only screen and (max-width: 700px) {
+  .coming-soon-bg {
+    background-size: 220%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .coming-soon-bg {
+    background-size: 350%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .coming-soon-bg {
+    background-size: 420%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .coming-soon-bg {
+    background-size: 480%;
+  }
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

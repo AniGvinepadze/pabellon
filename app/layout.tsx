@@ -1,16 +1,29 @@
+// app/layout.tsx
+import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import { Noto_Serif } from "next/font/google";
 
+// Load local Geist fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
+
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+
+});
+
+// Load Noto Serif from Google Fonts
+const notoSerif = Noto_Serif({
+  subsets: ["latin"],
+  variable: "--font-noto-serif",
+
 });
 
 export const metadata: Metadata = {
@@ -26,7 +39,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black`}
+        className={`
+          ${geistSans.variable}
+          ${geistMono.variable}
+          ${notoSerif.variable}
+          antialiased
+          bg-white
+          text-black
+          font-serif
+        `}
       >
         {children}
       </body>
