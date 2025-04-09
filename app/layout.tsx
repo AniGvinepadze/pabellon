@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Noto_Serif } from "next/font/google";
 import Header from "./global/Header";
+import HeaderWrapper from "./global/HeaderWrapper";
 
 // Load local Geist fonts
 const geistSans = localFont({
@@ -37,6 +38,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <body
@@ -50,9 +52,9 @@ export default function RootLayout({
           font-serif
         `}
       >
-        <Header/>
+        <HeaderWrapper/>
         {children}
-        
+
       </body>
     </html>
   );
