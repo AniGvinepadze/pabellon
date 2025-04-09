@@ -33,12 +33,11 @@ export default function LanginPage() {
         <p className="mb-8 text-[40px] font-normal max-800:text-[30px] max-550:text-xl font-mono-serif max-400:text-base">
           We’re launching something amazing. Stay tuned!
         </p>
-        {/* <button
-            //   onClick={() => setShowPopup(true)}
-            className="bg-white text-indigo-900 px-6 py-3 rounded-full shadow-lg font-semibold hover:scale-105 transition"
-            >
-            Notify Me
-            </button> */}
+        <p className="mb-8 text-[40px] font-normal max-800:text-[30px] max-550:text-xl font-mono-serif max-400:text-base">
+        Launch date June 15, 2025
+        </p>
+        
+      
       </motion.div>
       <div className="w-full text-start font-mono-serif ">
         <motion.div
