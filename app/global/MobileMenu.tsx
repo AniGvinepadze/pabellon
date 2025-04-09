@@ -10,7 +10,7 @@ interface MobileMenuProps {
   isOpen: boolean;
   setIsOpen: (value: boolean) => void;
   popup: boolean;
-  setPopup: (value: boolean) => void;
+  setPopup: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function MobileMenu({
@@ -19,6 +19,7 @@ export default function MobileMenu({
   popup,
   setPopup,
 }: MobileMenuProps) {
+
   return (
     <AnimatePresence>
       {isOpen && (
