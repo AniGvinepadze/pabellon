@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Noto_Serif } from "next/font/google";
+import Header from "./global/Header";
 
 // Load local Geist fonts
 const geistSans = localFont({
@@ -49,7 +50,9 @@ export default function RootLayout({
           font-serif
         `}
       >
+        <Header/>
         {children}
+        
       </body>
     </html>
   );
