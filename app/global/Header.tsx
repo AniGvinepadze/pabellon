@@ -10,7 +10,7 @@ export default function Header() {
      <Link href="/home" className='hover:scale-110 transition-all ease-in-out duration-300'>
      <Image src={logo} alt='logo' width={300} height={90} className='max-w-[300px] w-full object-contain'/>
      </Link>
-     <div className='flex gap-7'>
+     <div className='flex gap-6 mt-1 max-1000:hidden'>
         <div className='flex gap-7 items-center mt-4' >
            {navbar.map((e)=>(
             <Link href={e.route} key={e.id} className='max-w-[700px] w-full hover:scale-110 transition-all ease-in-out duration-300'>
@@ -22,6 +22,7 @@ export default function Header() {
             <Image src={glovabIcon} alt='globalIcon ' width={43} height={43} className="cursor-pointer"/>
         </div>
      </div>
+     
     </div>
   )
 }
