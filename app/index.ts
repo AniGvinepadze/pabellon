@@ -37,3 +37,5 @@ export const navbar: Navbar[] = [
     route: "/restaurant",
   },
 ];
+
+
