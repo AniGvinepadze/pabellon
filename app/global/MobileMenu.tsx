@@ -24,7 +24,7 @@ export default function MobileMenu({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed top-20 left-0 right-0 z-50  max-1000:block hidden"
+          className="fixed top-20 left-0 right-0 z-50  max-1000:block hidden bg-white"
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 2 }}
           exit={{ y: -40, opacity: 0 }}

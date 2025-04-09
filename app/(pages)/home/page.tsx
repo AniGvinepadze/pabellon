@@ -1,7 +1,10 @@
-import React from 'react'
+import Hero from "@/app/components/Home/Hero";
+import React from "react";
 
 export default function page() {
   return (
-    <div className='max-w-[1600px]  h-[2000px] w-full m-auto p-10'></div>
-  )
+    <div className="max-w-[1600px]  w-full m-auto p-2">
+      <Hero />
+    </div>
+  );
 }
