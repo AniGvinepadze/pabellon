@@ -14,7 +14,8 @@ export default function Header() {
   const [popup,setPopup] = useState<boolean>(false)
 
   return (
-    <div className="max-w-[1600px] w-full m-auto p-5 flex justify-between items-center max-1000:gap-10">
+<div className="max-w-[1600px] sticky top-0 z-50 w-full m-auto p-5 flex justify-between items-center max-1000:gap-10 bg-white">
+
       <Link
         href="/home"
         className="hover:scale-110 transition-all ease-in-out duration-300"
