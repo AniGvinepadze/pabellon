@@ -6,16 +6,14 @@ import { navbar } from "..";
 import glovabIcon from "../../public/assets/image 2 (2).svg";
 import Link from "next/link";
 import mobilemenu from "../../public/assets/Vector.svg";
-import { div } from "framer-motion/client";
 import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [popup,setPopup] = useState<boolean>(false)
+  const [popup, setPopup] = useState<boolean>(false);
 
   return (
-<div className="max-w-[1600px] sticky top-0 z-50 w-full m-auto p-5 flex justify-between items-center max-1000:gap-10 bg-white">
-
+    <div className="max-w-[1600px] sticky top-0 z-50 w-full m-auto p-5 flex justify-between items-center max-1000:gap-10 bg-white">
       <Link
         href="/home"
         className="hover:scale-110 transition-all ease-in-out duration-300"
@@ -41,22 +39,28 @@ export default function Header() {
           ))}
         </div>
         <div className="relative ">
-        <button className="hover:scale-110 transition-all ease-in-out duration-300 mt-4" onClick={() => setPopup((prev) => !prev)}>
-          <Image
-            src={glovabIcon}
-            alt="globalIcon "
-            width={43}
-            height={43}
-            className="cursor-pointer mt-2"
-          />
-      
-        </button>
-        {popup &&(
-            <div className="absolute w-[150px]  items-center -right-2  p-4 shadow-md rounded-md"> 
-                <p className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300">English</p>
-                <p className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300">Georgia</p>
+          <button
+            className="hover:scale-110 transition-all ease-in-out duration-300 mt-4"
+            onClick={() => setPopup((prev) => !prev)}
+          >
+            <Image
+              src={glovabIcon}
+              alt="globalIcon "
+              width={43}
+              height={43}
+              className="cursor-pointer mt-2"
+            />
+          </button>
+          {popup && (
+            <div className="absolute w-[150px]  items-center -right-2 bg-white  p-4 shadow-md rounded-md">
+              <p className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300">
+                English
+              </p>
+              <p className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300">
+                Georgia
+              </p>
             </div>
-        )}
+          )}
         </div>
       </div>
       <button
@@ -65,7 +69,14 @@ export default function Header() {
       >
         <Image src={mobilemenu} alt="mobilemenu" width={35} height={35} />
       </button>
-      {isOpen && <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} popup={popup} setPopup={setPopup} />}
+      {isOpen && (
+        <MobileMenu
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          popup={popup}
+          setPopup={setPopup}
+        />
+      )}
     </div>
   );
 }
