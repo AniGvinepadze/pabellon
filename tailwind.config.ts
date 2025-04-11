@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+
 //
 const config: Config = {
   content: [
@@ -83,7 +84,7 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        hero: "url('/assets/WALNUT1.jpg 2.svg')",
+        hero: "url('/assets/pabellon website background 1.svg')",
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
