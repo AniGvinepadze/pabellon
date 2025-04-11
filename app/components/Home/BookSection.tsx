@@ -36,13 +36,14 @@ export default function BookSection() {
     setIsPopupOpen(false);
   };
   return (
-    <div className="w-full m-auto my-7 ">
-      <div className=" w-full flex flex-col justify-center items-center text-center">
-        <h2 className="text-[40px] font-normal my-10">
+    <div className=" max-w-[1600px] w-full m-auto my-7 p-5">
+      <div className=" max-w-[1600px] w-full flex flex-col justify-center items-center text-center">
+        <h2 className="text-[40px] font-normal my-10 max-500:my-4 max-550:text-[34px] max-450:text-[30px] max-400:text-[25px] max-350:text-[21px] max-300:text-[18px] max-300:my-1">
           Book Your Stay At Pabellon
         </h2>
-        <div className="flex gap-10 items-center relative max-w-[800px] w-full justify-between mt-6">
-          <div className="flex flex-col max-w-[150px] w-full cursor-pointer hover:scale-105 transition-all ease-in-out duration-300">
+        <div className="grid grid-cols-4 gap-10 items-center relative max-w-[800px] m-auto w-full justify-between mt-6 max-600:grid-cols-2 max-600:px-10 max-450:px-3 max-450:gap-6 max-400:px-0">
+
+        <div className="flex flex-col w-full cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 ">
             <DatePicker
               selected={checkIn}
               onChange={(date) => setCheckIn(date)}
@@ -50,12 +51,12 @@ export default function BookSection() {
               startDate={checkIn}
               endDate={checkOut}
               placeholderText="Check-in"
-              className="border-none text-lg  placeholder-black outline-none font-serif "
+              className="border-none text-lg  placeholder-black outline-none font-serif max-400:text-base"
             />
             <div className="w-full h-[1px] bg-black my-3" />
           </div>
 
-          <div className="flex flex-col max-w-[150px] w-full mt-1 cursor-pointer hover:scale-105 transition-all ease-in-out duration-300">
+          <div className="flex flex-col  w-full mt-1 cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 ">
             <DatePicker
               selected={checkOut}
               onChange={(date) => setCheckOut(date)}
@@ -63,23 +64,22 @@ export default function BookSection() {
               startDate={checkIn}
               endDate={checkOut}
               placeholderText="Check-Out"
-              className="border-none  placeholder-black  outline-none font-serif w-[150px]"
+              className="border-none  placeholder-black  outline-none font-serif w-[150px] max-400:text-base"
             />
             <div className="w-full h-[1px] bg-black my-3" />
           </div>
-
-          <div className="flex flex-col max-w-[150px] w-full -mt-3 cursor-pointer hover:scale-105 transition-all ease-in-out duration-300">
+          <div className="flex flex-col  w-full -mt-3 cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 max-600:col-span-2">
             <input
               type="text"
               placeholder={selectedGuest ? selectedGuest.toString() : "1"}
               onClick={handleInputClick}
-              className=" placeholder-black outline-none font-serif w-[150px] p-2"
+              className=" placeholder-black outline-none font-serif w-[150px] p-2 max-400:text-base"
             />
             <div className="w-full h-[1px] bg-black " />
             {isPopupOpen && (
               <div
                 ref={popupRef}
-                className="absolute top-9 max-w-[200px] w-full bg-white shadow-md border rounded-md"
+                className="absolute top-9  w-full bg-white shadow-md border rounded-md"
               >
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((number) => (
                   <div
@@ -93,10 +93,11 @@ export default function BookSection() {
               </div>
             )}
           </div>
-          <div>
-            <button className="text-lg font-medium cursor-pointer hover:scale-110  transition-all ease-in-out duration-300">
+          <div className="max-600:col-span-2">
+            <button className="max-w-[140px] w-full text-lg font-medium cursor-pointer hover:scale-110  transition-all ease-in-out duration-300 max-400:text-base">
               Book
             </button>
+            <div className="hidden w-full h-[1px] bg-black my-3 max-600:flex" />
           </div>
         </div>
       </div>

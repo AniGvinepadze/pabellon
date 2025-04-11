@@ -6,7 +6,9 @@ export default function page() {
   return (
     <div className="max-w-[1600px]  w-full m-auto p-3">
       <Hero />
+      <div className="max-w-[1600px]  w-full "> 
       <BookSection/>
+      </div>
     </div>
   );
 }
