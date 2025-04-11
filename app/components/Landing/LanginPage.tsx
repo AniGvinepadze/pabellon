@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function LanginPage() {
   return (
-    <div className="w-full m-auto h-screen bg-hero bg-no-repeat flex flex-col justify-between items-center  p-5 bg-top coming-soon-bg">
+    <div className="w-full m-auto h-screen bg-hero bg-no-repeat bg-cover flex flex-col justify-between items-center  p-5 bg-top coming-soon-bg">
       <motion.div
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ export default function LanginPage() {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="z-10 flex justify-between  p-6 w-full max-550:mt-7"
+          className="z-10 flex justify-between gap-3  p-6 w-full max-700:flex-col max-700:items-center  "
         >
           <p className="text-2xl font-normal italic max-450:text-lg">
             sales@pabellon.ge
@@ -49,7 +49,7 @@ export default function LanginPage() {
           </p>
 
           <p className="text-2xl font-normal italic max-450:text-lg">
-            555 390 393
+            (+995) 555 390 393
           </p>
         </motion.div>
       </div>
