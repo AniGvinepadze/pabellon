@@ -16,9 +16,9 @@ export default function LanginPage() {
         <Image
           src={logo}
           alt="logo"
-          width={300}
+          width={340}
           height={90}
-          className="max-w-[340px] w-full object-contain"
+          className="max-w-[340px] w-full object-contain max-450:max-w-[280px]"
         />
       </motion.div>
       <motion.div
