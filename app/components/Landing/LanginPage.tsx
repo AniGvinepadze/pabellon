@@ -39,12 +39,16 @@ export default function LanginPage() {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="z-10 flex justify-between gap-3  p-6 w-full max-700:flex-col max-700:items-center  "
+          className="z-10 flex justify-between gap-2  p-6 w-full max-700:flex-col max-700:items-center  "
         >
+             <p className="text-2xl my-3 hidden font-normal italic max-450:text-lg max-700:flex max-450:my-[6px]">
+            contact us:
+          </p>
+
           <p className="text-2xl font-normal italic max-450:text-lg">
             sales@pabellon.ge
           </p>
-          <p className="text-2xl font-normal italic max-450:text-lg">
+          <p className="text-2xl font-normal italic max-450:text-lg max-700:hidden">
             contact us
           </p>
 
