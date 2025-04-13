@@ -84,7 +84,7 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        hero: "url('/assets/pabellon website background 1.svg')",
+        hero: "url('/assets/WALNUT2.png')",
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
