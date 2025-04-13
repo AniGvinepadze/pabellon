@@ -39,12 +39,12 @@ export default function LanginPage() {
           </p>
         </motion.div>
 
-        <div className="w-full max-w-[1440px] text-start font-mono-serif max-450:-mt-32">
+        <div className="w-full max-w-[1440px] text-start font-mono-serif ">
           <motion.div
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="flex justify-between gap-2 p-6 w-full max-700:flex-col max-700:items-center max-450:gap-0 max-450:p-4 "
+            className="flex justify-between gap-2 p-6 w-full max-700:flex-col max-700:items-center max-450:gap-0 max-450:p-4 max-450:py-20 "
           >
             <p className="text-2xl my-3 hidden font-normal italic max-450:text-lg max-700:flex max-450:my-[6px] max-350:text-base">
               contact us:
