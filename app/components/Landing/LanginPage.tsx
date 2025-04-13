@@ -7,10 +7,10 @@ import Image from "next/image";
 
 export default function LanginPage() {
   return (
-    <div className="relative w-full h-screen flex flex-col justify-between items-center p-5">
+    <div className="relative w-full h-screen flex flex-col justify-between items-center p-5 ">
       <div className="absolute inset-0 bg-hero bg-no-repeat bg-cover bg-top opacity-30 z-0" />
 
-      <div className="relative z-10 w-full h-full flex flex-col justify-between items-center">
+      <div className="relative z-10 w-full h-screen flex flex-col justify-between items-center ">
         <motion.div
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ export default function LanginPage() {
           </p>
         </motion.div>
 
-        <div className="w-full max-w-[1440px] text-start font-mono-serif max-450:-mt-14">
+        <div className="w-full max-w-[1440px] text-start font-mono-serif max-450:-mt-32">
           <motion.div
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
