@@ -34,7 +34,7 @@ export default function LanginPage() {
           <h1 className="text-5xl md:text-[61px] mb-3 drop-shadow-lg max-550:text-4xl max-450:text-3xl max-350:text-2xl font-mono-serif font-semibold tracking-wider">
             COMING SOON
           </h1>
-          <p className="text-[40px] font-normal max-800:text-[30px] max-550:text-xl font-mono-serif max-400:text-base">
+          <p className="text-[30px] font-normal max-800:text-[24px] max-550:text-[20px]  font-mono-serif max-450:text-base">
             Launch date June 15, 2025
           </p>
         </motion.div>
