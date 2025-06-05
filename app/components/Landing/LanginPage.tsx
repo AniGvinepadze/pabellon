@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 import logo from "../../../public/assets/logo.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function LanginPage() {
   return (
@@ -31,12 +32,13 @@ export default function LanginPage() {
           transition={{ duration: 1.2 }}
           className="text-center"
         >
-          <h1 className="text-5xl md:text-[61px] mb-3 drop-shadow-lg max-550:text-4xl max-450:text-3xl max-350:text-2xl font-mono-serif font-semibold tracking-wider">
-            COMING SOON
-          </h1>
-          <p className="text-[30px] font-normal max-800:text-[24px] max-550:text-[20px]  font-mono-serif max-450:text-base">
-            Launch date June 15, 2025
-          </p>
+          <Link
+            href={`https://live.ipms247.com/booking/book-rooms-pabellonhotel`}
+          >
+            <button className="px-10 py-3 rounded-3xl bg-transparent border-[2px] text-beige text-lg font-medium bg-[#242424] border-black flex justify-center shadow-slate-600 shadow-sm hover:bg-transparent hover:text-black transition-all ease-in-out duration-5 00 ">
+              Book now{" "}
+            </button>
+          </Link>
         </motion.div>
 
         <div className="w-full max-w-[1440px] text-start font-mono-serif ">
