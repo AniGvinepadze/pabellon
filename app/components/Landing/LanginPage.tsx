@@ -35,7 +35,7 @@ export default function LanginPage() {
           <Link
             href={`https://live.ipms247.com/booking/book-rooms-pabellonhotel`}
           >
-            <button className="px-10 py-3 rounded-3xl bg-transparent border-[2px] text-beige text-lg font-medium bg-[#2e2e2e] border-black flex justify-center shadow-slate-600 shadow-sm hover:bg-transparent hover:text-black transition-all ease-in-out duration-5 00 ">
+            <button className="px-10 py-3 rounded-3xl  border-[2px] text-beige text-lg font-medium bg-[#2b2b2b]  border-black flex justify-center shadow-slate-600 shadow-sm hover:bg-transparent hover:text-black transition-all ease-in-out duration-500 ">
               Book now
             </button>
           </Link>
