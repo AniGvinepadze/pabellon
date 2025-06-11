@@ -10,7 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        beige:"#EBE5D3"
+        beige:"#EBE5D3",
+        secondaryTextColor:"#37292B"
       },
       screens: {
         "max-1400": {
