@@ -12,8 +12,8 @@ export const navbar: Navbar[] = [
   },
   {
     id: 2,
-    title: "History",
-    route: "/history",
+    title: "About Us",
+    route: "/about-us",
   },
   {
     id: 3,
@@ -22,19 +22,34 @@ export const navbar: Navbar[] = [
   },
   {
     id: 4,
-    title: "Blog",
-    route: "/blog",
+    title: "Services",
+    route: "/services",
   },
 
   {
     id: 5,
-    title: "Contact",
-    route: "/contact",
+    title: "Experiences",
+    route: "/experiences",
   },
   {
     id: 6,
-    title: "Restaurant",
-    route: "/restaurant",
+    title: "Wine",
+    route: "/wine",
+  },
+    {
+    id: 7,
+    title: "Agrotourism",
+    route: "/agrotourism",
+  },
+    {
+    id: 8,
+    title: "Blog",
+    route: "/blog",
+  },
+      {
+    id: 9,
+    title: "Contact",
+    route: "/contact",
   },
 ];
 
