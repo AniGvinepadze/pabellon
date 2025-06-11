@@ -47,8 +47,8 @@ export default function RootLayout({
           ${geistMono.variable}
           ${notoSerif.variable}
           antialiased
-          bg-white
-          text-black
+          bg-beige
+          text-[#000000]
           font-serif
         `}
       >
