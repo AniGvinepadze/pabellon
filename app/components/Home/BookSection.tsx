@@ -51,9 +51,9 @@ export default function BookSection() {
               startDate={checkIn}
               endDate={checkOut}
               placeholderText="Check-in"
-              className="border-none text-lg  placeholder-black outline-none font-serif max-400:text-base"
+              className="border-none text-lg bg-beige placeholder-black outline-none font-serif max-400:text-base"
             />
-            <div className="w-full h-[1px] bg-black my-3" />
+            <div className="w-full h-[1px]  bg-black my-3" />
           </div>
 
           <div className="flex flex-col  w-full mt-1 cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 ">
@@ -64,7 +64,7 @@ export default function BookSection() {
               startDate={checkIn}
               endDate={checkOut}
               placeholderText="Check-Out"
-              className="border-none  placeholder-black  outline-none font-serif w-[150px] max-400:text-base"
+              className="border-none bg-beige  placeholder-black  outline-none font-serif w-[150px] max-400:text-base"
             />
             <div className="w-full h-[1px] bg-black my-3" />
           </div>
@@ -73,13 +73,13 @@ export default function BookSection() {
               type="text"
               placeholder={selectedGuest ? selectedGuest.toString() : "1"}
               onClick={handleInputClick}
-              className=" placeholder-black outline-none font-serif w-[150px] p-2 max-400:text-base"
+              className=" placeholder-black bg-beige outline-none font-serif w-[150px] p-2 max-400:text-base"
             />
             <div className="w-full h-[1px] bg-black " />
             {isPopupOpen && (
               <div
                 ref={popupRef}
-                className="absolute top-9  w-full bg-white shadow-md border rounded-md"
+                className="absolute top-9  w-full bg-beige shadow-md border rounded-md"
               >
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((number) => (
                   <div
