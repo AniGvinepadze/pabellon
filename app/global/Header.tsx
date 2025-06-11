@@ -13,7 +13,7 @@ export default function Header() {
   const [popup, setPopup] = useState<boolean>(false);
 
   return (
-    <div className="max-w-[1600px] sticky top-0 z-50 w-full m-auto p-3 flex justify-between items-center max-1000:gap-10 bg-white ">
+    <div className="max-w-[1600px] sticky top-0 z-50 w-full m-auto p-3 flex justify-between items-center max-1000:gap-10  ">
       <Link
         href="/home"
         className="hover:scale-110 transition-all ease-in-out duration-300"
@@ -23,7 +23,7 @@ export default function Header() {
           alt="logo"
           width={300}
           height={90}
-          className="max-w-[300px] w-full object-contain max-700:max-w-[220px]"
+          className="max-w-[300px] w-full object-contain max-700:max-w-[220px] bg-beige"
         />
       </Link>
       <div className="flex gap-6 mt-1 max-1000:hidden">
