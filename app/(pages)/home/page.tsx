@@ -1,5 +1,6 @@
 import BookSection from "@/app/components/Home/BookSection";
 import Hero from "@/app/components/Home/Hero";
+import PabellonSection from "@/app/components/Home/PabellonSection";
 import React from "react";
 
 export default function page() {
@@ -8,7 +9,9 @@ export default function page() {
       <Hero />
       <div className="max-w-[1600px]  w-full "> 
       <BookSection/>
+      <PabellonSection/>
       </div>
+
     </div>
   );
 }
