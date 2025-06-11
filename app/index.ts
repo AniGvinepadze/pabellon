@@ -55,8 +55,27 @@ export const navbar: Navbar[] = [
   },
 ];
 
+type Rooms = {
+    id:number,
+    img:string,
+    title:string,
+    description:string,
+    humanIcon:string,
+    humanQuantity:number,
+    sofaIcon?:string,
+    sofaQuantity?:number,
+    bedIcon:string,
+    bedQuantity:number,
+    areaIcon:string,
+    area:number,
+    wifiIcon:string,
+    wifi:string,
+    bathIcon?:string,
+    bathQuantity?:number
 
-export const rooms  = [
+}
+
+export const rooms:Rooms[]  = [
   {
     id:1,
     img:standartKing,

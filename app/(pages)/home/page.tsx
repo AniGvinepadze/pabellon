@@ -11,7 +11,7 @@ export default function page() {
       <div className="max-w-[1600px]  w-full "> 
       <BookSection/>
       <PabellonSection/>
- <div className="my-20">     <RoomsSection/></div>
+   <RoomsSection/>
       </div>
 
     </div>
