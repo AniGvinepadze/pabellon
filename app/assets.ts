@@ -33,5 +33,5 @@ export {
   iliaLake,
   footerBg,
   pabellonSvg,
-//   pabellonSvg2
+  pabellonSvg2
 };
