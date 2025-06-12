@@ -9,9 +9,9 @@ export default function BarSection() {
             <div className='max-w-[650px] w-full'>
                 <Image src={barImg} alt='barImg' width={660} height={750}  />
             </div>
-            <div className='min-h-[700px] max-w-[500px] w-full flex flex-col items-center justify-center '>
+            <div className='min-h-[700px] max-w-[700px] w-full flex flex-col items-center justify-center gap-5 '>
                   <h2 className='text-[40px] font-normal'>Bars</h2>
-                  <p className='text-[17px] font-light'>Tucked into the heart of the hotel, our bar is a cozy gathering place. Step into our stylish billiard corner, where friendly competition meets laid-back vibes. This area adds an interactive, energetic dimension to the bar experience. </p>
+                  <p className='text-[17px] font-light max-w-[400px] w-full'>Tucked into the heart of the hotel, our bar is a cozy gathering place. Step into our stylish billiard corner, where friendly competition meets laid-back vibes. This area adds an interactive, energetic dimension to the bar experience. </p>
             </div>
         </div>
     </div>
