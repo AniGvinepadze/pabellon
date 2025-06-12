@@ -156,7 +156,7 @@ export const rooms: Rooms[] = [
   },
 ];
 
-export const footerNavbar:Navbar[] = [
+export const footerNavbar: Navbar[] = [
   {
     id: 1,
     title: "Blog",
@@ -191,18 +191,41 @@ export const footerNavbar:Navbar[] = [
 
 export const footerSoc = [
   {
-    id:1,
-    soc:"Instagram",
-    link:"https://www.instagram.com"
+    id: 1,
+    soc: "Instagram",
+    link: "https://www.instagram.com",
   },
-    {
-    id:2,
-    soc:"Facebook",
-    link:"https://www.facebook.com/"
+  {
+    id: 2,
+    soc: "Facebook",
+    link: "https://www.facebook.com/",
   },
-    {
-    id:1,
-    soc:"LinkedIn",
-    link:"https://www.linkedin.com/"
+  {
+    id: 1,
+    soc: "LinkedIn",
+    link: "https://www.linkedin.com/",
   },
-]
+];
+type Facilities = {
+  id: number;
+  title: string;
+};
+
+export const facilities:Facilities[] = [
+  {
+    id: 1,
+    title: "spa",
+  },
+  {
+    id: 2,
+    title: "Indoor pool",
+  },
+  {
+    id: 3,
+    title: "Outdoor pool",
+  },
+  {
+    id: 4,
+    title: "Gym",
+  },
+];
