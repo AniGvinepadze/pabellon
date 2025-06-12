@@ -26,7 +26,7 @@ export default function Header() {
           className="max-w-[300px] w-full object-contain max-700:max-w-[220px] bg-beige"
         />
       </Link>
-      <div className="flex gap-6  mt-1 max-w-[1300px] w-full max-1000:hidden">
+      <div className="flex gap-6  mt-1 max-w-[1300px] w-full max-1100:hidden">
         <div className="flex gap-7 w-full justify-end items-center mt-4">
           {navbar.map((e) => (
             <Link
@@ -34,7 +34,9 @@ export default function Header() {
               key={e.id}
               className="max-w-[1000px]  hover:scale-110 transition-all ease-in-out duration-300"
             >
-              <p className="text-xl font-medium">{e.title} </p>
+              <p className="text-xl font-medium max-1250:text-lg max-1150:text-base">
+                {e.title}{" "}
+              </p>
             </Link>
           ))}
         </div>
@@ -64,7 +66,7 @@ export default function Header() {
         </div>
       </div>
       <button
-        className="hidden max-1000:flex hover:scale-110 mt-3 transition-all ease-in-out duration-300"
+        className="hidden max-1100:flex hover:scale-110 mt-3 transition-all ease-in-out duration-300"
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <Image

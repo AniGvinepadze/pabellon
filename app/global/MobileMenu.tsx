@@ -24,7 +24,7 @@ export default function MobileMenu({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed top-20 left-0 right-0 z-50  max-1000:block hidden bg-white"
+          className="fixed top-20 left-0 right-0 z-50  max-1100:block hidden bg-beige"
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 2 }}
           exit={{ y: -40, opacity: 0 }}
@@ -59,7 +59,7 @@ export default function MobileMenu({
                     />
                   </button>
                   {popup && (
-                    <div className="absolute top-12 left-0 bg-white w-[150px] p-4 shadow-md rounded-md z-50">
+                    <div className="absolute top-12 left-0 bg-beige w-[150px] p-4 shadow-md rounded-md z-50">
                       <p className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300">
                         English
                       </p>
