@@ -1,15 +1,19 @@
-import { logoCol } from "@/app/assets";
+import { logoCol, pabellonSvg } from "@/app/assets";
 import Image from "next/image";
 import React from "react";
 
 export default function PabellonSection() {
   return (
-    <div className="w-full flex flex-col  items-center my-10 p-4 " >
-      <div className="max-w-[990px] w-full flex flex-col items-center justify-center text-center gap-7 " >
-        
-        <Image src={logoCol} alt="logo" width={247} height={158}  className="max-500:w-[200px] max-350:w-[170px]"/>
+    <div className="w-full flex flex-col  items-center my-10 p-4 ">
+      <div className="max-w-[990px] w-full flex flex-col items-center justify-center text-center gap-7 ">
+        <Image
+          src={logoCol}
+          alt="logo"
+          width={247}
+          height={158}
+          className="max-500:w-[200px] max-350:w-[170px]"
+        />
         <p className="font-normal text-xl max-500:text-lg max-350:text-base">
-      
           Located in the heart of Kakheti,Pabellón promises to redefine your
           travel experience with state-of-the-art amenities, exceptional service
           and an atmosphere designed for both relaxation and inspiration.
@@ -19,6 +23,16 @@ export default function PabellonSection() {
           special occasion, Pabellón offers everything you need to make your
           stay memorable.
         </p>
+      </div>
+
+      <div className="my-20">
+        <Image
+          src={pabellonSvg}
+          alt="icon"
+          width={1540}
+          height={928}
+          className="max-w-[1600px] w-full"
+        />
       </div>
     </div>
   );
