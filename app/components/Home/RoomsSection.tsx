@@ -18,7 +18,7 @@ export default function RoomsSection() {
         </p>
       </div>
 
-      <div className="w-full flex justify-between gap-2 my-10">
+      <div className="w-full flex justify-between gap-2 my-16">
         {rooms.map((e) => (
           <div
             key={e.id}
