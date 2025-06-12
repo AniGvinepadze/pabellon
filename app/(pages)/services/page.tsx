@@ -2,6 +2,7 @@ import BarSection from "@/app/components/Services/BarSection";
 import MeetingSection from "@/app/components/Services/MeetingSection";
 import RestaurantBookSection from "@/app/components/Services/RestaurantBookSection";
 import RestaurantSection from "@/app/components/Services/RestaurantSection";
+import WellnessSection from "@/app/components/Services/WellnessSection";
 import React from "react";
 
 export default function page() {
@@ -15,6 +16,7 @@ export default function page() {
         
         </div>
         <MeetingSection/>
+        <WellnessSection/>
       </div>
     </div>
   );
