@@ -13,10 +13,19 @@ import twoHuman from "../public/assets/Group (4).svg";
 import bath from "../public/assets/Group (5).svg";
 import iliaLake from "../public/assets/ILIA-LAKE 1 (1).svg";
 import footerBg from "../public/assets/32.svg";
-import pabellonSvg from "../public/assets/Group 7.svg"
-import pabellonSvg2 from "../public/assets/image 116.svg"
-import inscription from "../public/assets/Artboard 3@3x 1.svg"
-import resImg from "../public/assets/image (40).svg"
+import pabellonSvg from "../public/assets/Group 7.svg";
+import pabellonSvg2 from "../public/assets/image 116.svg";
+import inscription from "../public/assets/Artboard 3@3x 1.svg";
+import resImg from "../public/assets/image (40).svg";
+import barImg from "../public/assets/image 634.svg";
+import meetingImg from "../public/assets/image 51.svg";
+import artWork from "../public/assets/Untitled_Artwork 3 1.svg";
+import wellnessImg from "../public/assets/image (41).svg";
+import kidsErImg from "../public/assets/image (42).svg";
+import kidsErImg2 from "../public/assets/image (44).svg";
+import kidsErImg3 from "../public/assets/image (45).svg";
+import kidsErImg4 from "../public/assets/image (46).svg";
+import kidsErImg5 from "../public/assets/image (47).svg";
 export {
   logoCol,
   logo,
@@ -36,5 +45,14 @@ export {
   pabellonSvg,
   pabellonSvg2,
   inscription,
-  resImg
+  resImg,
+  barImg,
+  artWork,
+  kidsErImg,
+  kidsErImg2,
+  kidsErImg3,
+  kidsErImg4,
+  kidsErImg5,
+  meetingImg,
+  wellnessImg,
 };
