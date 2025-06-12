@@ -9,7 +9,7 @@ export default function page() {
       <div className="mt-28">
         <RestaurantSection />
         <RestaurantBookSection/>
-        <div className="mt-40">
+        <div className="mt-40 max-850:mt-20 max-750:mt-0 max-700:mt-20">
         <BarSection/>
         </div>
       </div>
