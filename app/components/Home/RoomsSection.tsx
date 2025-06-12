@@ -22,7 +22,7 @@ export default function RoomsSection() {
         {rooms.map((e) => (
           <div
             key={e.id}
-            className="max-w-[340px] max-h-[370px] flex flex-col h-full"
+            className="max-w-[340px] max-h-[370px] flex flex-col h-full gap-7"
           >
             <div className="flex-grow">
               <Image
@@ -34,13 +34,12 @@ export default function RoomsSection() {
               />
             </div>
 
-            <div className="flex flex-col  text-start">
+            <div className="flex flex-col  text-start gap-6">
               <h2 className="font-semibold italic text-[25px]">{e.title}</h2>
               <p className="font-normal text-[15px]">{e.description}</p>
             </div>
 
             <div className="flex flex-col mt-auto ">
-         
               <div className="w-full flex gap-[9px] ">
                 <div className="flex gap-1">
                   <Image src={e.humanIcon} alt="icon" width={35} height={20} />
