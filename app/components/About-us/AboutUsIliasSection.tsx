@@ -4,7 +4,7 @@ import React from "react";
 
 export default function AboutUsIliasSection() {
   return (
-    <div className="max-w-[1400px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
+    <div className="max-w-[1400px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor ">
       <div className=" max-w-[1000px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-16">
         <p className="font-light text-[17px] max-500:text-[15px]">
           Modern and elegantly designed rooms, stunning views of Alazani Valley,
@@ -20,7 +20,7 @@ export default function AboutUsIliasSection() {
         </p>
         <Image src={iliaLake} alt="ilialake" width={978} height={992} />
       </div>
-      <div className="flex flex-col gap-24 justify-center">
+      <div className="flex flex-col gap-24 justify-center mt-16">
         <p className="font-light text-[17px] max-500:text-[15px]">
           In Kvareli, where Ilia Chavchavadze spent his childhood, the
           surroundings create an atmosphere WHERE STORIES LIVE. While standing
