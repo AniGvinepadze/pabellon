@@ -8,8 +8,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        beige:"#EBE5D3",
-        secondaryTextColor:"#37292B"
+        beige: "#EBE5D3",
+        secondaryTextColor: "#37292B",
       },
       screens: {
         "max-1400": {
@@ -84,7 +84,8 @@ const config: Config = {
       },
       backgroundImage: {
         hero: "url('/assets/WALNUT2.png')",
-        ilialake: "url('/assets/ILIA-LAKE 1.svg')"
+        ilialake: "url('/assets/ILIA-LAKE 1.svg')",
+        footerBg: "url('/assets/32.svg')",
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
