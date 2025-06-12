@@ -16,6 +16,7 @@ import footerBg from "../public/assets/32.svg";
 import pabellonSvg from "../public/assets/Group 7.svg"
 import pabellonSvg2 from "../public/assets/image 116.svg"
 import inscription from "../public/assets/Artboard 3@3x 1.svg"
+import resImg from "../public/assets/image (40).svg"
 export {
   logoCol,
   logo,
@@ -34,5 +35,6 @@ export {
   footerBg,
   pabellonSvg,
   pabellonSvg2,
-  inscription
+  inscription,
+  resImg
 };
