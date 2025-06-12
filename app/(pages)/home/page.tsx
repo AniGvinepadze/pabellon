@@ -13,9 +13,7 @@ export default function page() {
 
         <BookSection />
         <PabellonSection />
-        <div className="mb-56">
         <RoomsSection />
-        </div>
         <div className="max-w-[1600px]  w-full">
           <ContactUsSection />
         </div>
