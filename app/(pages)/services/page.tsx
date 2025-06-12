@@ -1,6 +1,6 @@
 import BarSection from "@/app/components/Services/BarSection";
 import FacilitiesSection from "@/app/components/Services/FacilitiesSection";
-import KidtSection from "@/app/components/Services/KidsSection";
+import KidstSection from "@/app/components/Services/KidsSection";
 import MeetingSection from "@/app/components/Services/MeetingSection";
 import RestaurantBookSection from "@/app/components/Services/RestaurantBookSection";
 import RestaurantSection from "@/app/components/Services/RestaurantSection";
@@ -20,7 +20,7 @@ export default function page() {
         <MeetingSection/>
         <WellnessSection/>
         <FacilitiesSection/>
-        <KidtSection/>
+        <KidstSection/>
       </div>
     </div>
   );
