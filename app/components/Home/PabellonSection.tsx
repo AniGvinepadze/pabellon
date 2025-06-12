@@ -4,11 +4,11 @@ import React from "react";
 
 export default function PabellonSection() {
   return (
-    <div className="w-full flex flex-col  items-center my-10">
-      <div className="max-w-[990px] w-full flex flex-col items-center justify-center text-center gap-7" >
+    <div className="w-full flex flex-col  items-center my-10 p-4 " >
+      <div className="max-w-[990px] w-full flex flex-col items-center justify-center text-center gap-7 " >
         
-        <Image src={logoCol} alt="logo" width={247} height={158} />
-        <p className="font-normal text-xl">
+        <Image src={logoCol} alt="logo" width={247} height={158}  className="max-500:w-[200px] max-350:w-[170px]"/>
+        <p className="font-normal text-xl max-500:text-lg max-350:text-base">
       
           Located in the heart of Kakheti,Pabellón promises to redefine your
           travel experience with state-of-the-art amenities, exceptional service
