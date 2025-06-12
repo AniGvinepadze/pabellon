@@ -37,10 +37,11 @@ export default function RestaurantBookSection() {
   return (
     <div className="w-full m-auto ">
       <div className="max-w-[1300px] w-full m-auto flex flex-col justify-center">
-        <div className="flex justify-center my-10">
-          <h2 className="italic font-semibold text-[40px] ">Book Restaurant</h2>
+        <div className="flex justify-center my-10 max-500:my-0">
+          <h2 className="italic font-semibold text-[40px] max-500:text-[32px]">Book Restaurant</h2>
         </div>
-        <div className="flex gap-10 items-center relative max-w-[1000px] m-auto w-full justify-between mt-6  max-600:px-10 max-450:px-3 max-450:gap-6 max-400:px-0">
+        <div className="flex gap-10 items-center relative max-w-[1000px] m-auto w-full justify-between mt-6  max-600:px-10 max-450:px-3 max-450:gap-6 max-400:px-0 max-650:flex-col">
+            <div className="w-full flex justify-between gap-7">
           <div className="flex flex-col w-full cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 ">
             <DatePicker
               selected={checkIn}
@@ -54,11 +55,7 @@ export default function RestaurantBookSection() {
             <div className="w-full h-[1px]  bg-black my-3" />
           </div>
 
-          {/* <div className="flex flex-col  w-full mt-1 cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 "> */}
-          {/*                     
-                    //   <div className="w-full h-[1px] bg-black my-3" /> */}
-          {/* </div> */}
-          <div className="flex flex-col w-full -mt-3 cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 max-600:col-span-2">
+          <div className="flex flex-col w-full mt-[2px] cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 max-600:col-span-2 max-400:-mt-1">
             <input
               type="text"
               placeholder={selectedGuest ? selectedGuest.toString() : "1"}
@@ -83,7 +80,8 @@ export default function RestaurantBookSection() {
               </div>
             )}
           </div>
-          <div className="max-w-[200px] w-full">
+          </div>
+          <div className="max-w-[200px] w-full max-650:max-w-[650px]">
             <button className=" w-full px-2 py-2  text-lg font-medium cursor-pointer hover:scale-110  transition-all ease-in-out duration-300 max-400:text-base text-beige  bg-secondaryTextColor">
               make an enquiry
             </button>
