@@ -1,4 +1,5 @@
 import AboutUsaSection from '@/app/components/About-us/AboutUsaSection'
+import AboutUsIliasSection from '@/app/components/About-us/AboutUsIliasSection'
 import React from 'react'
 
 export default function AboutUs() {
@@ -6,6 +7,7 @@ export default function AboutUs() {
     <div className='max-w-[1600px] m-auto p-3'>
         <div className='mt-28'>
         <AboutUsaSection/>
+        <AboutUsIliasSection/>
         </div>
     </div>
   )

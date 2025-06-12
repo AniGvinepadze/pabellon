@@ -11,11 +11,11 @@ import areaIcon from "../public/assets/Group (2).svg";
 import wifi from "../public/assets/Group (3).svg";
 import twoHuman from "../public/assets/Group (4).svg";
 import bath from "../public/assets/Group (5).svg";
-import iliaLake from "../public/assets/ILIA-LAKE 1.svg";
+import iliaLake from "../public/assets/ILIA-LAKE 1 (1).svg";
 import footerBg from "../public/assets/32.svg";
 import pabellonSvg from "../public/assets/Group 7.svg"
 import pabellonSvg2 from "../public/assets/image 116.svg"
-
+import inscription from "../public/assets/Artboard 3@3x 1.svg"
 export {
   logoCol,
   logo,
@@ -33,5 +33,6 @@ export {
   iliaLake,
   footerBg,
   pabellonSvg,
-  pabellonSvg2
+  pabellonSvg2,
+  inscription
 };
