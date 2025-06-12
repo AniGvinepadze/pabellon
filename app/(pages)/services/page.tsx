@@ -1,3 +1,4 @@
+import BarSection from "@/app/components/Services/BarSection";
 import RestaurantBookSection from "@/app/components/Services/RestaurantBookSection";
 import RestaurantSection from "@/app/components/Services/RestaurantSection";
 import React from "react";
@@ -8,6 +9,9 @@ export default function page() {
       <div className="mt-28">
         <RestaurantSection />
         <RestaurantBookSection/>
+        <div className="mt-40">
+        <BarSection/>
+        </div>
       </div>
     </div>
   );
