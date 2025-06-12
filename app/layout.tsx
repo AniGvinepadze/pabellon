@@ -5,8 +5,8 @@ import localFont from "next/font/local";
 import { Noto_Serif } from "next/font/google";
 import Header from "./global/Header";
 import HeaderWrapper from "./global/HeaderWrapper";
+import FooterWrapper from "./global/FooterWrapper";
 
-// Load local Geist fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -21,7 +21,6 @@ const geistMono = localFont({
 
 });
 
-// Load Noto Serif from Google Fonts
 const notoSerif = Noto_Serif({
   subsets: ["latin"],
   variable: "--font-noto-serif",
@@ -54,6 +53,7 @@ export default function RootLayout({
       >
         <HeaderWrapper/>
         {children}
+        <FooterWrapper/>
 
       </body>
     </html>
