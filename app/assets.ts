@@ -11,4 +11,5 @@ import areaIcon from "../public/assets/Group (2).svg"
 import wifi from "../public/assets/Group (3).svg"
 import twoHuman from "../public/assets/Group (4).svg"
 import bath from "../public/assets/Group (5).svg"
-export { logoCol, logo ,duplex,pabellonSuite,standartKing,superiorDuplex,areaIcon,bed,sofa,threeHuman,wifi,twoHuman,bath};
+import iliaLake from "../public/assets/ILIA-LAKE 1.svg"
+export { logoCol, logo ,duplex,pabellonSuite,standartKing,superiorDuplex,areaIcon,bed,sofa,threeHuman,wifi,twoHuman,bath,iliaLake};
