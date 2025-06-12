@@ -21,7 +21,7 @@ export default function MeetingSection() {
         </p>
       </div>
 
-      <div className=" my-20 flex flex-col gap-16 justify-center items-center">
+      <div className=" my-20 grid grid-cols-4 gap-16  items-center">
         <Image src={meetingImg} alt="meetingImg" width={1420} height={877}/>
         <Image src={artWork} alt="artwork" width={1011} height={675}/>
       </div>

@@ -11,10 +11,10 @@ export default function FacilitiesSection() {
           Our facilities
         </h2>
       </div>
-      <div className="my-20 flex justify-between max-w-[850px] w-full">
+      <div className="my-20 grid grid-cols-4  max-w-[850px] w-full max-750:grid-cols-1 max-500:my-10">
         {facilities.map((e) => (
-          <div key={e.id} className="bg-secondaryTextColor w-full p-6">
-            <li className="font-light text-xl text-beige">{e.title}</li>
+          <div key={e.id} className="bg-secondaryTextColor w-full p-6 max-750:p-2">
+            <li className="font-light text-xl text-beige max-800:text-lg">{e.title}</li>
           </div>
         ))}
       </div>
