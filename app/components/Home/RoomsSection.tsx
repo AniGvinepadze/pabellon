@@ -34,7 +34,7 @@ export default function RoomsSection() {
               />
             </div>
 
-            <div className="flex flex-col  text-start gap-6">
+            <div className="flex flex-col  text-start gap-8 min-h-[175px]">
               <h2 className="font-semibold italic text-[25px]">{e.title}</h2>
               <p className="font-normal text-[15px]">{e.description}</p>
             </div>
