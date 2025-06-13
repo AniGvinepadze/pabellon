@@ -35,6 +35,10 @@ export default function KidstSection() {
           height={940}
           className="max-w-[1600px] w-full "
         />
+
+
+
+        
       </div>
       <div className="flex justify-center w-full ">
       <div className="  grid grid-cols-4 gap-5 w-full my-8 max-750:my-0 max-800:grid-cols-2 ">
