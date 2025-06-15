@@ -1,4 +1,6 @@
 import { facilities, sapces, sapces2 } from "@/app";
+import { artWork } from "@/app/assets";
+import Image from "next/image";
 import React from "react";
 
 export default function SpacesSection() {
@@ -25,6 +27,7 @@ export default function SpacesSection() {
         ))}
       </div>
       </div>
+         <Image src={artWork} alt="artwork" width={1011} height={675}/>
     </div>
   );
 }
