@@ -26,6 +26,11 @@ import kidsErImg2 from "../public/assets/image (44).svg";
 import kidsErImg3 from "../public/assets/image (45).svg";
 import kidsErImg4 from "../public/assets/image (46).svg";
 import kidsErImg5 from "../public/assets/image (47).svg";
+import meetingImg1 from "../public/assets/image (40).svg";
+import meetingImg2 from "../public/assets/Frame 11 (1).svg";
+import meetingImg3 from "../public/assets/image (49).svg";
+import meetingImg4 from "../public/assets/Frame 12 (1).svg";
+import meetingImg5 from "../public/assets/Frame 10 (2).svg";
 export {
   logoCol,
   logo,
@@ -40,6 +45,11 @@ export {
   wifi,
   twoHuman,
   bath,
+  meetingImg1,
+  meetingImg2,
+  meetingImg3,
+  meetingImg4,
+  meetingImg5,
   iliaLake,
   footerBg,
   pabellonSvg,
