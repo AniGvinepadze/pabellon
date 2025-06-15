@@ -211,7 +211,7 @@ type Facilities = {
   title: string;
 };
 
-export const facilities:Facilities[] = [
+export const facilities: Facilities[] = [
   {
     id: 1,
     title: "spa",
@@ -227,5 +227,31 @@ export const facilities:Facilities[] = [
   {
     id: 4,
     title: "Gym",
+  },
+];
+
+export const sapces: Facilities[] = [
+  {
+    id: 1,
+    title: "Meeting Rooms",
+  },
+  {
+    id: 2,
+    title: "Boardroom",
+  },
+  {
+    id: 3,
+    title: "Ballroom",
+  },
+];
+
+export const sapces2: Facilities[] = [
+  {
+    id: 1,
+    title: "Pre-function Area",
+  },
+  {
+    id: 2,
+    title: "Hallway",
   },
 ];
