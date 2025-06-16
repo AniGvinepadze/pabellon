@@ -1,12 +1,19 @@
-"use client"
-import { artWork, meetingImg, meetingImg1 } from "@/app/assets";
+"use client";
+import {
+  artWork,
+  meetingImg,
+  meetingImg1,
+  meetingImg3,
+  meetingImg4,
+} from "@/app/assets";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
 import React from "react";
+import { meeting } from "@/app";
 
 export default function ConferenceRoomsSection() {
   return (
@@ -33,32 +40,75 @@ export default function ConferenceRoomsSection() {
       <div className=" my-20 flex flex-col gap-14 justify-center items-center">
         <Image src={meetingImg1} alt="meetingImg" width={1420} height={877} />
       </div>
-       <div className="w-full max-w-4xl mx-auto mt-10">
-      <Swiper
-        modules={[Autoplay, Pagination]}
-        spaceBetween={20}
-        slidesPerView={4}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        loop={true}
-      >
-        <SwiperSlide>
-          <div className="h-64 bg-blue-500 text-white flex items-center justify-center text-2xl">
-            Slide 1
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-64 bg-green-500 text-white flex items-center justify-center text-2xl">
-            Slide 2
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-64 bg-red-500 text-white flex items-center justify-center text-2xl">
-            Slide 3
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    </div>
+      <div className=" w-full">
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={4}
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          speed={1000}
+          modules={[Autoplay]}
+          className=" w-full flex "
+        >
+          <SwiperSlide className="w-full">
+            <Image
+              src={meetingImg3}
+              alt="img"
+              width={500}
+              height={420}
+              className="max-h-[420px] object-cover max-w-[400px] w-full m-5"
+            />
+          </SwiperSlide>
+          <SwiperSlide className="w-full">
+            <Image
+              src={meetingImg4}
+              alt="img"
+              width={500}
+              height={420}
+              className="max-h-[420px] object-cover max-w-[400px] w-full"
+            />
+          </SwiperSlide>
+          <SwiperSlide className="w-full">
+            <Image
+              src={meetingImg3}
+              alt="img"
+              width={500}
+              height={420}
+              className="max-h-[420px] object-cover max-w-[400px] w-full m-5"
+            />
+          </SwiperSlide>
+          <SwiperSlide className="w-full">
+            <Image
+              src={meetingImg4}
+              alt="img"
+              width={500}
+              height={420}
+              className="max-h-[420px] object-cover max-w-[400px] w-full"
+            />
+          </SwiperSlide>
+          <SwiperSlide className="w-full">
+            <Image
+              src={meetingImg3}
+              alt="img"
+              width={500}
+              height={420}
+              className="max-h-[420px] object-cover max-w-[400px] w-full m-5"
+            />
+          </SwiperSlide>
+           <SwiperSlide className="w-full">
+            <Image
+              src={meetingImg4}
+              alt="img"
+              width={500}
+              height={420}
+              className="max-h-[420px] object-cover max-w-[400px] w-full"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </div>
   );
 }

@@ -3,6 +3,10 @@ import {
   bath,
   bed,
   duplex,
+  meetingImg2,
+  meetingImg3,
+  meetingImg4,
+  meetingImg5,
   pabellonSuite,
   sofa,
   standartKing,
@@ -253,5 +257,32 @@ export const sapces2: Facilities[] = [
   {
     id: 2,
     title: "Hallway",
+  },
+];
+
+export const meeting = [
+  {
+    id: 1,
+    img: meetingImg4,
+  },
+  {
+    id: 2,
+    img: meetingImg3,
+  },
+  {
+    id: 3,
+    img: meetingImg4,
+  },
+  {
+    id: 4,
+    img: meetingImg3,
+  },
+  {
+    id: 5,
+    img: meetingImg4,
+  },
+  {
+    id: 6,
+    img: meetingImg3,
   },
 ];
