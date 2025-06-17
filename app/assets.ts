@@ -38,6 +38,7 @@ import wellnessImg4 from "../public/assets/image (50).svg";
 import wellnessImg5 from "../public/assets/image (51).svg";
 import wellnessImg6 from "../public/assets/image (52).svg";
 import wellnessImg7 from "../public/assets/image (53).svg";
+
 export {
   logoCol,
   logo,

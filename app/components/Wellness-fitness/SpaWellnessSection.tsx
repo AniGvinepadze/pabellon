@@ -16,17 +16,21 @@ export default function SpaWellnessSection() {
           balancing body, mind and spirit in a setting of pure tranquility.
         </p>
       </div>
-      <div className="w-full m-auto flex justify-between gap-6 my-20">
+      <div className="w-full m-auto flex justify-between gap-6 my-20 max-750:flex-col max-750:mt-72 max-450:mt-56 max-400:mt-36">
         <div className="max-w-[700px] w-full flex flex-col justify-center items-center ">
-          <div className="max-w-[470px] w-full max-h-[500px] flex flex-col justify-center items-center text-center">
+          <div className="max-w-[470px] w-full max-h-[500px] flex flex-col justify-center items-center text-center max-1200:mt-9 max-750:max-w-[1000px]">
             <Image
               src={wellnessImg2}
               alt="img"
               width={469}
               height={617}
-              className=" max-w-[470px] w-full object-cover"
+              className=" max-w-[470px] w-full object-cover max-1200:max-w-[300px] max-850:max-w-[240px] max-750:max-w-[700px] max-750:max-h-[600px] max-450:max-h-[550px]"
             />
-            <p className="font-light text-base my-7">Whether you're seeking wellness, fun, or simply a beautiful place to pause, our pools offer the perfect balance of comfort, leisure, and enjoyment for all ages.</p>
+            <p className="font-light text-base my-7 max-750:min-h-[300px] max-400:min-h-[230px] max-300:min-h-[190px]">
+              Whether you're seeking wellness, fun, or simply a beautiful place
+              to pause, our pools offer the perfect balance of comfort, leisure,
+              and enjoyment for all ages.
+            </p>
           </div>
         </div>
         <div className="max-w-[700px] w-full">
