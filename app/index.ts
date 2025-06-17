@@ -234,6 +234,28 @@ export const facilities: Facilities[] = [
   },
 ];
 
+
+export const ourFacilities: Facilities[] = [
+  {
+    id: 1,
+    title: "spa",
+  },
+  {
+    id: 2,
+    title: "heated Indoor pool",
+  },
+  {
+    id: 3,
+    title: "Outdoor pool",
+  },
+   {
+    id: 4,
+    title: "children's pool",
+  }, {
+    id: 5,
+    title: "Gym",
+  },
+];
 export const sapces: Facilities[] = [
   {
     id: 1,
