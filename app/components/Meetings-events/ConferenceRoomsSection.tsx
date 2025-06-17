@@ -14,6 +14,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import React from "react";
 import { meeting } from "@/app";
+import ContactUsSection from "../Home/ContactUsSection";
 
 export default function ConferenceRoomsSection() {
   return (
@@ -108,6 +109,9 @@ export default function ConferenceRoomsSection() {
             />
           </SwiperSlide>
         </Swiper>
+      </div>
+      <div>
+   
       </div>
     </div>
   );
