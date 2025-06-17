@@ -1,4 +1,4 @@
-import { wellnessImg1, wellnessImg2 } from "@/app/assets";
+import { wellnessImg1, wellnessImg2, wellnessImg3 } from "@/app/assets";
 import Image from "next/image";
 import React from "react";
 
@@ -41,6 +41,24 @@ export default function SpaWellnessSection() {
             height={920}
             className="max-w-[700px] w-full object-cover"
           />
+        </div>
+      </div>
+
+      <div className="w-full flex justify-between gap-5 my-10">
+        <div className="max-w-[800px] w-full m-auto">
+          <Image src={wellnessImg3} alt="wellness" width={800} height={500} />
+        </div>
+        <div className="max-w-[600px] w-full flex flex-col justify-center items-center text-center">
+          <div className="max-w-[3000px] w-full">
+            <p className="text-2xl">
+              {" "}
+              Let ancient worlds and wonder guide an unforgettable adventure
+              //შესაცვლლეიაs
+            </p>
+            <button className="bg-secondaryTextColor px-8 py-2 border border-secondaryTextColor hover:bg-transparent transition-all ease-in-out duration-300 text-beige hover:text-secondaryTextColor text-[17px] font-normal my-8">
+              see the menu
+            </button>
+          </div>
         </div>
       </div>
     </div>
