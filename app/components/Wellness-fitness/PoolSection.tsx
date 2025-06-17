@@ -5,6 +5,7 @@ import {
   wellnessImg4,
   wellnessImg5,
   wellnessImg6,
+  wellnessImg7,
 } from "@/app/assets";
 import Image from "next/image";
 import React from "react";
@@ -73,6 +74,10 @@ export default function PoolSection() {
           />
         </div>
       </div>
+
+      <div className="w-full m-auto my-10">
+        <Image src={wellnessImg7} alt="wellness" width={1170} height={744} className="max-[1200px] w-full object-contain"/>
+      </div> 
     </div>
   );
 }
