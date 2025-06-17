@@ -1,6 +1,7 @@
 import FacilitiesSection from "@/app/components/Services/FacilitiesSection";
 import WellnessSection from "@/app/components/Services/WellnessSection";
 import OurFacilitiesSection from "@/app/components/Wellness-fitness/OurFacilitiesSection";
+import SpaWellnessSection from "@/app/components/Wellness-fitness/SpaWellnessSection";
 import React from "react";
 
 export default function page() {
@@ -9,6 +10,7 @@ export default function page() {
         <div className="my-20">
       <WellnessSection />
       <OurFacilitiesSection/>
+      <SpaWellnessSection/>
       </div>
     </div>
   );

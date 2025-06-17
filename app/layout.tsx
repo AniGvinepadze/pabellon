@@ -7,24 +7,24 @@ import Header from "./global/Header";
 import HeaderWrapper from "./global/HeaderWrapper";
 import FooterWrapper from "./global/FooterWrapper";
 
+// Restore GeistSans font
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "./fonts/GeistVF.woff",  // Ensure this file exists in the 'public/fonts/' folder
   variable: "--font-geist-sans",
   weight: "100 900",
-
 });
 
+// Restore GeistMono font
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "./fonts/GeistMonoVF.woff",  // Ensure this file exists in the 'public/fonts/' folder
   variable: "--font-geist-mono",
   weight: "100 900",
-
 });
 
+// Google font Noto Serif
 const notoSerif = Noto_Serif({
   subsets: ["latin"],
   variable: "--font-noto-serif",
-
 });
 
 export const metadata: Metadata = {
@@ -37,7 +37,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
   return (
     <html lang="en">
       <body
@@ -51,10 +50,9 @@ export default function RootLayout({
           font-serif
         `}
       >
-        <HeaderWrapper/>
+        <HeaderWrapper />
         {children}
-        <FooterWrapper/>
-
+        <FooterWrapper />
       </body>
     </html>
   );

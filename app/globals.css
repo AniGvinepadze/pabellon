@@ -16,6 +16,10 @@
     --foreground: #ededed;
   }
 }
+@font-face {
+  font-family: 'GeistMono';
+  src: url('/fonts/GeistMonoVF.woff') format('woff');
+}
 
 body {
   color: var(--foreground);

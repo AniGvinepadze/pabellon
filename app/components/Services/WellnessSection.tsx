@@ -1,4 +1,4 @@
-import { resImg, wellnessImg } from '@/app/assets'
+import { resImg, wellnessImg, wellnessImg2 } from '@/app/assets'
 import Image from 'next/image'
 import React from 'react'
 
@@ -25,6 +25,7 @@ export default function WellnessSection() {
           className="max-w-[1600px] w-full "
         />
       </div>
+    
       
     </div>
   )

@@ -31,6 +31,13 @@ import meetingImg2 from "../public/assets/Frame 11 (1).svg";
 import meetingImg3 from "../public/assets/image (49).svg";
 import meetingImg4 from "../public/assets/Frame 12 (1).svg";
 import meetingImg5 from "../public/assets/Frame 10 (2).svg";
+import wellnessImg1 from "../public/assets/image 33.svg";
+import wellnessImg2 from "../public/assets/image 636 (1).svg";
+import wellnessImg3 from "../public/assets/Medium-81 SSMM S07 STORY WOMENS DAY CLEAN 1.svg";
+import wellnessImg4 from "../public/assets/image (50).svg";
+import wellnessImg5 from "../public/assets/image (51).svg";
+import wellnessImg6 from "../public/assets/image (52).svg";
+import wellnessImg7 from "../public/assets/image (53).svg";
 export {
   logoCol,
   logo,
@@ -65,4 +72,11 @@ export {
   kidsErImg5,
   meetingImg,
   wellnessImg,
+  wellnessImg1,
+  wellnessImg2,
+  wellnessImg3,
+  wellnessImg4,
+  wellnessImg5,
+  wellnessImg6,
+  wellnessImg7,
 };
