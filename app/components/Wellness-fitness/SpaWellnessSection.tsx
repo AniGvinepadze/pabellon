@@ -44,13 +44,13 @@ export default function SpaWellnessSection() {
         </div>
       </div>
 
-      <div className="w-full flex justify-between gap-5 my-10">
+      <div className="w-full flex justify-between gap-5 my-10  max-750:flex-col-reverse">
         <div className="max-w-[800px] w-full m-auto">
           <Image src={wellnessImg3} alt="wellness" width={800} height={500} />
         </div>
-        <div className="max-w-[600px] w-full flex flex-col justify-center items-center text-center">
-          <div className="max-w-[3000px] w-full">
-            <p className="text-2xl">
+        <div className="max-w-[800px] w-full flex flex-col justify-center items-center text-center">
+          <div className="max-w-[500px] w-full ">
+            <p className="text-2xl max-1000:text-xl max-450:text-lg">
               {" "}
               Let ancient worlds and wonder guide an unforgettable adventure
               //შესაცვლლეია
