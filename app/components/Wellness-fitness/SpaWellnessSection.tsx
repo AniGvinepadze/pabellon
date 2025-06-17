@@ -16,8 +16,8 @@ export default function SpaWellnessSection() {
           balancing body, mind and spirit in a setting of pure tranquility.
         </p>
       </div>
-      <div className="w-full m-auto flex justify-between gap-6">
-        <div className="max-w-[700px] w-full flex flex-col justify-center items-center">
+      <div className="w-full m-auto flex justify-between gap-6 my-20">
+        <div className="max-w-[700px] w-full flex flex-col justify-center items-center ">
           <div className="max-w-[470px] w-full max-h-[500px] flex flex-col justify-center items-center text-center">
             <Image
               src={wellnessImg2}
