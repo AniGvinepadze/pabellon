@@ -53,7 +53,7 @@ export default function SpaWellnessSection() {
             <p className="text-2xl">
               {" "}
               Let ancient worlds and wonder guide an unforgettable adventure
-              //შესაცვლლეიაs
+              //შესაცვლლეია
             </p>
             <button className="bg-secondaryTextColor px-8 py-2 border border-secondaryTextColor hover:bg-transparent transition-all ease-in-out duration-300 text-beige hover:text-secondaryTextColor text-[17px] font-normal my-8">
               see the menu

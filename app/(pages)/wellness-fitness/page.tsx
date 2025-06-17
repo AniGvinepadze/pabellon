@@ -1,6 +1,7 @@
 import FacilitiesSection from "@/app/components/Services/FacilitiesSection";
 import WellnessSection from "@/app/components/Services/WellnessSection";
 import OurFacilitiesSection from "@/app/components/Wellness-fitness/OurFacilitiesSection";
+import PoolSection from "@/app/components/Wellness-fitness/PoolSection";
 import SpaWellnessSection from "@/app/components/Wellness-fitness/SpaWellnessSection";
 import React from "react";
 
@@ -11,6 +12,7 @@ export default function page() {
       <WellnessSection />
       <OurFacilitiesSection/>
       <SpaWellnessSection/>
+      <PoolSection/>
       </div>
     </div>
   );
