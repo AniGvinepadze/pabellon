@@ -11,9 +11,9 @@ export default function OurFacilitiesSection() {
           Our facilities
         </h2>
       </div>
-      <div className="my-20 grid grid-cols-5  max-w-[1100px] w-full max-750:grid-cols-1 max-500:my-10">
+      <div className="my-20 grid grid-cols-5  max-w-[1100px] w-full max-850:grid-cols-1  max-500:my-10">
         {ourFacilities.map((e) => (
-          <div key={e.id} className="bg-secondaryTextColor w-full py-7 px-2 max-750:p-2">
+          <div key={e.id} className="bg-secondaryTextColor w-full py-7 px-2 max-850:p-2 ">
             <li className="font-light text-lg text-beige max-800:text-base">{e.title}</li>
           </div>
         ))}
