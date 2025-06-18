@@ -310,12 +310,12 @@ export const meeting = [
 ];
 
 type Wine = {
-  id:number,
-  title:string,
-  description:string
-}
+  id: number;
+  title: string;
+  description: string;
+};
 
-export const wine:Wine[] = [
+export const wine: Wine[] = [
   {
     id: 1,
     title: "Khikhvi 2024",
@@ -332,7 +332,7 @@ export const wine:Wine[] = [
     description: "Red Dry, alc. 13% – PDO Khashmi, Kakheti, Georgia",
   },
   {
-    id: 1,
+    id: 4,
     title: "Kindzmarauli 2024",
     description: "Red Semi-Sweet, alc. 11.5% – Kakheti, Georgia",
   },

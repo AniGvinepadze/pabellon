@@ -1,8 +1,9 @@
-import { wellnessImg } from "@/app/assets";
+import { wine } from "@/app";
+import { walnut } from "@/app/assets";
 import Image from "next/image";
 import React from "react";
 
-export default function CategoriesSection() {
+export default function WineCategoriesSection() {
   return (
     <div className="max-w-[1400px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
       <div className="max-w-[1050px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-400:gap-3">
@@ -13,17 +14,21 @@ export default function CategoriesSection() {
           8,000-year-old winemaking culture. Our vineyards are cultivated with
           respect for the land: native grape varieties flourish under the
           Kakhetian sun, nurtured by organic practices. Every bottle tells a
-          story of soil, sun, and soul. 
+          story of soil, sun, and soul.
         </p>
       </div>
-      <div className="my-20 max-w-[1100px] w-full bg-[#907655] flex flex-col justify-between items-center text-center p-10">
-
+      <div className="relative my-20 max-w-[1100px] w-full bg-[#907655] flex flex-col justify-between items-center text-center p-10 gap-10 shadow-lg shadow-gray-500">
+        <Image src={walnut} alt="walnut" width={270} height={360} className="absolute -left-10 -mt-20"/>
         <h2 className="font-semibold italic text-[40px]">Categories</h2>
-        
-           </div>
+        <div>
+          {wine.map((e) => (
+            <div key={e.id} className="py-5">
+              <p className="font-bold text-2xl my-3">{e.title}</p>
+              <p className="font-light text-2xl">{e.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
- 
- 
-  )
+  );
 }
