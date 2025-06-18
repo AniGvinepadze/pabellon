@@ -2,6 +2,12 @@ import {
   areaIcon,
   bath,
   bed,
+  blogImg,
+  blogImg2,
+  blogImg3,
+  blogImg4,
+  blogImg5,
+  blogImg6,
   duplex,
   meetingImg2,
   meetingImg3,
@@ -335,5 +341,57 @@ export const wine: Wine[] = [
     id: 4,
     title: "Kindzmarauli 2024",
     description: "Red Semi-Sweet, alc. 11.5% – Kakheti, Georgia",
+  },
+];
+
+type Blog = {
+  id: number;
+  img: string;
+  title: string;
+  description: string;
+};
+
+export const blog: Blog[] = [
+  {
+    id: 1,
+    img: blogImg,
+    title: "5 Things To Do In Kakheti",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+  },
+  {
+    id: 2,
+    img: blogImg2,
+    title: "Spring Workshop At Pabellon",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+  },
+  {
+    id: 3,
+    img: blogImg3,
+    title: "5 Things To Do In Kakheti",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+  },
+  {
+    id: 4,
+    img: blogImg4,
+    title: "What To Enjoy At Pabellon Dining",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+  },
+  {
+    id: 5,
+    img: blogImg5,
+    title: "5 Things To Do In Kakheti",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+  },
+  {
+    id: 6,
+    img: blogImg6,
+    title: "“Best Spa Experience In Georgia”",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
   },
 ];

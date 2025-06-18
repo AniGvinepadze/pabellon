@@ -49,6 +49,12 @@ import agroImg2 from "../public/assets/image (58).svg";
 import agroImg3 from "../public/assets/Agriculture 1.svg";
 import agroImg4 from "../public/assets/image (59).svg";
 import agroImg5 from "../public/assets/agro (2) 1.svg";
+import blogImg from "../public/assets/image (60).svg";
+import blogImg2 from "../public/assets/image (61).svg";
+import blogImg3 from "../public/assets/image (62).svg";
+import blogImg4 from "../public/assets/image (63).svg";
+import blogImg5 from "../public/assets/image (64).svg";
+import blogImg6 from "../public/assets/Frame 1.svg";
 
 export {
   logoCol,
@@ -101,5 +107,11 @@ export {
   agroImg3,
   agroImg4,
   walnut2,
-  agroImg5
+  agroImg5,
+  blogImg,
+  blogImg2,
+  blogImg3,
+  blogImg4,
+  blogImg5,
+  blogImg6,
 };
