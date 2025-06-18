@@ -22,6 +22,16 @@ export default function OurMissionSection() {
           <Image src={walnut2} alt="walnutImg" width={828} height={958} />
         </div>
       </div>
+      <div className="max-w-[824px] w-full m-auto flex flex-col justify-center my-10">
+        <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px] my-8">
+          Here, every meal is a celebration of place, people, and the timeless
+          bond between nature and culture. Agriculture here is not industry, it
+          is inheritance, love and quiet devotion passed down through
+          generations. Meals are born from the morning's gathering: crisp
+          vegetables pulled from the earth, tomatoes still warm from the sun,
+          basil freshly cut from the garden - a true celebration of life.
+        </p>
+      </div>
     </div>
   );
 }
