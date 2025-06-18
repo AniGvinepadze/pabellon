@@ -234,7 +234,6 @@ export const facilities: Facilities[] = [
   },
 ];
 
-
 export const ourFacilities: Facilities[] = [
   {
     id: 1,
@@ -248,10 +247,11 @@ export const ourFacilities: Facilities[] = [
     id: 3,
     title: "Outdoor pool",
   },
-   {
+  {
     id: 4,
     title: "children's pool",
-  }, {
+  },
+  {
     id: 5,
     title: "Gym",
   },
@@ -306,5 +306,34 @@ export const meeting = [
   {
     id: 6,
     img: meetingImg3,
+  },
+];
+
+type Wine = {
+  id:number,
+  title:string,
+  description:string
+}
+
+export const wine:Wine[] = [
+  {
+    id: 1,
+    title: "Khikhvi 2024",
+    description: "White Dry, alc. 11.5% – Kakheti, Georgia",
+  },
+  {
+    id: 2,
+    title: "Kisi Qvevri 2022",
+    description: "White Dry, alc. 12.5% – Kakheti, Georgia",
+  },
+  {
+    id: 3,
+    title: "Saperavi 2023",
+    description: "Red Dry, alc. 13% – PDO Khashmi, Kakheti, Georgia",
+  },
+  {
+    id: 1,
+    title: "Kindzmarauli 2024",
+    description: "Red Semi-Sweet, alc. 11.5% – Kakheti, Georgia",
   },
 ];

@@ -38,8 +38,11 @@ import wellnessImg4 from "../public/assets/image (50).svg";
 import wellnessImg5 from "../public/assets/image (51).svg";
 import wellnessImg6 from "../public/assets/image (52).svg";
 import wellnessImg7 from "../public/assets/image (53).svg";
-import logoCol2 from "../public/assets/Artboard 14@3x-8 1.svg"
-import wineImg from "../public/assets/image (54).svg"
+import logoCol2 from "../public/assets/Artboard 14@3x-8 1.svg";
+import wineImg from "../public/assets/image (54).svg";
+import walnut from "../public/assets/walnut_silver 1.svg";
+import wineImg1 from "../public/assets/image (56).svg";
+import artWork2 from "../public/assets/Artboard 4@3x 1.svg";
 export {
   logoCol,
   logo,
@@ -80,6 +83,10 @@ export {
   wellnessImg4,
   wellnessImg5,
   wellnessImg6,
-  wellnessImg7,logoCol2,
-  wineImg
+  wellnessImg7,
+  logoCol2,
+  wineImg,
+  artWork2,
+  walnut,
+  wineImg1,
 };
