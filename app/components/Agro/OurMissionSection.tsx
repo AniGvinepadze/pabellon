@@ -1,4 +1,11 @@
-import { walnut2 } from "@/app/assets";
+import {
+  agroImg,
+  agroImg2,
+  agroImg3,
+  agroImg4,
+  agroImg5,
+  walnut2,
+} from "@/app/assets";
 import Image from "next/image";
 import React from "react";
 
@@ -31,6 +38,38 @@ export default function OurMissionSection() {
           vegetables pulled from the earth, tomatoes still warm from the sun,
           basil freshly cut from the garden - a true celebration of life.
         </p>
+      </div>
+      <div className="flex justify-center w-full ">
+        <div className="  grid grid-cols-4 gap-5 w-full my-8 max-750:my-0 max-800:grid-cols-2 ">
+          <Image
+            src={agroImg2}
+            alt="icon"
+            width={388}
+            height={518}
+            className="max-800:max-w-[300px] max-800:max-h-[370px] max-800:mt-3 w-full"
+          />{" "}
+          <Image
+            src={agroImg3}
+            alt="icon"
+            width={300}
+            height={450}
+            className="object-contain max-h-[450px] w-[306px] mt-5 max-800:max-w-[300px]"
+          />{" "}
+          <Image
+            src={agroImg4}
+            alt="icon"
+            width={300}
+            height={450}
+            className="max-800:max-w-[300px]w-[300px] w-[300px] mt-5  max-800:max-h-[380px] max-800:mt-3"
+          />
+          <Image
+            src={agroImg5}
+            alt="icon"
+            width={388}
+            height={518}
+            className=" max-800:max-w-[300px] w-full"
+          />
+        </div>
       </div>
     </div>
   );
