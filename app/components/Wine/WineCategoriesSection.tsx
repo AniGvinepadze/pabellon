@@ -41,6 +41,15 @@ export default function WineCategoriesSection() {
       <div className="w-full m-auto items-center my-10 flex flex-col justify-center">
         <Image src={wineImg1} alt="artwork" width={1500} height={850} />
       </div>
+      <div className="max-w-[800px] w-full m-auto flex flex-col justify-center items-center">
+        {" "}
+        <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
+          At our table, wine is more than a drink - it is a bridge between past
+          and present, a celebration of life, family and friendship. We invite
+          you to experience Georgia's true gift to the world: a wine culture as
+          deep and timeless as the vines themselves.
+        </p>
+      </div>
     </div>
   );
 }
