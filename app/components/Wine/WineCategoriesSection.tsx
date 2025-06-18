@@ -1,5 +1,5 @@
 import { wine } from "@/app";
-import { walnut } from "@/app/assets";
+import { artWork2, walnut, wineImg1 } from "@/app/assets";
 import Image from "next/image";
 import React from "react";
 
@@ -17,8 +17,14 @@ export default function WineCategoriesSection() {
           story of soil, sun, and soul.
         </p>
       </div>
-      <div className="relative my-20 max-w-[1100px] w-full bg-[#907655] flex flex-col justify-between items-center text-center p-16 gap-10 shadow-lg shadow-gray-500">
-        <Image src={walnut} alt="walnut" width={270} height={360} className="absolute -left-10 -mt-20"/>
+      <div className="relative my-20 max-w-[1150px] w-full bg-[#907655] flex flex-col justify-between items-center text-center p-16 gap-10 shadow-lg shadow-gray-500">
+        <Image
+          src={walnut}
+          alt="walnut"
+          width={270}
+          height={360}
+          className="absolute -left-10 -mt-20"
+        />
         <h2 className="font-semibold italic text-[40px]">Categories</h2>
         <div>
           {wine.map((e) => (
@@ -28,6 +34,12 @@ export default function WineCategoriesSection() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="w-full m-auto items-center my-10 flex flex-col justify-center">
+        <Image src={artWork2} alt="artwork" width={462} height={138} />
+      </div>
+      <div className="w-full m-auto items-center my-10 flex flex-col justify-center">
+        <Image src={wineImg1} alt="artwork" width={1500} height={850} />
       </div>
     </div>
   );
