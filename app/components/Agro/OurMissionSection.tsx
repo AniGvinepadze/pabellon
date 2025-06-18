@@ -12,7 +12,7 @@ import React from "react";
 export default function OurMissionSection() {
   return (
     <div className="max-w-[1400px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
-      <div className="max-w-[1100px] w-full flex  justify-between items-center text-center text-secondaryTextColor font-mono-serif gap-16 max-400:gap-3">
+      <div className="max-w-[1100px] w-full flex  justify-between items-center text-center text-secondaryTextColor font-mono-serif gap-16 max-400:gap-3 max-700:flex-col">
         <div className="max-w-[400px] w-full">
           <h2 className="font-semibold text-[40px]  max-600:text-[32px] max-400:text-[26px]">
             Our Mission
@@ -53,14 +53,14 @@ export default function OurMissionSection() {
             alt="icon"
             width={300}
             height={450}
-            className="object-contain max-h-[450px] w-[306px] mt-5 max-800:max-w-[300px]"
+            className="object-contain max-h-[450px] max-w-[306px] w-full mt-5 max-800:max-w-[300px] max-1000:mt-0 max-650:mt-2 max-600:mt-5"
           />{" "}
           <Image
             src={agroImg4}
             alt="icon"
             width={300}
             height={450}
-            className="max-800:max-w-[300px]w-[300px] w-[300px] mt-5  max-800:max-h-[380px] max-800:mt-3"
+            className="max-800:max-w-[300px]w-[300px] w-[300px] mt-5  max-800:max-h-[380px] max-1000:mt-0"
           />
           <Image
             src={agroImg5}
