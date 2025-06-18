@@ -17,13 +17,13 @@ export default function WineCategoriesSection() {
           story of soil, sun, and soul.
         </p>
       </div>
-      <div className="relative my-20 max-w-[1100px] w-full bg-[#907655] flex flex-col justify-between items-center text-center p-10 gap-10 shadow-lg shadow-gray-500">
+      <div className="relative my-20 max-w-[1100px] w-full bg-[#907655] flex flex-col justify-between items-center text-center p-16 gap-10 shadow-lg shadow-gray-500">
         <Image src={walnut} alt="walnut" width={270} height={360} className="absolute -left-10 -mt-20"/>
         <h2 className="font-semibold italic text-[40px]">Categories</h2>
         <div>
           {wine.map((e) => (
-            <div key={e.id} className="py-5">
-              <p className="font-bold text-2xl my-3">{e.title}</p>
+            <div key={e.id} className="py-3">
+              <p className="font-bold text-2xl my-1">{e.title}</p>
               <p className="font-light text-2xl">{e.description}</p>
             </div>
           ))}
