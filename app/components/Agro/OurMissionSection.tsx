@@ -39,7 +39,7 @@ export default function OurMissionSection() {
           basil freshly cut from the garden - a true celebration of life.
         </p>
       </div>
-      <div className="flex justify-center w-full ">
+      <div className="flex justify-center w-full my-10 ">
         <div className="  grid grid-cols-4 gap-5 w-full my-8 max-750:my-0 max-800:grid-cols-2 ">
           <Image
             src={agroImg2}
