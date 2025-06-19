@@ -38,7 +38,7 @@ export default function ContactInfo() {
             </div>{" "}
             <div>
               <input
-                type="text"
+                type="number"
                 placeholder="Phone"
                 className="  placeholder-secondaryTextColor bg-beige outline-none font-serif w-[150px] p-2 max-400:text-base"
               />
