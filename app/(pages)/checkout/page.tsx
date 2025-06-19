@@ -1,5 +1,6 @@
 import AdditionalDetailsSection from "@/app/components/Checkout/AdditionalDetailsSection";
 import ContactInfo from "@/app/components/Checkout/ContactInfo";
+import HouseRulesSection from "@/app/components/Checkout/HouseRulesSection";
 import React from "react";
 
 export default function page() {
@@ -8,6 +9,7 @@ export default function page() {
       <div className="my-20">
         <ContactInfo />
         <AdditionalDetailsSection/>
+        <HouseRulesSection />
       </div>
     </div>
   );
