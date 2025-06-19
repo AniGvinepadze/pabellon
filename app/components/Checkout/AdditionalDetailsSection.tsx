@@ -3,16 +3,16 @@ import React from "react";
 export default function AdditionalDetailsSection() {
   return (
     <div className="max-w-[1400px] w-full m-auto  text-black ">
-      <div className="max-w-[850px] w-full flex flex-col text-black font-mono-serif gap-6 max-400:gap-3 my-20">
+      <div className="max-w-[850px] w-full flex flex-col text-black font-mono-serif gap-6 max-400:gap-3 my-20 max-450:mt-44 ">
         <h2
-          className="text-[26px] font-medium
+          className="text-[26px] font-medium max-450:text-2xl
         "
         >
           ADDITIONAL DETAILS
         </h2>
-        <div className="w-full grid grid-cols-2 gap-12 my-5">
+        <div className="w-full grid grid-cols-2 gap-12 my-5 max-450:gap-7 max-400:grid-cols-1">
           <div className="flex flex-col ">
-            <label className="text-base font-normal my-4"> Adults</label>
+            <label className="text-base font-normal my-4 max-400:my-1"> Adults</label>
             <input
               type="number"
               placeholder="2"
@@ -21,7 +21,7 @@ export default function AdditionalDetailsSection() {
             <div className="w-full h-[1px]   bg-[#7f7e7e] " />
           </div> 
           <div className="flex flex-col ">
-            <label className="text-base font-normal my-4"> Children</label>
+            <label className="text-base font-normal my-4 max-400:my-1"> Children</label>
             <input
               type="number"
               placeholder="0"
@@ -30,7 +30,7 @@ export default function AdditionalDetailsSection() {
             <div className="w-full h-[1px]   bg-[#7f7e7e] " />
           </div>
         <div className="flex flex-col ">
-            <label className="text-base font-normal my-4"> Arrival Time</label>
+            <label className="text-base font-normal my-4 max-400:my-1"> Arrival Time</label>
             <input
               type="text"
               placeholder="14:00"
