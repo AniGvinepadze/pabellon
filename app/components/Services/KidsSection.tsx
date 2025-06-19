@@ -16,9 +16,8 @@ export default function KidstSection() {
         <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
           Kids Entertainment
         </h2>
-        <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px]">
-          Let ancient worlds and wonder guide an unforgettable adventure//
-          შესაცვლელია
+        <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px] custom-font">
+          Let ancient worlds and wonder guide an unforgettable adventure
         </h2>
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
           At our hotel, every guest is special - especially the youngest ones.
@@ -35,42 +34,38 @@ export default function KidstSection() {
           height={940}
           className="max-w-[1600px] w-full "
         />
-
-
-
-        
       </div>
       <div className="flex justify-center w-full ">
-      <div className="  grid grid-cols-4 gap-5 w-full my-8 max-750:my-0 max-800:grid-cols-2 ">
-        <Image
-          src={kidsErImg2}
-          alt="icon"
-          width={388}
-          height={419}
-          className="mt-7 max-800:max-w-[300px] w-full"
-        />
-        <Image
-          src={kidsErImg3}
-          alt="icon"
-          width={388}
-          height={508}
-          className="max-800:max-w-[300px] max-800:max-h-[370px] max-800:mt-3 w-full"
-        />{" "}
-        <Image
-          src={kidsErImg4}
-          alt="icon"
-          width={322}
-          height={419}
-          className="object-contain max-h-[400px] mt-3 w-full max-800:max-w-[300px]"
-        />{" "}
-        <Image
-          src={kidsErImg5}
-          alt="icon"
-          width={388}
-          height={508}
-          className="max-800:max-w-[300px] w-full max-800:max-h-[380px] max-800:mt-3"
-        />
-      </div>
+        <div className="  grid grid-cols-4 gap-5 w-full my-8 max-750:my-0 max-800:grid-cols-2 ">
+          <Image
+            src={kidsErImg2}
+            alt="icon"
+            width={388}
+            height={419}
+            className="mt-7 max-800:max-w-[300px] w-full"
+          />
+          <Image
+            src={kidsErImg3}
+            alt="icon"
+            width={388}
+            height={508}
+            className="max-800:max-w-[300px] max-800:max-h-[370px] max-800:mt-3 w-full"
+          />{" "}
+          <Image
+            src={kidsErImg4}
+            alt="icon"
+            width={322}
+            height={419}
+            className="object-contain max-h-[400px] mt-3 w-full max-800:max-w-[300px]"
+          />{" "}
+          <Image
+            src={kidsErImg5}
+            alt="icon"
+            width={388}
+            height={508}
+            className="max-800:max-w-[300px] w-full max-800:max-h-[380px] max-800:mt-3"
+          />
+        </div>
       </div>
     </div>
   );

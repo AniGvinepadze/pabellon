@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500&display=swap");
-@import 'react-datepicker/dist/react-datepicker.css';
+@import "react-datepicker/dist/react-datepicker.css";
 
 @tailwind base;
 @tailwind components;
@@ -17,8 +17,8 @@
   }
 }
 @font-face {
-  font-family: 'GeistMono';
-  src: url('/fonts/GeistMonoVF.woff') format('woff');
+  font-family: "GeistMono";
+  src: url("/fonts/GeistMonoVF.woff") format("woff");
 }
 
 body {
@@ -64,6 +64,16 @@ body {
 }
 .coming-soon-bg {
   background-size: 130%;
+}
+@font-face {
+  font-family: "custom-font";
+  src: url("/fonts/Biro_Script_reduced.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.custom-font {
+  font-family: "custom-font", serif !important;
 }
 @media only screen and (max-width: 700px) {
   .coming-soon-bg {

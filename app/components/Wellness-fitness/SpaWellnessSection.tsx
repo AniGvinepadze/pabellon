@@ -49,11 +49,10 @@ export default function SpaWellnessSection() {
           <Image src={wellnessImg3} alt="wellness" width={800} height={500} />
         </div>
         <div className="max-w-[800px] w-full flex flex-col justify-center items-center text-center">
-          <div className="max-w-[500px] w-full ">
-            <p className="text-2xl max-1000:text-xl max-450:text-lg">
+          <div className="max-w-[450px] w-full ">
+            <p className="text-2xl max-1000:text-xl max-450:text-lg font-normal custom-font">
               {" "}
               Let ancient worlds and wonder guide an unforgettable adventure
-              //შესაცვლლეია
             </p>
             <button className="bg-secondaryTextColor px-8 py-2 border border-secondaryTextColor hover:bg-transparent transition-all ease-in-out duration-300 text-beige hover:text-secondaryTextColor text-[17px] font-normal my-8">
               see the menu

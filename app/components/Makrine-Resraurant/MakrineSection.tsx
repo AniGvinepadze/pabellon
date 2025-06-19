@@ -18,9 +18,9 @@ export default function MakrineSection() {
     <div className="max-w-[1400px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
       <div className="max-w-[750px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-400:gap-3">
         <Image src={makrineLogo} alt="logo" width={269} height={190} />
-        <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px]">
+        <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px] custom-font">
           Savor tradition and innovation, one unforgettable bite and sip at a
-          time// შესაცვლელია
+          time
         </h2>
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
           Nestled within the hotel, our Georgian “Restaurant Makrine” offers a

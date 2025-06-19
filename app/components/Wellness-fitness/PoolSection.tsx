@@ -17,9 +17,8 @@ export default function PoolSection() {
         <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
           Pool
         </h2>
-        <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px]">
-          Let ancient worlds and wonder guide an unforgettable adventure //
-          შესაცვლელია
+        <h2 className="font-normal custom-font text-[30px] italic max-600:text-[22px] max-400:text-[18px]">
+          Let ancient worlds and wonder guide an unforgettable adventure
         </h2>
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
           Discover wellness at our hotel's beautifully designed pool areas,
@@ -76,8 +75,14 @@ export default function PoolSection() {
       </div>
 
       <div className="w-full m-auto my-10">
-        <Image src={wellnessImg7} alt="wellness" width={1170} height={744} className="max-[1200px] w-full object-contain"/>
-      </div> 
+        <Image
+          src={wellnessImg7}
+          alt="wellness"
+          width={1170}
+          height={744}
+          className="max-[1200px] w-full object-contain"
+        />
+      </div>
     </div>
   );
 }

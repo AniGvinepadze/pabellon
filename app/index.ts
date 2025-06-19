@@ -70,7 +70,7 @@ export const navbar: Navbar[] = [
   {
     id: 7,
     title: "Agrotourism",
-    route: "/agrotourism",
+    route: "/agro",
   },
   {
     id: 8,

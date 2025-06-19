@@ -16,9 +16,8 @@ export default function KidsEntertainmenttSection() {
         <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
           Kids Entertainment
         </h2>
-        <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px]">
-          Let ancient worlds and wonder guide an unforgettable adventure//
-          შესაცვლელია
+        <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px] custom-font">
+          Let ancient worlds and wonder guide an unforgettable adventure
         </h2>
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
           At our hotel, every guest is special - especially the youngest ones.

@@ -9,9 +9,8 @@ export default function MeetingSection() {
         <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
           Meetings & Events
         </h2>
-        <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px]">
-          Where ideas come to life and every celebration feels effortless//
-          შესაცვლელია
+        <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px] custom-font">
+          Where ideas come to life and every celebration feels effortless
         </h2>
         <p className="text-[17px] font-light  max-600:text-[15px] max-400:text-[13px]">
           Here, business is more than an agenda - it's an experience. Our
@@ -22,8 +21,8 @@ export default function MeetingSection() {
       </div>
 
       <div className=" my-20 flex flex-col gap-14 justify-center items-center">
-        <Image src={meetingImg} alt="meetingImg" width={1420} height={877}/>
-        <Image src={artWork} alt="artwork" width={1011} height={675}/>
+        <Image src={meetingImg} alt="meetingImg" width={1420} height={877} />
+        <Image src={artWork} alt="artwork" width={1011} height={675} />
       </div>
     </div>
   );

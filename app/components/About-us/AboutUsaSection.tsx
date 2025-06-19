@@ -9,9 +9,9 @@ export default function AboutUsaSection() {
         <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
           About Us
         </h2>
-        <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px]">
+        <h2 className="custom-font font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px]">
           inspired by traditional Georgian archeology, art, literature, history
-          and motifs // შესაცვლელია
+          and motifs
         </h2>
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
           We promise an escape to a world of warmth, generosity, and playful
@@ -29,7 +29,6 @@ export default function AboutUsaSection() {
           className="max-w-[1600px] w-full "
         />
       </div>
-      
     </div>
   );
 }

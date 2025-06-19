@@ -42,8 +42,7 @@ export default function BookSection() {
           Book Your Stay At Pabellon
         </h2>
         <div className="grid grid-cols-4 gap-10 items-center relative max-w-[800px] m-auto w-full justify-between mt-6 max-600:grid-cols-2 max-600:px-10 max-450:px-3 max-450:gap-6 max-400:px-0">
-
-        <div className="flex flex-col w-full cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 ">
+          <div className="flex flex-col w-full cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 ">
             <DatePicker
               selected={checkIn}
               onChange={(date) => setCheckIn(date)}
