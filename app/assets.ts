@@ -69,7 +69,9 @@ import makrineImg2 from "../public/assets/Frame 4.svg";
 import makrineImg3 from "../public/assets/image (66).svg";
 import makrineImg4 from "../public/assets/image 634 (1).svg";
 import makrineImg5 from "../public/assets/image (67).svg";
-import makrineImg6 from "../public/assets/image (68).svg"
+import makrineImg6 from "../public/assets/image (68).svg";
+import prev from "../public/assets/Group 24.svg";
+import next from "../public/assets/Group 16.svg";
 export {
   logoCol,
   logo,
@@ -142,5 +144,7 @@ export {
   makrineImg4,
   makrineImg5,
   makrineLogo,
-  makrineImg6
+  makrineImg6,
+  next,
+  prev,
 };
