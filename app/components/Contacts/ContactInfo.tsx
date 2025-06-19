@@ -7,7 +7,7 @@ export default function ContactInfo() {
     <div className="max-w-[1400px] w-full m-auto  text-black my-20 ">
    
         <div>
-          <div className="w-full flex justify-between gap-16 max-800:flex-col-reverse  ">
+          <div className="max-w-[1400px] w-full flex justify-between gap-16 max-800:flex-col-reverse  ">
             <div className="max-w-[850px] w-full my-10">
               <h2
                 className="text-[26px] font-medium
@@ -24,8 +24,8 @@ export default function ContactInfo() {
                   />
                   <div className="w-full h-[1px]   bg-[#7f7e7e] mt-9 max-1000:mt-4 max-450:mt-2" />
                 </div>
-                <div className="w-full flex justify-between gap-7 my-5">
-                  <div className="w-full">
+                <div className="max-w-[800px] w-full flex justify-between gap-7 my-5 max-500:flex-col">
+                  <div className="w-full max-w-[450px]">
                     <input
                       type="text"
                       placeholder="Email Adress"
@@ -33,11 +33,11 @@ export default function ContactInfo() {
                     />
                     <div className="w-full h-[1px]   bg-[#7f7e7e] mt-9 max-1000:mt-4 max-450:mt-2" />
                   </div>{" "}
-                  <div className="w-full">
+                <div className="w-full max-w-[450px]">
                     <input
                       type="number"
                       placeholder="Mobile Phone"
-                      className="  placeholder-secondaryTextColor bg-beige outline-none font-serif p-2 max-400:text-base"
+                      className="placeholder-secondaryTextColor bg-beige outline-none font-serif p-2 max-400:text-base"
                     />
                     <div className="w-full h-[1px]  bg-[#7f7e7e] mt-9 max-1000:mt-4 max-450:mt-2" />
                   </div>
@@ -47,12 +47,12 @@ export default function ContactInfo() {
                   <input
                     type="text"
         
-                    className="  placeholder-secondaryTextColor bg-beige outline-none font-serif w-full p-2 max-400:text-base min-h-[240px] border border-[#7f7e7e]"
+                    className="  placeholder-secondaryTextColor bg-beige outline-none font-serif w-full p-2 max-400:text-base min-h-[240px] border border-[#7f7e7e] "
                   />
                 </div>
                 <div className="flex gap-3 my-4">
-                  <input type="checkbox" className="max-w-[20px] w-full accent-beige" />
-                  <p className="text-xl font-normal">
+                  <input type="checkbox" className="max-w-[20px] w-full accent-beige max-400:max-w-[17px]" />
+                  <p className="text-xl font-normal max-450:text-lg max-400:text-base">
                     I have read and accept the privacy policy.
                   </p>
                 </div>
