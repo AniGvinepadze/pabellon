@@ -10,9 +10,9 @@ import { makrineImg, makrineImg2, meetingImg } from "@/app/assets";
 
 export default function MakrineSwiperSection() {
   return (
-    <div className="w-full m-auto">
+    <div className="w-full m-auto ">
       {" "}
-      <div className=" w-full">
+      <div className=" w-full ">
         <Swiper
           spaceBetween={15}
           slidesPerView={4}
@@ -23,7 +23,7 @@ export default function MakrineSwiperSection() {
           loop={true}
           speed={1000}
           modules={[Autoplay, Pagination]}
-          className=" w-full flex  "
+          className=" w-full flex "
         >
           <SwiperSlide className="w-full">
             <Image src={makrineImg} alt="img" width={615} height={760} />

@@ -89,7 +89,7 @@ export default function MakrineRestaurantBookSection() {
               )}
             </div>
           </div>
-          <div className="max-w-[150px] w-full max-650:max-w-[650px] mt-16">
+          <div className="max-w-[150px] w-full max-650:max-w-[650px] mt-16 ">
             <button className=" w-full px-2 py-2  text-base font-medium cursor-pointer hover:scale-110  transition-all ease-in-out duration-300 max-400:text-base text-beige  bg-secondaryTextColor">
               make an enquiry
             </button>

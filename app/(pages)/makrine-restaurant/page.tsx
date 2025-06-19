@@ -1,4 +1,5 @@
 import MakrineRestaurantBookSection from '@/app/components/Makrine-Resraurant/MakrineRestaurantBookSection'
+import MakrinerestaurantSection from '@/app/components/Makrine-Resraurant/MakrineRestaurantSection'
 import MakrineSection from '@/app/components/Makrine-Resraurant/MakrineSection'
 import MakrineSwiperSection from '@/app/components/Makrine-Resraurant/MakrineSwiperSection'
 import React from 'react'
@@ -9,7 +10,10 @@ export default function page() {
       <div className="mt-28">
         <MakrineSection/>
         <MakrineRestaurantBookSection/>
+        <div className=''>
         <MakrineSwiperSection/>
+        <MakrinerestaurantSection/>
+        </div>
         </div>
         </div>
   )
