@@ -3,6 +3,7 @@ import {
   logoCol,
   logoCol2,
   makrineImg,
+  makrineImg6,
   makrineLogo,
   resImg,
   wellnessImg,
@@ -29,7 +30,7 @@ export default function MakrineSection() {
       </div>
       <div className="my-20">
         <Image
-          src={makrineImg}
+          src={makrineImg6}
           alt="icon"
           width={1440}
           height={890}
