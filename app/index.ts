@@ -14,6 +14,13 @@ import {
   meetingImg4,
   meetingImg5,
   pabellonSuite,
+  roomImg2,
+  roomImg3,
+  roomImg4,
+  roomImg5,
+  roomImg6,
+  roomImg7,
+  roomImg8,
   sofa,
   standartKing,
   superiorDuplex,
@@ -393,5 +400,148 @@ export const blog: Blog[] = [
     title: "“Best Spa Experience In Georgia”",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+  },
+];
+
+type RoomsBook = {
+  id: number;
+  img: string;
+  title: string;
+  description: string;
+  humanIcon: string;
+  humanQuantity: number;
+  sofaIcon?: string;
+  sofaQuantity?: number;
+  bedIcon: string;
+  bedQuantity: number;
+  areaIcon: string;
+  area: number;
+  wifiIcon: string;
+  wifi: string;
+  bathIcon?: string;
+  bathQuantity?: number;
+  price: number;
+};
+
+export const roomsBook: RoomsBook[] = [
+  {
+    id: 1,
+    img: roomImg2,
+    title: "Standard Double Room Accessible",
+    description:
+      "A tender, thoughtfully crafted space where care and ease come together for guests with limited mobility.",
+    humanIcon: twoHuman,
+    humanQuantity: 2,
+    bedIcon: bed,
+    bedQuantity: 1,
+    areaIcon: areaIcon,
+    area: 26,
+    wifiIcon: wifi,
+    wifi: "Free wifi",
+    price: 155,
+  },
+  {
+    id: 2,
+    img: roomImg3,
+    title: "Iverisi Standard Room",
+    description:
+      "Standard Rooms are thoughtfully designed for comfort and convenience. Each features an elegant furnishing and a calming color palette.",
+    humanIcon: twoHuman,
+    humanQuantity: 2,
+    bedIcon: bed,
+    bedQuantity: 1,
+
+    areaIcon: areaIcon,
+    area: 26,
+    wifiIcon: wifi,
+    wifi: "Free wifi",
+    price: 155,
+  },
+  {
+    id: 3,
+    img: roomImg4,
+    title: "Rcheuli Standard Room",
+    description:
+      "Soak in the scenery and unwind in style from your spacious king-bed retreat.",
+    humanIcon: threeHuman,
+    humanQuantity: 3,
+    bedIcon: bed,
+    bedQuantity: 1,
+    sofaIcon: sofa,
+    sofaQuantity: 1,
+    areaIcon: areaIcon,
+    area: 55,
+    wifiIcon: wifi,
+    wifi: "Free wifi",
+    price: 155,
+  },
+  {
+    id: 4,
+    img: roomImg5,
+    title: "Rcheuli Standard Room with View",
+    description:
+      "An inviting space to relax. Recharge and soak in the beauty just beyond your window.",
+    humanIcon: twoHuman,
+    humanQuantity: 4,
+    bedIcon: bed,
+    bedQuantity: 1,
+    sofaIcon: sofa,
+    sofaQuantity: 1,
+
+    areaIcon: areaIcon,
+    area: 52,
+    wifiIcon: wifi,
+    wifi: "Free wifi",
+    price: 155,
+  },
+  {
+    id: 5,
+    img: roomImg6,
+    title: "Verde Duplex",
+    description:
+      "Designed over two levels, the lower floor offers a cozy living area with patio garden, cozy yet sophisticated ambiance, while upstairs, the sleeping area invites restful nights. ",
+    humanIcon: twoHuman,
+    humanQuantity: 4,
+    bedIcon: bed,
+    bedQuantity: 1,
+    areaIcon: areaIcon,
+    area: 55,
+    wifiIcon: wifi,
+    wifi: "Free wifi",
+    price: 155,
+  },
+  {
+    id: 6,
+    img: roomImg7,
+    title: "Gantiani Duplex",
+    description:
+      "Duplex spans two levels, offering a separate living area below and a tranquil sleeping space above. Ideal for guests seeking a little extra luxury, enjoying the bath and calm atmosphere.",
+    humanIcon: twoHuman,
+    humanQuantity: 4,
+    bedIcon: bed,
+    bedQuantity: 1,
+    bathIcon: bath,
+    bathQuantity: 1,
+    areaIcon: areaIcon,
+    area: 52,
+    wifiIcon: wifi,
+    wifi: "Free wifi",
+    price: 155,
+  },
+  {
+    id: 7,
+    img: roomImg8,
+    title: "Tsiagi Suite",
+    description:
+      "Our Suite is the pinnacle of comfort. The space creates a tranquil atmosphere ideal for relaxation and inspiration, perfect choice for guests who appreciate refined living.",
+    humanIcon: twoHuman,
+    humanQuantity: 4,
+    bedIcon: bed,
+    bedQuantity: 1,
+    areaIcon: areaIcon,
+    area: 52,
+    wifiIcon: wifi,
+    wifi: "Free wifi",
+    price: 155,
   },
 ];
