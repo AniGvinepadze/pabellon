@@ -5,7 +5,7 @@ import React from "react";
 export default function ContactInfo() {
   return (
     <div className="max-w-[1400px] w-full m-auto  text-black ">
-      <div className="max-w-[650px] w-full flex flex-col text-black font-mono-serif gap-6 max-400:gap-3 my-20">
+      <div className="max-w-[850px] w-full flex flex-col text-black font-mono-serif gap-6 max-400:gap-3 my-20">
         <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
           Checkout
         </h2>
