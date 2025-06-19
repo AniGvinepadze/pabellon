@@ -35,10 +35,12 @@ export default function Footer() {
       : whiteLogo;
 
   return (
+    <div className="max-w-[3600px] w-full "  style={{ backgroundColor: footerBackgroundColor }}>
     <div
-      className={`max-w-[1600px] w-full m-auto px-12 bg-footerBg bg-cover text-beige mt-20`}
+      className={`max-w-[1400px] w-full m-auto px-12 bg-footerBg bg-cover text-beige mt-20`}
       style={{ backgroundColor: footerBackgroundColor }}
     >
+      
       <div className="flex justify-between py-10">
         <div className="min-h-[300px] flex flex-col justify-between">
           <Image src={logoImage} alt="logo" width={300} height={120} />
@@ -84,6 +86,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
