@@ -63,6 +63,13 @@ import roomImg5 from "../public/assets/Frame 19.svg";
 import roomImg6 from "../public/assets/Frame 15.svg";
 import roomImg7 from "../public/assets/Frame 18.svg";
 import roomImg8 from "../public/assets/Frame 14.svg";
+import makrineLogo from "../public/assets/1 2.svg";
+import makrineImg from "../public/assets/Frame 7 (6).svg";
+import makrineImg2 from "../public/assets/Frame 4.svg";
+import makrineImg3 from "../public/assets/image (66).svg";
+import makrineImg4 from "../public/assets/image 634 (1).svg";
+import makrineImg5 from "../public/assets/image (67).svg";
+
 export {
   logoCol,
   logo,
@@ -129,4 +136,10 @@ export {
   roomImg6,
   roomImg7,
   roomImg8,
+  makrineImg,
+  makrineImg2,
+  makrineImg3,
+  makrineImg4,
+  makrineImg5,
+  makrineLogo,
 };
