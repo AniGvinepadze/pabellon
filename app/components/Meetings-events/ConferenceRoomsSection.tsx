@@ -60,7 +60,7 @@ export default function ConferenceRoomsSection() {
               alt="img"
               width={500}
               height={420}
-              className="max-h-[420px] object-cover max-w-[400px] w-full m-5"
+              className="max-h-[420px] object-cover max-w-[400px] w-full m-5 max-750:m-3 max-350:m-2"
             />
           </SwiperSlide>
           <SwiperSlide className="w-full">
@@ -78,7 +78,7 @@ export default function ConferenceRoomsSection() {
               alt="img"
               width={500}
               height={420}
-              className="max-h-[420px] object-cover max-w-[400px] w-full m-5"
+              className="max-h-[420px] object-cover max-w-[400px] w-full m-5  max-750:m-3  max-450:m-2 max-350:m-2"
             />
           </SwiperSlide>
           <SwiperSlide className="w-full">
@@ -96,10 +96,10 @@ export default function ConferenceRoomsSection() {
               alt="img"
               width={500}
               height={420}
-              className="max-h-[420px] object-cover max-w-[400px] w-full m-5"
+              className="max-h-[420px] object-cover max-w-[400px] w-full m-5  max-750:m-3  max-450:m-2 max-350:m-2"
             />
           </SwiperSlide>
-           <SwiperSlide className="w-full">
+          <SwiperSlide className="w-full">
             <Image
               src={meetingImg4}
               alt="img"
@@ -110,9 +110,7 @@ export default function ConferenceRoomsSection() {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div>
-   
-      </div>
+      <div></div>
     </div>
   );
 }
