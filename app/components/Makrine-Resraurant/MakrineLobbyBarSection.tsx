@@ -42,7 +42,7 @@ const MakrineLobbyBarSection = () => {
 
         <div className="flex justify-between mt-4 ">
           <button onClick={() => swiperRef.current?.swiper.slidePrev()}>
-            <Image src={prev} alt="prev" width={19} height={36} className=" absolute top-1/2" />
+            <Image src={prev} alt="prev" width={19} height={36} className="absolute top-1/2" />
           </button>
           <button onClick={() => swiperRef.current?.swiper.slideNext()}>
             <Image src={next} alt="next" width={19} height={36} className=" absolute top-1/2"/>
