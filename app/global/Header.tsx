@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import logo from "../../public/assets/logo.svg";
 import { navbar } from "..";
-import glovabIcon from "../../public/assets/image 2 (2).svg";
+import glovabIcon from "../../public/assets/Vector (10).svg";
 import Link from "next/link";
 import mobilemenu from "../../public/assets/Vector.svg";
 import MobileMenu from "./MobileMenu";
@@ -48,8 +48,8 @@ export default function Header() {
             <Image
               src={glovabIcon}
               alt="globalIcon "
-              width={43}
-              height={43}
+              width={24}
+              height={24}
               className="cursor-pointer mt-2"
             />
           </button>
