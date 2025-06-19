@@ -1,3 +1,4 @@
+import MakrineBarSection from '@/app/components/Makrine-Resraurant/MakrineBarSection'
 import MakrineRestaurantBookSection from '@/app/components/Makrine-Resraurant/MakrineRestaurantBookSection'
 import MakrinerestaurantSection from '@/app/components/Makrine-Resraurant/MakrineRestaurantSection'
 import MakrineSection from '@/app/components/Makrine-Resraurant/MakrineSection'
@@ -13,6 +14,7 @@ export default function page() {
         <div className=''>
         <MakrineSwiperSection/>
         <MakrinerestaurantSection/>
+        <MakrineBarSection/>
         </div>
         </div>
         </div>
