@@ -13,16 +13,16 @@ export default function HouseRulesSection() {
 
         <div className="w-full flex flex-col gap-4 my-10">
           <div className="max-w-[270px]">
-            <div className="flex justify-between max-w-[250x] w-full">
+            <div className="flex justify-between max-w-[250x] w-full gap-7">
               <p className="font-normal text-xl">Check-In</p>
               <p className="font-normal text-base">15:00</p>
             </div>
-            <div className="flex justify-between max-w-[250x] w-full my-2">
+            <div className="flex justify-between max-w-[250x] w-full my-2 gap-7">
               <p className="font-normal text-xl">Check-Out</p>
               <p className="font-normal text-base">12:00</p>
             </div>
           </div>
-          <div className="max-w-[640px] w-full flex justify-between my-8">
+          <div className="max-w-[640px] w-full flex justify-between my-8 gap-7 max-500:flex-col">
             <p className="font-normal text-xl">
               Payment and cancellation policy
             </p>
@@ -38,7 +38,7 @@ export default function HouseRulesSection() {
             </p>
           </div>
         </div>
-        <div className="max-w-[460px] w-full flex justify-between">
+        <div className="max-w-[460px] w-full flex justify-between gap-7 max-500:flex-col">
           <p className="font-normal text-xl">Additional Information</p>
           <div>
             <p className="font-normal text-base mb-3">
