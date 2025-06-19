@@ -55,7 +55,14 @@ import blogImg3 from "../public/assets/image (62).svg";
 import blogImg4 from "../public/assets/image (63).svg";
 import blogImg5 from "../public/assets/image (64).svg";
 import blogImg6 from "../public/assets/Frame 1.svg";
-
+import roomImg from "../public/assets/image (65).svg";
+import roomImg2 from "../public/assets/Frame 17.svg";
+import roomImg3 from "../public/assets/Frame 20.svg";
+import roomImg4 from "../public/assets/Frame 16.svg";
+import roomImg5 from "../public/assets/Frame 19.svg";
+import roomImg6 from "../public/assets/Frame 15.svg";
+import roomImg7 from "../public/assets/Frame 18.svg";
+import roomImg8 from "../public/assets/Frame 14.svg";
 export {
   logoCol,
   logo,
@@ -114,4 +121,12 @@ export {
   blogImg4,
   blogImg5,
   blogImg6,
+  roomImg,
+  roomImg2,
+  roomImg3,
+  roomImg4,
+  roomImg5,
+  roomImg6,
+  roomImg7,
+  roomImg8,
 };

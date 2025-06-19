@@ -28,6 +28,7 @@ export default function OurMissionSection() {
         <div className="max-w-[828px] w-full">
           <Image src={walnut2} alt="walnutImg" width={828} height={958} />
         </div>
+        
       </div>
       <div className="max-w-[824px] w-full m-auto flex flex-col justify-center my-10">
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px] my-8">
