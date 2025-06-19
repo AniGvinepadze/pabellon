@@ -72,6 +72,7 @@ import makrineImg5 from "../public/assets/image (67).svg";
 import makrineImg6 from "../public/assets/image (68).svg";
 import prev from "../public/assets/Group 24.svg";
 import next from "../public/assets/Group 16.svg";
+import chefImg from "../public/assets/image 36.svg"
 export {
   logoCol,
   logo,
@@ -147,4 +148,5 @@ export {
   makrineImg6,
   next,
   prev,
+  chefImg
 };

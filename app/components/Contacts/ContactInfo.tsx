@@ -1,4 +1,4 @@
-import { roomImg3, roomImg4 } from "@/app/assets";
+import { chefImg, roomImg3, roomImg4 } from "@/app/assets";
 import Image from "next/image";
 import React from "react";
 
@@ -65,58 +65,14 @@ export default function ContactInfo() {
             </div>
 
             <div className="max-w-[554px] w-full flex flex-col gap-6 items-center justify-center max-800:max-w-[720px] ">
-              <p>Where Hospitality Feels Like Home შესაცვლელია</p>
-              <div className="w-full  flex flex-col justify-center items-center p-6 border-white border shadow-md shadow-gray-500">
-                <Image src={roomImg4} alt="img" width={500} height={402} />
-                <div>
-                  <div className="flex gap-2 mt-2">
-                    <p className="text-[#979797] text-base font-medium my-1">
-                      Arrival
-                    </p>
-                    <p className="text-blase text-base font-normal mt-1">
-                      June 13 , 2025
-                    </p>
-                  </div>
-                  <div className="flex gap-2">
-                    <p className="text-[#979797] text-base font-medium ">
-                      Departure
-                    </p>
-                    <p className="text-blase text-base font-normal ">
-                      June 16 , 2025
-                    </p>
-                  </div>
-                </div>
-                <div className="w-full">
-                  <div className="w-full flex flex-col justify-center items-center my-7">
-                    <p className="font-bold text-3xl max-450:text-2xl">
-                      STANDARD KING
-                    </p>
-                    <div className="w-full h-[0.5px] bg-gray-400 my-5"></div>
-                  </div>
-                  <div className=" max-w-[600px] w-full flex items-center justify-between">
-                    <div>
-                      <p className="font-normal text-base">3 nights stay</p>
-                      <p className="font-normal text-base">taxes and fees</p>
-                    </div>
-                    <div>
-                      <p className="font-normal text-base">$450.00</p>
-                      <p className="font-normal text-base">$40.00</p>
-                    </div>
-                  </div>
-                  <div className="w-full flex justify-between my-5">
-                    <div>
-                      <p className="text-2xl font-semibold my-2 max-450:text-xl">
-                        TOTAL
-                      </p>
-                      <p className="text-sm font-medium">
-                        INCLUDING TAXES AND FEES
-                      </p>
-                    </div>
-                    <div className="text-[34px] font-semibold max-450:text-2xl max-450:mt-3">
-                      $490
-                    </div>
-                  </div>
-                </div>
+             
+              <div className="w-full  flex flex-col justify-center text-center gap-6 items-center p-6 border-white border shadow-md shadow-gray-500">
+                <Image src={chefImg} alt="img" width={528} height={528} />
+              <div className="w-full flex flex-col items-center justify-center p-6 gap-5">
+                <p className="italic font-normal text-[26px]">EXPERIENCES</p> 
+                <p className="text-base font-normal" >Hidden on the main floor of a building in Barcelona's Eixample, this small hotel is another layer of the city's history.</p>
+               <button className="bg-transparent border border-black flex flex-col justify-center items-center px-10 py-1 my-7">More Information</button>
+              </div>
               </div>
             </div>
           </div>
