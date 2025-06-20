@@ -18,6 +18,7 @@ export default function LanginPage() {
           transition={{ duration: 1.2 }}
         >
           <Image
+            priority={true}
             src={logo}
             alt="logo"
             width={340}

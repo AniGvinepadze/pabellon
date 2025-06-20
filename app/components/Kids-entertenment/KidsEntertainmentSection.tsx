@@ -29,6 +29,7 @@ export default function KidsEntertainmenttSection() {
 
       <div className="my-20">
         <Image
+          priority={true}
           src={kidsErImg}
           alt="icon"
           width={1540}
@@ -47,6 +48,7 @@ export default function KidsEntertainmenttSection() {
       <div className="flex justify-center w-full ">
         <div className="  grid grid-cols-4 gap-5 w-full my-8 max-750:my-0 max-800:grid-cols-2 ">
           <Image
+            priority={true}
             src={kidsErImg2}
             alt="icon"
             width={388}
@@ -54,6 +56,7 @@ export default function KidsEntertainmenttSection() {
             className="mt-7 max-800:max-w-[300px] w-full"
           />
           <Image
+            priority={true}
             src={kidsErImg3}
             alt="icon"
             width={388}
@@ -61,6 +64,7 @@ export default function KidsEntertainmenttSection() {
             className="max-800:max-w-[300px] max-800:max-h-[370px] max-800:mt-3 w-full"
           />{" "}
           <Image
+            priority={true}
             src={kidsErImg4}
             alt="icon"
             width={322}
@@ -68,6 +72,7 @@ export default function KidsEntertainmenttSection() {
             className="object-contain max-h-[400px] mt-3 w-full max-800:max-w-[300px]"
           />{" "}
           <Image
+            priority={true}
             src={kidsErImg5}
             alt="icon"
             width={388}

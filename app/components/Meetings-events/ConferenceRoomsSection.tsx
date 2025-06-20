@@ -39,7 +39,13 @@ export default function ConferenceRoomsSection() {
       </div>
 
       <div className=" my-20 flex flex-col gap-14 justify-center items-center">
-        <Image src={meetingImg1} alt="meetingImg" width={1420} height={877} />
+        <Image
+          priority={true}
+          src={meetingImg1}
+          alt="meetingImg"
+          width={1420}
+          height={877}
+        />
       </div>
       <div className=" w-full">
         <Swiper
@@ -56,6 +62,7 @@ export default function ConferenceRoomsSection() {
         >
           <SwiperSlide className="w-full">
             <Image
+              priority={true}
               src={meetingImg3}
               alt="img"
               width={500}
@@ -65,6 +72,7 @@ export default function ConferenceRoomsSection() {
           </SwiperSlide>
           <SwiperSlide className="w-full">
             <Image
+              priority={true}
               src={meetingImg4}
               alt="img"
               width={500}
@@ -74,6 +82,7 @@ export default function ConferenceRoomsSection() {
           </SwiperSlide>
           <SwiperSlide className="w-full">
             <Image
+              priority={true}
               src={meetingImg3}
               alt="img"
               width={500}
@@ -83,6 +92,7 @@ export default function ConferenceRoomsSection() {
           </SwiperSlide>
           <SwiperSlide className="w-full">
             <Image
+              priority={true}
               src={meetingImg4}
               alt="img"
               width={500}
@@ -92,6 +102,7 @@ export default function ConferenceRoomsSection() {
           </SwiperSlide>
           <SwiperSlide className="w-full">
             <Image
+              priority={true}
               src={meetingImg3}
               alt="img"
               width={500}
@@ -101,6 +112,7 @@ export default function ConferenceRoomsSection() {
           </SwiperSlide>
           <SwiperSlide className="w-full">
             <Image
+              priority={true}
               src={meetingImg4}
               alt="img"
               width={500}

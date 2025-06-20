@@ -28,6 +28,7 @@ export default function PoolSection() {
       </div>
       <div className="my-20">
         <Image
+          priority={true}
           src={wellnessImg4}
           alt="icon"
           width={1540}
@@ -49,6 +50,7 @@ export default function PoolSection() {
         <div className="max-w-[700px] w-full flex flex-col justify-center items-center ">
           <div className="max-w-[470px] w-full max-h-[500px] flex flex-col justify-center items-center text-center max-1200:mt-9 max-750:max-w-[1000px]">
             <Image
+              priority={true}
               src={wellnessImg5}
               alt="img"
               width={469}
@@ -65,6 +67,7 @@ export default function PoolSection() {
         </div>
         <div className="max-w-[700px] w-full">
           <Image
+            priority={true}
             src={wellnessImg6}
             alt="img"
             width={700}
@@ -76,6 +79,7 @@ export default function PoolSection() {
 
       <div className="w-full m-auto my-10">
         <Image
+          priority={true}
           src={wellnessImg7}
           alt="wellness"
           width={1170}

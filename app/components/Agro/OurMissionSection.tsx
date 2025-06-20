@@ -26,9 +26,14 @@ export default function OurMissionSection() {
           </p>
         </div>
         <div className="max-w-[828px] w-full">
-          <Image src={walnut2} alt="walnutImg" width={828} height={958} />
+          <Image
+            priority={true}
+            src={walnut2}
+            alt="walnutImg"
+            width={828}
+            height={958}
+          />
         </div>
-        
       </div>
       <div className="max-w-[824px] w-full m-auto flex flex-col justify-center my-10">
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px] my-8">
@@ -43,6 +48,7 @@ export default function OurMissionSection() {
       <div className="flex justify-center w-full my-10 ">
         <div className="  grid grid-cols-4 gap-5 w-full my-8 max-750:my-0 max-800:grid-cols-2 ">
           <Image
+            priority={true}
             src={agroImg2}
             alt="icon"
             width={388}
@@ -50,6 +56,7 @@ export default function OurMissionSection() {
             className="max-800:max-w-[300px] max-800:max-h-[370px] max-800:mt-3 w-full"
           />{" "}
           <Image
+            priority={true}
             src={agroImg3}
             alt="icon"
             width={300}
@@ -57,6 +64,7 @@ export default function OurMissionSection() {
             className="object-contain max-h-[450px] max-w-[306px] w-full mt-5 max-800:max-w-[300px] max-1000:mt-0 max-650:mt-2 max-600:mt-5"
           />{" "}
           <Image
+            priority={true}
             src={agroImg4}
             alt="icon"
             width={300}
@@ -64,6 +72,7 @@ export default function OurMissionSection() {
             className="max-800:max-w-[300px]w-[300px] w-[300px] mt-5  max-800:max-h-[380px] max-1000:mt-0"
           />
           <Image
+            priority={true}
             src={agroImg5}
             alt="icon"
             width={388}

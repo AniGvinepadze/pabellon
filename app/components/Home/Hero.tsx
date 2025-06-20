@@ -6,6 +6,7 @@ export default function Hero() {
   return (
     <div className="max-w-[1300px] w-full m-auto ">
       <Image
+        priority={true}
         src={hero}
         alt="hero"
         width={1600}

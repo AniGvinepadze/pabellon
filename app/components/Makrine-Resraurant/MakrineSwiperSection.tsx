@@ -26,30 +26,66 @@ export default function MakrineSwiperSection() {
           className=" w-full flex "
         >
           <SwiperSlide className="w-full">
-            <Image src={makrineImg} alt="img" width={615} height={760} />
+            <Image
+              priority={true}
+              src={makrineImg}
+              alt="img"
+              width={615}
+              height={760}
+            />
           </SwiperSlide>
           <SwiperSlide className="w-full">
-            <Image src={makrineImg2} alt="img" width={615} height={760} />
+            <Image
+              priority={true}
+              src={makrineImg2}
+              alt="img"
+              width={615}
+              height={760}
+            />
           </SwiperSlide>
           <SwiperSlide className="w-full">
-            <Image src={makrineImg} alt="img" width={615} height={760} />
+            <Image
+              priority={true}
+              src={makrineImg}
+              alt="img"
+              width={615}
+              height={760}
+            />
           </SwiperSlide>
           <SwiperSlide className="w-full">
-            <Image src={makrineImg2} alt="img" width={615} height={760} />
+            <Image
+              priority={true}
+              src={makrineImg2}
+              alt="img"
+              width={615}
+              height={760}
+            />
           </SwiperSlide>
           <SwiperSlide className="w-full">
-            <Image src={makrineImg} alt="img" width={615} height={760} />
+            <Image
+              priority={true}
+              src={makrineImg}
+              alt="img"
+              width={615}
+              height={760}
+            />
           </SwiperSlide>
           <SwiperSlide className="w-full">
-            <Image src={makrineImg2} alt="img" width={615} height={760} />
+            <Image
+              priority={true}
+              src={makrineImg2}
+              alt="img"
+              width={615}
+              height={760}
+            />
           </SwiperSlide>
         </Swiper>
       </div>
       {/* <div className="grid grid-cols-4 gap-5">
-        <Image src={makrineImg} alt="img" width={615} height={760} />
-        <Image src={makrineImg2} alt="img" width={615} height={760} />{" "}
-        <Image src={makrineImg} alt="img" width={615} height={760} />
-        <Image src={makrineImg2} alt="img" width={615} height={760} />
+        <Image priority={true} src={makrineImg} alt="img" width={615} height={760} />
+        <Image priority={true} src={makrineImg2} alt="img" width={615} height={760} />{" "}
+        <Image priority={true} src={makrineImg} alt="img" width={615} height={760} />
+        <Image priority={true} src={makrineImg2} alt="img" width={615} height={760} />
       </div> */}
     </div>
   );

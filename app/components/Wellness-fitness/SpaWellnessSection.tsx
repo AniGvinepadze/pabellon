@@ -20,6 +20,7 @@ export default function SpaWellnessSection() {
         <div className="max-w-[700px] w-full flex flex-col justify-center items-center ">
           <div className="max-w-[470px] w-full max-h-[500px] flex flex-col justify-center items-center text-center max-1200:mt-9 max-750:max-w-[1000px]">
             <Image
+              priority={true}
               src={wellnessImg2}
               alt="img"
               width={469}
@@ -35,6 +36,7 @@ export default function SpaWellnessSection() {
         </div>
         <div className="max-w-[700px] w-full">
           <Image
+            priority={true}
             src={wellnessImg1}
             alt="img"
             width={700}
@@ -46,7 +48,13 @@ export default function SpaWellnessSection() {
 
       <div className="w-full flex justify-between gap-5 my-10  max-750:flex-col-reverse">
         <div className="max-w-[800px] w-full m-auto">
-          <Image src={wellnessImg3} alt="wellness" width={800} height={500} />
+          <Image
+            priority={true}
+            src={wellnessImg3}
+            alt="wellness"
+            width={800}
+            height={500}
+          />
         </div>
         <div className="max-w-[800px] w-full flex flex-col justify-center items-center text-center">
           <div className="max-w-[450px] w-full ">

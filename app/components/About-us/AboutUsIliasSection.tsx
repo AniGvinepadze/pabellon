@@ -18,7 +18,13 @@ export default function AboutUsIliasSection() {
           whites, each bottle tells a story of local passion, sustainable
           practices and winemaking traditions.
         </p>
-        <Image src={iliaLake} alt="ilialake" width={978} height={992} />
+        <Image
+          priority={true}
+          src={iliaLake}
+          alt="ilialake"
+          width={978}
+          height={992}
+        />
       </div>
       <div className="flex flex-col gap-24 justify-center mt-16 max-450:gap-12">
         <p className="font-light text-[17px] max-500:text-[15px]">
@@ -37,7 +43,13 @@ export default function AboutUsIliasSection() {
           unforgettable experiences meet.
         </p>
         <div className="flex justify-center">
-          <Image src={inscription} alt="ilialake" width={660} height={178} />
+          <Image
+            priority={true}
+            src={inscription}
+            alt="ilialake"
+            width={660}
+            height={178}
+          />
         </div>
         <p className="font-light text-[17px] max-500:text-[15px]">
           And Makrine, Aunt - who raised him as her own child, is someone who

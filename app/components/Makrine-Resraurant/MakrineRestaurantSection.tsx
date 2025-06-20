@@ -34,12 +34,20 @@ export default function MakrinerestaurantSection() {
           innovation meets identity.
         </p>
         <p className="text-[17px] font-light  max-600:text-[15px] max-400:text-[13px]">
-       Step into our restaurant and discover the soul of Georgian hospitality. This is a place, where tradition lives on - not just in the recipes, but in the way we welcome you.
+          Step into our restaurant and discover the soul of Georgian
+          hospitality. This is a place, where tradition lives on - not just in
+          the recipes, but in the way we welcome you.
         </p>
       </div>
 
       <div className=" my-20 flex flex-col gap-14 justify-center items-center">
-        <Image src={makrineImg3} alt="meetingImg" width={1420} height={877} />
+        <Image
+          priority={true}
+          src={makrineImg3}
+          alt="meetingImg"
+          width={1420}
+          height={877}
+        />
       </div>
 
       <div></div>

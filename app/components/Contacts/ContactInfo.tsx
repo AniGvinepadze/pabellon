@@ -67,7 +67,13 @@ export default function ContactInfo() {
 
           <div className="max-w-[554px] w-full flex flex-col gap-6 items-center justify-center max-800:max-w-[720px] ">
             <div className="w-full  flex flex-col justify-center text-center gap-6 items-center p-6 border-white border shadow-md shadow-gray-500">
-              <Image src={chefImg} alt="img" width={528} height={528} />
+              <Image
+                priority={true}
+                src={chefImg}
+                alt="img"
+                width={528}
+                height={528}
+              />
               <div className="w-full flex flex-col items-center justify-center p-6 gap-5">
                 <p className="italic font-normal text-[26px]">EXPERIENCES</p>
                 <p className="text-base font-normal">

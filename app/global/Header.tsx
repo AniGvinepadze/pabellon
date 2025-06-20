@@ -57,6 +57,7 @@ export default function Header() {
         className="hover:scale-110 transition-all ease-in-out duration-300"
       >
         <Image
+          priority={true}
           src={logoSrc}
           alt="logo"
           width={300}

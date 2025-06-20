@@ -120,6 +120,7 @@ export default function MobileMenu({
                 <div className="relative w-fit -ml-4">
                   <button onClick={() => setPopup((prev) => !prev)}>
                     <Image
+                      priority={true}
                       src={globalIcon}
                       alt="globalIcon"
                       width={24}

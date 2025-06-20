@@ -24,6 +24,7 @@ export default function MakrineBarSection() {
         </div>
         <div className="max-w-[650px] w-full flex justify-center item-center  ">
           <Image
+            priority={true}
             src={makrineImg4}
             alt="barImg"
             width={660}

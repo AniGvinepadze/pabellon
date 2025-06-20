@@ -14,7 +14,7 @@ export default function BlogSection() {
         <div className="w-full grid grid-cols-3 gap-10 max-900:grid-cols-2 max-600:grid-cols-1">
           {blog.map((e) => (
             <div key={e.id} className=" flex flex-col gap-10 ">
-              <Image src={e.img} alt="blogImg" />
+              <Image priority={true} src={e.img} alt="blogImg" />
               <div>
                 <p className="text-xl font-normal my-1">{e.title}</p>
                 <p className="text-base font-light">{e.description}</p>

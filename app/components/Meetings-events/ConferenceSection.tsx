@@ -25,6 +25,7 @@ export default function ConferenceSection() {
       </div>
       <div className="my-20">
         <Image
+          priority={true}
           src={meetingImg}
           alt="icon"
           width={1540}

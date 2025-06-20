@@ -22,6 +22,7 @@ export default function AboutUsaSection() {
       </div>
       <div className="my-20">
         <Image
+          priority={true}
           src={pabellonSvg2}
           alt="icon"
           width={1540}

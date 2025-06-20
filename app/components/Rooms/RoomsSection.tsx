@@ -20,7 +20,13 @@ export default function RoomsSection() {
       </div>
 
       <div className=" mt-20 flex flex-col gap-14 justify-center items-center ">
-        <Image src={roomImg} alt="meetingImg" width={1420} height={877} />
+        <Image
+          priority={true}
+          src={roomImg}
+          alt="meetingImg"
+          width={1420}
+          height={877}
+        />
       </div>
     </div>
   );

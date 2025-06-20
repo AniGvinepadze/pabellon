@@ -24,28 +24,72 @@ const MakrineLobbyBarSection = () => {
           className="max-w-[1200px] w-full flex items-center justify-center"
         >
           <SwiperSlide>
-            <Image src={makrineImg5} alt="makrine" width={1200} height={750} />
+            <Image
+              priority={true}
+              src={makrineImg5}
+              alt="makrine"
+              width={1200}
+              height={750}
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={makrineImg5} alt="makrine" width={1200} height={750} />
+            <Image
+              priority={true}
+              src={makrineImg5}
+              alt="makrine"
+              width={1200}
+              height={750}
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={makrineImg5} alt="makrine" width={1200} height={750} />
+            <Image
+              priority={true}
+              src={makrineImg5}
+              alt="makrine"
+              width={1200}
+              height={750}
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={makrineImg5} alt="makrine" width={1200} height={750} />
+            <Image
+              priority={true}
+              src={makrineImg5}
+              alt="makrine"
+              width={1200}
+              height={750}
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={makrineImg5} alt="makrine" width={1200} height={750} />
+            <Image
+              priority={true}
+              src={makrineImg5}
+              alt="makrine"
+              width={1200}
+              height={750}
+            />
           </SwiperSlide>
         </Swiper>
 
         <div className="flex justify-between mt-4 ">
           <button onClick={() => swiperRef.current?.swiper.slidePrev()}>
-            <Image src={prev} alt="prev" width={19} height={36} className="absolute top-1/2" />
+            <Image
+              priority={true}
+              src={prev}
+              alt="prev"
+              width={19}
+              height={36}
+              className="absolute top-1/2"
+            />
           </button>
           <button onClick={() => swiperRef.current?.swiper.slideNext()}>
-            <Image src={next} alt="next" width={19} height={36} className=" absolute top-1/2"/>
+            <Image
+              priority={true}
+              src={next}
+              alt="next"
+              width={19}
+              height={36}
+              className=" absolute top-1/2"
+            />
           </button>
         </div>
       </div>

@@ -21,6 +21,7 @@ export default function RestaurantSection() {
       </div>
       <div className="my-20">
         <Image
+          priority={true}
           src={resImg}
           alt="icon"
           width={1540}

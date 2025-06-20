@@ -21,8 +21,20 @@ export default function MeetingSection() {
       </div>
 
       <div className=" my-20 flex flex-col gap-14 justify-center items-center">
-        <Image src={meetingImg} alt="meetingImg" width={1420} height={877} />
-        <Image src={artWork} alt="artwork" width={1011} height={675} />
+        <Image
+          priority={true}
+          src={meetingImg}
+          alt="meetingImg"
+          width={1420}
+          height={877}
+        />
+        <Image
+          priority={true}
+          src={artWork}
+          alt="artwork"
+          width={1011}
+          height={675}
+        />
       </div>
     </div>
   );

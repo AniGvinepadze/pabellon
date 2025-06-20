@@ -7,6 +7,7 @@ export default function PabellonSection() {
     <div className="w-full max-w-[1300px] m-auto flex flex-col  items-center my-10 p-4 ">
       <div className="max-w-[990px] w-full flex flex-col items-center justify-center text-center gap-7 ">
         <Image
+          priority={true}
           src={logoCol}
           alt="logo"
           width={247}
@@ -27,6 +28,7 @@ export default function PabellonSection() {
 
       <div className="my-20">
         <Image
+          priority={true}
           src={pabellonSvg}
           alt="icon"
           width={1540}

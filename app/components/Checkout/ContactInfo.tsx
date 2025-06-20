@@ -74,7 +74,13 @@ export default function ContactInfo() {
           <div className="max-w-[554px] w-full flex flex-col gap-6 items-center justify-center max-800:max-w-[720px] custom-font">
             <p>Where Hospitality Feels Like Home</p>
             <div className="w-full  flex flex-col justify-center items-center p-6 border-white border shadow-md shadow-gray-500">
-              <Image src={roomImg4} alt="img" width={500} height={402} />
+              <Image
+                priority={true}
+                src={roomImg4}
+                alt="img"
+                width={500}
+                height={402}
+              />
               <div>
                 <div className="flex gap-2 mt-2">
                   <p className="text-[#979797] text-base font-medium my-1">

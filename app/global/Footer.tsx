@@ -44,7 +44,13 @@ export default function Footer() {
       >
         <div className="flex justify-between py-10 w-full">
           <div className="min-h-[300px] flex flex-col justify-between gap-10">
-            <Image src={logoImage} alt="logo" width={300} height={120} />
+            <Image
+              priority={true}
+              src={logoImage}
+              alt="logo"
+              width={300}
+              height={120}
+            />
             <div className="max-w-[240px] w-full justify-between mt-10 hidden max-650:flex max-650:mt-0">
               <div className="flex flex-col gap-3">
                 {footerNavbar.map((e) =>
@@ -92,7 +98,13 @@ export default function Footer() {
               </p>
             </div>
             <div className="hidden max-650:flex">
-              <Image src={glovabIcon} alt="icon" width={24} height={24} />
+              <Image
+                priority={true}
+                src={glovabIcon}
+                alt="icon"
+                width={24}
+                height={24}
+              />
             </div>
           </div>
 
@@ -133,7 +145,13 @@ export default function Footer() {
                 ))}
               </div>
               <div className="flex justify-end">
-                <Image src={glovabIcon} alt="icon" width={24} height={24} />
+                <Image
+                  priority={true}
+                  src={glovabIcon}
+                  alt="icon"
+                  width={24}
+                  height={24}
+                />
               </div>
             </div>
           </div>

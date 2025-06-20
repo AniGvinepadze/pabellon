@@ -20,6 +20,7 @@ export default function WellnessSection() {
       </div>
       <div className="my-20">
         <Image
+          priority={true}
           src={wellnessImg}
           alt="icon"
           width={1540}

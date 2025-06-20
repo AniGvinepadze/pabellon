@@ -5,7 +5,7 @@ import React from "react";
 
 export default function RoomsSection() {
   return (
-    <div className="max-w-[1300px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
+    <div className="max-w-[1400px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
       <div className="w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-400:gap-3">
         <h2 className="font-semibold text-[40px] italic max-600:text-[32px] max-400:text-[26px]">
           Rooms
@@ -28,6 +28,7 @@ export default function RoomsSection() {
           >
             <div className="">
               <Image
+                priority={true}
                 src={e.img}
                 alt={e.title}
                 width={680}
@@ -44,13 +45,25 @@ export default function RoomsSection() {
             <div className="flex flex-col mt-auto ">
               <div className="w-full flex gap-[9px] max-1350:flex-wrap my-4 ">
                 <div className="flex gap-1">
-                  <Image src={e.humanIcon} alt="icon" width={35} height={20} />
+                  <Image
+                    priority={true}
+                    src={e.humanIcon}
+                    alt="icon"
+                    width={35}
+                    height={20}
+                  />
                   <p className="font-medium text-sm mt-[1px]">
                     {e.humanQuantity}
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <Image src={e.bedIcon} alt="icon" width={25} height={20} />
+                  <Image
+                    priority={true}
+                    src={e.bedIcon}
+                    alt="icon"
+                    width={25}
+                    height={20}
+                  />
                   <p className="font-medium text-sm mt-[1px]">
                     {e.bedQuantity}
                   </p>
@@ -58,6 +71,7 @@ export default function RoomsSection() {
                 <div className="flex gap-2">
                   {e.sofaIcon || e.bathIcon ? (
                     <Image
+                      priority={true}
                       src={e.sofaIcon || e.bathIcon || ""}
                       alt="icon"
                       width={25}
@@ -73,12 +87,24 @@ export default function RoomsSection() {
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <Image src={e.areaIcon} alt="icon" width={20} height={20} />
+                  <Image
+                    priority={true}
+                    src={e.areaIcon}
+                    alt="icon"
+                    width={20}
+                    height={20}
+                  />
                   <p className="font-medium text-sm mt-[1px]">{e.area}m </p>
                   <p className="text-xs -mx-[7px] ">2</p>
                 </div>
                 <div className="flex gap-2 mx-2">
-                  <Image src={e.wifiIcon} alt="icon" width={25} height={10} />
+                  <Image
+                    priority={true}
+                    src={e.wifiIcon}
+                    alt="icon"
+                    width={25}
+                    height={10}
+                  />
                   <p className="font-medium text-sm mt-[1px]">{e.wifi}</p>
                 </div>
               </div>
