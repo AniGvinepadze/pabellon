@@ -1,32 +1,63 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
-import logo from "../../public/assets/logo.svg";
+import React, { useState, useEffect } from "react";
 import { navbar } from "..";
+import whiteglovabIcon from "../../public/assets/Vector (9).svg";
 import glovabIcon from "../../public/assets/Vector (10).svg";
 import Link from "next/link";
 import mobilemenu from "../../public/assets/Vector.svg";
 import MobileMenu from "./MobileMenu";
+import { logo, whiteLogo } from "../assets";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [popup, setPopup] = useState<boolean>(false);
+  const [bgColor, setBgColor] = useState<string>("bg-beige");
+  const [logoSrc, setLogoSrc] = useState<string>(logo);
+  const [textColor, setTextColor] = useState<string>("text-beige");
+  const [globalSrc, setGlobalSrc] = useState<any>(glovabIcon);
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setBgColor("bg-secondaryTextColor");
+      setLogoSrc(whiteLogo);
+      setGlobalSrc(whiteglovabIcon);
+      setTextColor("text-beige");
+    } else {
+      setBgColor("bg-beige");
+      setLogoSrc(logo);
+      setGlobalSrc(glovabIcon);
+      setTextColor("text-black");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="max-w-[1600px] sticky top-0 z-50 bg-beige w-full m-auto p-3 flex justify-between items-center max-1000:gap-10  ">
+    <div
+      className={`max-w-[1600px] sticky top-0 z-50 w-full m-auto p-3 flex justify-between items-center max-1000:gap-10 ${bgColor} transition-all ease-in-out duration-500`}
+    >
       <Link
         href="/home"
         className="hover:scale-110 transition-all ease-in-out duration-300"
       >
         <Image
-          src={logo}
+          src={logoSrc}
           alt="logo"
           width={300}
           height={90}
-          className="max-w-[300px] w-full object-contain max-700:max-w-[220px] bg-beige"
+          className="max-w-[300px] w-full object-contain max-700:max-w-[220px] bg-transparent transition-all ease-in-out duration-500"
         />
       </Link>
-      <div className="flex gap-6  mt-1 max-w-[1300px] w-full max-1100:hidden">
+      <div
+        className={`flex gap-6 mt-1 max-w-[1300px] w-full max-1100:hidden ${textColor} transition-all duration-500 ease-in-out`}
+      >
         <div className="flex gap-7 w-full justify-end items-center mt-4">
           {navbar.map((e) => (
             <Link
@@ -35,7 +66,7 @@ export default function Header() {
               className="max-w-[1000px]  hover:scale-110 transition-all ease-in-out duration-300"
             >
               <p className="text-xl font-medium max-1250:text-lg max-1150:text-base">
-                {e.title}{" "}
+                {e.title}
               </p>
             </Link>
           ))}
@@ -46,11 +77,11 @@ export default function Header() {
             onClick={() => setPopup((prev) => !prev)}
           >
             <Image
-              src={glovabIcon}
+              src={globalSrc}
               alt="globalIcon "
               width={24}
               height={24}
-              className="cursor-pointer mt-2"
+              className="cursor-pointer mt-2 transition-all duration-500 ease-in-out"
             />
           </button>
           {popup && (
