@@ -47,8 +47,8 @@ export default function Footer() {
             <Image src={logoImage} alt="logo" width={300} height={120} />
             <div className="max-w-[240px] w-full justify-between mt-10 hidden max-650:flex max-650:mt-0">
               <div className="flex flex-col gap-3">
-                {footerNavbar.map((e) => (
-                  e.route ? ( 
+                {footerNavbar.map((e) =>
+                  e.route ? (
                     <Link
                       key={e.id}
                       href={e.route}
@@ -63,10 +63,10 @@ export default function Footer() {
                       className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300"
                       style={{ color: textColor }}
                     >
-                      {e.title} {/* Render as text if no route */}
+                      {e.title}
                     </span>
                   )
-                ))}
+                )}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-col gap-3">
@@ -91,15 +91,15 @@ export default function Footer() {
                 Phone Number: (+995) 35 2 200200
               </p>
             </div>
-            <div className="">
-              <Image src={glovabIcon} alt="icon" width={34} height={34} />
+            <div className="hidden max-650:flex">
+              <Image src={glovabIcon} alt="icon" width={24} height={24} />
             </div>
           </div>
 
           <div className="max-w-[240px] w-full flex justify-between mt-10 max-650:hidden">
             <div className="flex flex-col gap-3">
-              {footerNavbar.map((e) => (
-                e.route ? ( 
+              {footerNavbar.map((e) =>
+                e.route ? (
                   <Link
                     key={e.id}
                     href={e.route}
@@ -114,10 +114,10 @@ export default function Footer() {
                     className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300"
                     style={{ color: textColor }}
                   >
-                    {e.title} 
+                    {e.title}
                   </span>
                 )
-              ))}
+              )}
             </div>
             <div className="flex flex-col justify-between">
               <div className="flex flex-col gap-3">
@@ -133,7 +133,7 @@ export default function Footer() {
                 ))}
               </div>
               <div className="flex justify-end">
-                <Image src={glovabIcon} alt="icon" width={34} height={34} />
+                <Image src={glovabIcon} alt="icon" width={24} height={24} />
               </div>
             </div>
           </div>
