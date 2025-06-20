@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import globalIcon from "../../public/assets/Vector (10).svg";
+import whiteglovabIcon from "../../public/assets/Vector (9).svg";
+import glovabIcon from "../../public/assets/Vector (10).svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { navbar } from "..";
 
@@ -18,34 +20,105 @@ export default function MobileMenu({
   popup,
   setPopup,
 }: MobileMenuProps) {
+  const [bgColor, setBgColor] = useState<string>("bg-beige");
+  const [textColor, setTextColor] = useState<string>("text-beige");
+  const [globalSrc, setGlobalSrc] = useState<any>(glovabIcon);
+  const [showNewPopup, setShowNewPopup] = useState<boolean>(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setBgColor("bg-secondaryTextColor");
+      setGlobalSrc(whiteglovabIcon);
+      setTextColor("text-beige");
+    } else {
+      setBgColor("bg-beige");
+      setGlobalSrc(glovabIcon);
+      setTextColor("text-black");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleItem2Click = (route: string | undefined) => {
+    if (!route) {
+      setShowNewPopup((prev) => !prev);
+    } else {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed top-20 left-0 right-0 z-50  max-1100:block hidden bg-beige"
+          className={`fixed top-32 left-0 right-0 z-50 max-1100:block hidden ${bgColor}`}
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 2 }}
           exit={{ y: -40, opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
-          <div className="w-full shadow-md  p-4 max-350:p-2">
+          <div className="w-full shadow-md p-4 max-350:p-2">
             <div className="flex flex-col justify-between h-full text-black">
-              <div className="flex flex-col gap-5 px-7 py-3 max-400:gap-2">
-                {navbar.map((item) => (
-                  <Link
-                    key={item.id}
-                    href={item?.route || "#"}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <p className="text-lg hover:text-[19px] font-medium transition-all duration-300  ease-in-out max-300:text-base">
-                      {item.title}
+              <div
+                className={`flex flex-col gap-5 px-7 py-3 max-400:gap-2 ${textColor}`}
+              >
+                {navbar.map((e) =>
+                  e.route ? (
+                    <Link
+                      key={e.id}
+                      href={e.route}
+                      className="max-w-[1000px]   relative"
+                    >
+                      <p className="text-xl hover:text-[21px] transition-all ease-in-out duration-300 font-medium max-1250:text-lg max-1150:text-base ">
+                        {e.title}
+                      </p>
+                    </Link>
+                  ) : (
+                    <p
+                      key={e.id}
+                      onClick={() => handleItem2Click(e.route)}
+                      className="relative"
+                    >
+                      {e.title}
                     </p>
-                    <div className="hover:scale-110 transition-all ease-in-out duration-300 mt-4">
-                      {" "}
-                    </div>
-                  </Link>
-                ))}
-
+                  )
+                )}
+                {showNewPopup && (
+                  <div
+                    className={`absolute max-w-[300px]  mt-56 ${bgColor} ${textColor}  p-4 shadow-md flex flex-col `}
+                  >
+                    <Link
+                      href={"/makrine-restaurant"}
+                      className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+                    >
+                      Bars & Restaurants
+                    </Link>
+                    <Link
+                      href={"/meetings-events"}
+                      className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+                    >
+                      Meetings & Events
+                    </Link>
+                    <Link
+                      href={"/wellness-fitness"}
+                      className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+                    >
+                      Spa & Wellness
+                    </Link>
+                    <Link
+                      href={"/kids-entertainment"}
+                      className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+                    >
+                      Kids Entertainment
+                    </Link>
+                  </div>
+                )}
                 <div className="relative w-fit -ml-4">
                   <button onClick={() => setPopup((prev) => !prev)}>
                     <Image
