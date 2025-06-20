@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import globalIcon from "../../public/assets/Vector (10).svg";
 import whiteglovabIcon from "../../public/assets/Vector (9).svg";
 import glovabIcon from "../../public/assets/Vector (10).svg";
 import { AnimatePresence, motion } from "framer-motion";
@@ -57,7 +56,7 @@ export default function MobileMenu({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className={`fixed top-32 left-0 right-0 z-50 max-1100:block hidden ${bgColor}`}
+          className={`fixed top-32 left-0 right-0 z-50 max-1100:block hidden max-700:top-20 ${bgColor}`}
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 2 }}
           exit={{ y: -40, opacity: 0 }}
@@ -121,7 +120,7 @@ export default function MobileMenu({
                   <button onClick={() => setPopup((prev) => !prev)}>
                     <Image
                       priority={true}
-                      src={globalIcon}
+                      src={globalSrc}
                       alt="globalIcon"
                       width={24}
                       height={24}

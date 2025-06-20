@@ -7,6 +7,7 @@ import glovabIcon from "../../public/assets/Vector (10).svg";
 import Link from "next/link";
 import mobilemenu from "../../public/assets/Vector.svg";
 import MobileMenu from "./MobileMenu";
+import whiteMobileMenu from "../../public/assets/burgerwhite.svg";
 import { logo, whiteLogo } from "../assets";
 
 export default function Header() {
@@ -17,17 +18,19 @@ export default function Header() {
   const [textColor, setTextColor] = useState<string>("text-beige");
   const [globalSrc, setGlobalSrc] = useState<any>(glovabIcon);
   const [showNewPopup, setShowNewPopup] = useState<boolean>(false);
-
+  const [menuSrc, setMenuSrc] = useState<any>(mobilemenu);
   const handleScroll = () => {
     if (window.scrollY > 50) {
       setBgColor("bg-secondaryTextColor");
       setLogoSrc(whiteLogo);
       setGlobalSrc(whiteglovabIcon);
+      setMenuSrc(whiteMobileMenu);
       setTextColor("text-beige");
     } else {
       setBgColor("bg-beige");
       setLogoSrc(logo);
       setGlobalSrc(glovabIcon);
+      setMenuSrc(mobilemenu);
       setTextColor("text-black");
     }
   };
@@ -153,7 +156,7 @@ export default function Header() {
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <Image
-          src={mobilemenu}
+          src={menuSrc}
           alt="mobilemenu"
           width={35}
           height={35}
