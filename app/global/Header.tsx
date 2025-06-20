@@ -42,7 +42,7 @@ export default function Header() {
 
   const handleItemClick = (route: string | undefined) => {
     if (!route) {
-      setShowNewPopup(true);
+      setShowNewPopup((prev) => !prev);
     } else {
       setIsOpen(false);
     }

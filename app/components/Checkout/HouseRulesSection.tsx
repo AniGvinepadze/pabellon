@@ -2,7 +2,7 @@ import React from "react";
 
 export default function HouseRulesSection() {
   return (
-    <div className="max-w-[1400px] w-full m-auto  text-black ">
+    <div className="max-w-[1300px] w-full m-auto  text-black ">
       <div className="max-w-[850px] w-full flex flex-col text-black font-mono-serif gap-6 max-400:gap-3 my-28 max-450:mt-44 ">
         <h2
           className="text-[26px] font-medium max-450:text-2xl

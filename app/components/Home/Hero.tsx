@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="w-full  ">
+    <div className="max-w-[1300px] w-full m-auto ">
       <Image
         src={hero}
         alt="hero"

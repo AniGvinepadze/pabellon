@@ -51,9 +51,9 @@ export default function MobileMenu({
                     <Image
                       src={globalIcon}
                       alt="globalIcon"
-                      width={43}
-                      height={43}
-                      className="cursor-pointer hover:w-[50px] transition-all ease-in-out duration-300"
+                      width={24}
+                      height={24}
+                      className="cursor-pointer hover:w-[30px] transition-all ease-in-out duration-300 mx-2"
                     />
                   </button>
                   {popup && (

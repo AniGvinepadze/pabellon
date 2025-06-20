@@ -11,7 +11,7 @@ import React from "react";
 
 export default function OurMissionSection() {
   return (
-    <div className="max-w-[1400px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
+    <div className="max-w-[1300px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
       <div className="max-w-[1100px] w-full flex  justify-between items-center text-center text-secondaryTextColor font-mono-serif gap-16 max-400:gap-3 max-700:flex-col">
         <div className="max-w-[400px] w-full">
           <h2 className="font-semibold text-[40px]  max-600:text-[32px] max-400:text-[26px]">

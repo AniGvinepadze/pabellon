@@ -13,7 +13,7 @@ const MakrineLobbyBarSection = () => {
   const swiperRef = useRef<any>(null);
   return (
     <div className="max-w-[1440px] w-full my-20 m-auto">
-      <div className="max-w-[1400px] w-full flex flex-col  relative">
+      <div className="max-w-[1300px] w-full flex flex-col  relative">
         <Swiper
           ref={swiperRef}
           modules={[Navigation]}
