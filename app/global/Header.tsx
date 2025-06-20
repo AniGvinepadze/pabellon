@@ -52,8 +52,9 @@ export default function Header() {
   };
 
   return (
+    <div className={`max-w-[3600px] w-full ${bgColor}  sticky top-0 z-50   transition-all ease-in-out duration-500`}>
     <div
-      className={`max-w-[1600px] sticky top-0 z-50 w-full m-auto p-3 flex justify-between items-center max-1000:gap-10 ${bgColor} transition-all ease-in-out duration-500`}
+      className={`max-w-[1600px] w-full m-auto p-3 flex justify-between items-center max-1000:gap-10`}
     >
       <Link
         href="/home"
@@ -171,6 +172,7 @@ export default function Header() {
           setPopup={setPopup}
         />
       )}
+    </div>
     </div>
   );
 }

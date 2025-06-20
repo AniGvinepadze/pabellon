@@ -128,7 +128,7 @@ export default function MobileMenu({
                     />
                   </button>
                   {popup && (
-                    <div className="absolute top-12 left-0 bg-beige w-[150px] p-4 shadow-md rounded-md z-50">
+                    <div className={`absolute top-12 left-0 w-[150px] p-4 shadow-md rounded-md z-50 ${bgColor} ${textColor} `}>
                       <p className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300">
                         English
                       </p>
