@@ -65,9 +65,7 @@ export default function MobileMenu({
         >
           <div className="w-full shadow-md p-4 max-350:p-2">
             <div className="flex flex-col justify-between h-full text-black">
-              <div
-                className={`flex flex-col gap-5 px-7 py-3 max-400:gap-2 ${textColor}`}
-              >
+              <div className={`flex flex-col gap-5 px-7 py-3  ${textColor}`}>
                 {navbar.map((e) =>
                   e.route ? (
                     <Link
