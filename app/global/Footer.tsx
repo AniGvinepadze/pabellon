@@ -1,16 +1,15 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { logo, whiteLogo } from "../assets"; // ამ შემთხვევაში ლოგოს ორივე ვარიანტია იმპორტირებული
+import { logo, whiteLogo } from "../assets";
 import { footerNavbar, footerSoc } from "..";
 import Link from "next/link";
 import glovabIcon from "../../public/assets/Vector (9).svg";
-import { usePathname } from "next/navigation"; // აქ გამოიყენება usePathname
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
-  const pathname = usePathname(); // ამით მიიღებ მიმდინარე მარშრუტს
+  const pathname = usePathname();
 
-  // ფონების და ტექსტის ფერების განსაზღვრა მარშრუტის მიხედვით
   const footerBackgroundColor =
     pathname === "/rooms" ||
     pathname === "/kids" ||
@@ -46,17 +45,27 @@ export default function Footer() {
         <div className="flex justify-between py-10 w-full">
           <div className="min-h-[300px] flex flex-col justify-between gap-10">
             <Image src={logoImage} alt="logo" width={300} height={120} />
-            <div className="max-w-[240px] w-full  justify-between mt-10 hidden max-650:flex max-650:mt-0">
+            <div className="max-w-[240px] w-full justify-between mt-10 hidden max-650:flex max-650:mt-0">
               <div className="flex flex-col gap-3">
                 {footerNavbar.map((e) => (
-                  <Link
-                    href={e.route}
-                    key={e.id}
-                    className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300"
-                    style={{ color: textColor }}
-                  >
-                    {e.title}
-                  </Link>
+                  e.route ? ( 
+                    <Link
+                      key={e.id}
+                      href={e.route}
+                      className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300"
+                      style={{ color: textColor }}
+                    >
+                      {e.title}
+                    </Link>
+                  ) : (
+                    <span
+                      key={e.id}
+                      className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300"
+                      style={{ color: textColor }}
+                    >
+                      {e.title} {/* Render as text if no route */}
+                    </span>
+                  )
                 ))}
               </div>
               <div className="flex flex-col justify-between">
@@ -90,14 +99,24 @@ export default function Footer() {
           <div className="max-w-[240px] w-full flex justify-between mt-10 max-650:hidden">
             <div className="flex flex-col gap-3">
               {footerNavbar.map((e) => (
-                <Link
-                  href={e.route}
-                  key={e.id}
-                  className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300"
-                  style={{ color: textColor }}
-                >
-                  {e.title}
-                </Link>
+                e.route ? ( 
+                  <Link
+                    key={e.id}
+                    href={e.route}
+                    className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300"
+                    style={{ color: textColor }}
+                  >
+                    {e.title}
+                  </Link>
+                ) : (
+                  <span
+                    key={e.id}
+                    className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300"
+                    style={{ color: textColor }}
+                  >
+                    {e.title} 
+                  </span>
+                )
               ))}
             </div>
             <div className="flex flex-col justify-between">

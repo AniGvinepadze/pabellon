@@ -16,6 +16,7 @@ export default function Header() {
   const [logoSrc, setLogoSrc] = useState<string>(logo);
   const [textColor, setTextColor] = useState<string>("text-beige");
   const [globalSrc, setGlobalSrc] = useState<any>(glovabIcon);
+  const [showNewPopup, setShowNewPopup] = useState<boolean>(false);
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -39,6 +40,14 @@ export default function Header() {
     };
   }, []);
 
+  const handleItemClick = (route: string | undefined) => {
+    if (!route) {
+      setShowNewPopup(true);
+    } else {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <div
       className={`max-w-[1600px] sticky top-0 z-50 w-full m-auto p-3 flex justify-between items-center max-1000:gap-10 ${bgColor} transition-all ease-in-out duration-500`}
@@ -58,18 +67,58 @@ export default function Header() {
       <div
         className={`flex gap-6 mt-1 max-w-[1300px] w-full max-1100:hidden ${textColor} transition-all duration-500 ease-in-out`}
       >
-        <div className="flex gap-7 w-full justify-end items-center mt-4">
-          {navbar.map((e) => (
-            <Link
-              href={e.route}
-              key={e.id}
-              className="max-w-[1000px]  hover:scale-110 transition-all ease-in-out duration-300"
-            >
-              <p className="text-xl font-medium max-1250:text-lg max-1150:text-base">
+        <div className="flex gap-7 w-full justify-end items-center mt-4 relative">
+          {navbar.map((e) =>
+            e.route ? (
+              <Link
+                key={e.id}
+                href={e.route}
+                className="max-w-[1000px]  hover:scale-110 transition-all ease-in-out duration-300 relative"
+              >
+                <p className="text-xl font-medium max-1250:text-lg max-1150:text-base ">
+                  {e.title}
+                </p>
+              </Link>
+            ) : (
+              <button
+                key={e.id}
+                onClick={() => handleItemClick(e.route)}
+                className="text-xl font-medium max-1250:text-lg max-1150:text-base hover:text-[19px] transition-all duration-300 ease-in-out"
+              >
                 {e.title}
-              </p>
-            </Link>
-          ))}
+              </button>
+            )
+          )}
+          {showNewPopup && (
+            <div
+              className={`absolute max-w-[300px]   right-[370px] mt-64 ${bgColor} ${textColor}  p-4 shadow-md flex flex-col `}
+            >
+              <Link
+                href={"/makrine-restaurant"}
+                className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+              >
+                Bars & Restaurants
+              </Link>
+              <Link
+                href={"/meetings-events"}
+                className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+              >
+                Meetings & Events
+              </Link>
+              <Link
+                href={"/wellness-fitness"}
+                className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+              >
+                Spa & Wellness
+              </Link>
+              <Link
+                href={"/kids-entertainment"}
+                className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+              >
+                Kids Entertainment
+              </Link>
+            </div>
+          )}
         </div>
         <div className="relative ">
           <button
@@ -85,7 +134,9 @@ export default function Header() {
             />
           </button>
           {popup && (
-            <div className="absolute w-[150px]  items-center -right-2 bg-white  p-4 shadow-md rounded-md">
+            <div
+              className={`absolute w-[150px]  items-center -right-2 ${textColor} ${bgColor}   p-4 shadow-md `}
+            >
               <p className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300">
                 English
               </p>
@@ -105,7 +156,7 @@ export default function Header() {
           alt="mobilemenu"
           width={35}
           height={35}
-          className="max-700:max-w-[30px] max-400:max-w-[26px] max-300:max-w-[20px]"
+          className="max-700:max-w-[30px] max-400:max-w-[26px] max-300:max-w-[20px] "
         />
       </button>
       {isOpen && (

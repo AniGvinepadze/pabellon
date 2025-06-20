@@ -32,7 +32,7 @@ import {
 type Navbar = {
   id: number;
   title: string;
-  route: string;
+  route?: string;
 };
 
 export const navbar: Navbar[] = [
@@ -60,7 +60,7 @@ export const navbar: Navbar[] = [
   {
     id: 5,
     title: "Experiences",
-    route: "/experiences",
+    // route: "/experiences",
   },
   {
     id: 6,

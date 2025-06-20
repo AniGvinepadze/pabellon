@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import globalIcon from "../../public/assets/image 2 (2).svg";
-
+import globalIcon from "../../public/assets/Vector (10).svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { navbar } from "..";
 
@@ -19,7 +18,6 @@ export default function MobileMenu({
   popup,
   setPopup,
 }: MobileMenuProps) {
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -36,7 +34,7 @@ export default function MobileMenu({
                 {navbar.map((item) => (
                   <Link
                     key={item.id}
-                    href={item.route}
+                    href={item?.route || "#"}
                     onClick={() => setIsOpen(false)}
                   >
                     <p className="text-lg hover:text-[19px] font-medium transition-all duration-300  ease-in-out max-300:text-base">
