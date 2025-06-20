@@ -35,58 +35,91 @@ export default function Footer() {
       : whiteLogo;
 
   return (
-    <div className="max-w-[3600px] w-full "  style={{ backgroundColor: footerBackgroundColor }}>
     <div
-      className={`max-w-[1400px] w-full m-auto px-12 bg-footerBg bg-cover text-beige mt-20`}
+      className="max-w-[3600px] w-full "
       style={{ backgroundColor: footerBackgroundColor }}
     >
-      
-      <div className="flex justify-between py-10">
-        <div className="min-h-[300px] flex flex-col justify-between">
-          <Image src={logoImage} alt="logo" width={300} height={120} />
+      <div
+        className={`max-w-[1400px] w-full m-auto px-12 bg-footerBg bg-cover text-beige mt-20`}
+        style={{ backgroundColor: footerBackgroundColor }}
+      >
+        <div className="flex justify-between py-10 w-full">
+          <div className="min-h-[300px] flex flex-col justify-between gap-10">
+            <Image src={logoImage} alt="logo" width={300} height={120} />
+            <div className="max-w-[240px] w-full  justify-between mt-10 hidden max-650:flex max-650:mt-0">
+              <div className="flex flex-col gap-3">
+                {footerNavbar.map((e) => (
+                  <Link
+                    href={e.route}
+                    key={e.id}
+                    className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300"
+                    style={{ color: textColor }}
+                  >
+                    {e.title}
+                  </Link>
+                ))}
+              </div>
+              <div className="flex flex-col justify-between">
+                <div className="flex flex-col gap-3">
+                  {footerSoc.map((e) => (
+                    <Link
+                      href={e.link}
+                      key={e.id}
+                      className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300"
+                      style={{ color: textColor }}
+                    >
+                      {e.soc}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
 
-          <div className="flex flex-col gap-1" style={{ color: textColor }}>
-            <p className="text-base font-light">contact us :</p>
-            <p className="font-light text-base">Email : info@pabellon.ge</p>
-            <p className="font-light text-base">
-              Phone Number: (+995) 35 2 200200
-            </p>
+            <div className="flex flex-col gap-1" style={{ color: textColor }}>
+              <p className="text-base font-light">contact us :</p>
+              <p className="font-light text-base">Email : info@pabellon.ge</p>
+              <p className="font-light text-base">
+                Phone Number: (+995) 35 2 200200
+              </p>
+            </div>
+            <div className="">
+              <Image src={glovabIcon} alt="icon" width={34} height={34} />
+            </div>
           </div>
-        </div>
 
-        <div className="max-w-[240px] w-full flex justify-between mt-10">
-          <div className="flex flex-col gap-3">
-            {footerNavbar.map((e) => (
-              <Link
-                href={e.route}
-                key={e.id}
-                className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300"
-                style={{ color: textColor }}
-              >
-                {e.title}
-              </Link>
-            ))}
-          </div>
-          <div className="flex flex-col justify-between">
+          <div className="max-w-[240px] w-full flex justify-between mt-10 max-650:hidden">
             <div className="flex flex-col gap-3">
-              {footerSoc.map((e) => (
+              {footerNavbar.map((e) => (
                 <Link
-                  href={e.link}
+                  href={e.route}
                   key={e.id}
                   className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300"
                   style={{ color: textColor }}
                 >
-                  {e.soc}
+                  {e.title}
                 </Link>
               ))}
             </div>
-            <div className="flex justify-end">
-              <Image src={glovabIcon} alt="icon" width={34} height={34} />
+            <div className="flex flex-col justify-between">
+              <div className="flex flex-col gap-3">
+                {footerSoc.map((e) => (
+                  <Link
+                    href={e.link}
+                    key={e.id}
+                    className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300"
+                    style={{ color: textColor }}
+                  >
+                    {e.soc}
+                  </Link>
+                ))}
+              </div>
+              <div className="flex justify-end">
+                <Image src={glovabIcon} alt="icon" width={34} height={34} />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
