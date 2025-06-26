@@ -443,7 +443,7 @@ export const roomsBook: RoomsBook[] = [
   {
     id: 2,
     img: roomImg3,
-    title: "Iverisi Standard Room",
+    title: "Iverisi Standard",
     description:
       "Standard Rooms are thoughtfully designed for comfort and convenience. Each features an elegant furnishing and a calming color palette.",
     humanIcon: twoHuman,
@@ -460,7 +460,7 @@ export const roomsBook: RoomsBook[] = [
   {
     id: 3,
     img: roomImg4,
-    title: "Rcheuli Standard Room",
+    title: "Rcheuli Room",
     description:
       "Soak in the scenery and unwind in style from your spacious king-bed retreat.",
     humanIcon: threeHuman,
@@ -499,7 +499,7 @@ export const roomsBook: RoomsBook[] = [
     img: roomImg6,
     title: "Verde Duplex",
     description:
-      "Designed over two levels, the lower floor offers a cozy living area with patio garden, cozy yet sophisticated ambiance, while upstairs, the sleeping area invites restful nights. ",
+      "Designed over two levels, the lower floor offers a cozy living area with patio garden, cozy yet sophisticated ambiance, while upstairs, the sleeping area invites restful nights.",
     humanIcon: twoHuman,
     humanQuantity: 4,
     bedIcon: bed,
