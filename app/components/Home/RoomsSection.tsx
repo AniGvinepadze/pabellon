@@ -11,9 +11,8 @@ export default function RoomsSection() {
           Rooms
         </h2>
         <h2 className="font-normal text-[30px] italic  max-600:text-[22px] max-400:text-[18px] custom-font">
-     Relax in refined comfort, where every detail is designed to create warmth and a homely atmosphere.
-
-
+          Relax in refined comfort, where every detail is designed to create
+          warmth and a homely atmosphere.
         </h2>
         <p className="text-[17px] font-light max-w-[700px]  max-600:text-[15px] max-400:text-[13px]">
           Rooms are designed to help you slow down and unwind, offering a
