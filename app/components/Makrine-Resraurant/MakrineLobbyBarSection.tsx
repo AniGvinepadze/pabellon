@@ -13,6 +13,21 @@ const MakrineLobbyBarSection = () => {
   const swiperRef = useRef<any>(null);
   return (
     <div className="max-w-[1440px] w-full my-20 m-auto">
+      <div className="max-w-[1000px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-400:gap-3 m-auto my-20">
+        <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
+          Lobby Bar
+        </h2>
+        <p className="font-light text-[17px] max-600:text-[15px] max-400:text-[13px]">
+          Warm hospitality, great music, delicious Georgian bites, a tapas menu,
+          and stories shared over a glass of wine — this is the spirit of our
+          bar. You are welcome to the billiards corner, also on the first floor,
+          where friendly competition meets a lively and interactive setting.
+        </p>
+        <p className="font-medium text-[17px] max-600:text-[15px] max-400:text-[13px]">
+          Join us daily from 12:00 PM to 12:00 AM (kitchen closes at 11:30 PM).
+        </p>
+      </div>
+
       <div className="max-w-[1300px] w-full flex flex-col  relative">
         <Swiper
           ref={swiperRef}
