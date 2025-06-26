@@ -10,10 +10,19 @@ export default function MeetingSection() {
           Meetings & Events
         </h2>
         <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px] custom-font">
-          Where ideas come to life and every celebration feels effortless
+          Here, business is more than just an agenda. Our event spaces are
+          designed to inspire, motivate, and spark new ideas. Each room is
+          thoughtfully arranged to transform any type of gathering into a
+          memorable experience.
         </h2>
         <p className="text-[17px] font-light  max-600:text-[15px] max-400:text-[13px]">
-         Here, business is more than an agenda - it's an experience. Our Ballroom and meetings rooms are designed to inspire, to turn simple meetings into shared memories and ordinary events into extraordinary moments.
+          Naturally, the signature elements of Georgian hospitality are woven
+          into these spaces as well. The rooms are also equipped with the latest
+          technology to meet all your event needs.
+        </p>
+        <p className="text-[17px] font-normal  max-600:text-[15px] max-400:text-[13px]">
+          For more information, to view the venue, or to make a reservation,
+          please contact the reception at extension 100.
         </p>
       </div>
 
