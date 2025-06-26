@@ -28,7 +28,7 @@ export default function HouseRulesSection() {
             </p>
             <p className="font-normal text-base max-w-[413px] w-full">
               To guarantee your reservation total amount of first night should
-              be prepaid. If reservation is not prepaid, hotel has the right to
+              be prepaid. If reservation is not pre-paid, hotel has the right to
               consider the reservation as non-guaranteed and cancel it the day
               before 16:00 the arrival date of the guest. In case of guaranteed
               reservation, if the guest has not arrived in the hotel, the
