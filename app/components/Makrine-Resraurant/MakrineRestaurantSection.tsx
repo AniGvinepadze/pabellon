@@ -26,17 +26,17 @@ export default function MakrinerestaurantSection() {
           Makrine Restaurant
         </h2>
         <p className="font-light text-[17px] max-600:text-[15px] max-400:text-[13px]">
-          Our mission is to nourish our guests with love and care, just like
-          Makrine, offering delectable dishes and a beautiful ambience that
-          feels like home.  Our Menu brings Kakhetian heritage to life with a
-          fresh, modern spirit. Whether you’re savoring reimagined bites, each
-          dish tells a story - familiar, yet full of delightful surprises, where
-          innovation meets identity.
+          In Kvareli, where Ilia Chavchavadze grew up, the atmosphere is steeped
+          in the nostalgic spirit of his time. The warmth and hospitality of the
+          space are enhanced by the persona of Makrine — Ilia’s aunt, who was
+          known for her extraordinary care and attentiveness. She also deeply
+          cherished the culture of delicious homemade food.
         </p>
         <p className="text-[17px] font-light  max-600:text-[15px] max-400:text-[13px]">
-          Step into our restaurant and discover the soul of Georgian
-          hospitality. This is a place, where tradition lives on - not just in
-          the recipes, but in the way we welcome you.
+          Inspired by her legacy, the concept behind Makrine promises an
+          unforgettable experience. At the restaurant, you’ll enjoy exquisite
+          dishes thoughtfully selected for their authentic Georgian character
+          and rich flavors.
         </p>
       </div>
 
@@ -50,7 +50,20 @@ export default function MakrinerestaurantSection() {
         />
       </div>
 
-      <div></div>
+      <div className="flex flex-col max-w-[900px] w-full gap-6 justify-center items-center">
+        {" "}
+        <p className="text-[17px] font-light max-w-[600px]  max-600:text-[15px] max-400:text-[13px]">
+          The "farm-to-table" philosophy highlights the importance of both food
+          quality and the involvement of the local community.
+        </p>
+        <p className="text-[17px] font-light  max-600:text-[15px] max-400:text-[13px]">
+          We invite you to visit Makrine restaurant on the first floor and
+          explore the Georgian menu. Alongside Kakhetian specialties, from 12:00
+          PM to 12:00 AM (kitchen until 11:30 PM), you can also enjoy a wide
+          variety of wines produced at Pabeloni’s own winery in the restaurant’s
+          bar.
+        </p>
+      </div>
     </div>
   );
 }

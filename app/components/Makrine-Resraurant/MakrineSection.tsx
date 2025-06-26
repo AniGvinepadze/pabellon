@@ -25,7 +25,7 @@ export default function MakrineSection() {
           height={190}
         />
         <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px] custom-font">
-          Savor tradition and innovation, one unforgettable bite and sip at a
+          Savor tradition and innovation one unforgettable bite and sip at a
           time
         </h2>
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
