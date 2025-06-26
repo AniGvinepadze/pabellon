@@ -20,10 +20,15 @@ export default function KidstSection() {
           Let ancient worlds and wonder guide an unforgettable adventure
         </h2>
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
-          At our hotel, every guest is special - especially the youngest ones.
-          Our Kids' entertainment room is a bright, colorful space where
-          children can laugh, learn, and explore in a safe and welcoming
-          environment.
+          At our hotel, every guest receives special attention — but naturally,
+          children hold the most important place. That's why our kid's playroom
+          is a bright and colorful space where children can play, learn, and
+          explore the world in a safe and friendly environment.
+        </p>
+        <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
+          Located on the first floor, the space is designed to spark joy and
+          creativity. The room features a variety of toys, an arts and crafts
+          corner, and age-appropriate interactive activities.
         </p>
       </div>
       <div className="my-20">

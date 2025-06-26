@@ -13,10 +13,7 @@ export default function MeetingSection() {
           Where ideas come to life and every celebration feels effortless
         </h2>
         <p className="text-[17px] font-light  max-600:text-[15px] max-400:text-[13px]">
-          Here, business is more than an agenda - it's an experience. Our
-          Ballroom and meetings rooms are designed to inspire, to turn simple
-          meetings into shared memories and ordinary events into extraordinary
-          moments.
+         Here, business is more than an agenda - it's an experience. Our Ballroom and meetings rooms are designed to inspire, to turn simple meetings into shared memories and ordinary events into extraordinary moments.
         </p>
       </div>
 

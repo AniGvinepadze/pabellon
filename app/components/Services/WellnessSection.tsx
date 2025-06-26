@@ -14,7 +14,7 @@ export default function WellnessSection() {
         </h2>
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
           Breathe deeply. Let go. Immerse yourself in the slow, grounding beauty
-          of Georgias countryside and emerge refreshed, reenergized and
+          of Georgias countryside and emerge refreshes, reenergized and
           restored.
         </p>
       </div>
