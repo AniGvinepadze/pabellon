@@ -8,13 +8,13 @@ export default function WineCategoriesSection() {
     <div className="max-w-[1300px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
       <div className="max-w-[1050px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-400:gap-3">
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
-          Our mission is to craft exceptional wines that embody the rich
-          heritage and unique character of Georgia, using the finest grapes and
-          traditional methods. Pabellón winery carries the spirit of Georgia,s
-          8,000-year-old winemaking culture. Our vineyards are cultivated with
-          respect for the land: native grape varieties flourish under the
-          Kakhetian sun, nurtured by organic practices. Every bottle tells a
-          story of soil, sun, and soul.
+          Our mission is to craft exceptional wines that reflect Georgia’s rich
+          heritage and unique character. We use the finest grape varieties and
+          traditional methods passed down through generations. Pabeloni’s winery
+          embodies the spirit of Georgia’s 8,000-year-old winemaking legacy.
+          Local grape varieties thrive under the Kakhetian sun, cultivated using
+          ancient techniques. Each bottle tells a story — of the land, the sun,
+          and the Georgian soul.
         </p>
       </div>
       <div className="relative my-20 max-w-[1150px] w-full bg-[#907655] flex flex-col justify-between items-center text-center p-16 gap-10 shadow-lg shadow-gray-500">
@@ -57,10 +57,10 @@ export default function WineCategoriesSection() {
       <div className="max-w-[800px] w-full m-auto flex flex-col justify-center items-center my-10">
         {" "}
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
-          At our table, wine is more than a drink - it is a bridge between past
-          and present, a celebration of life, family and friendship. We invite
-          you to experience Georgia's true gift to the world: a wine culture as
-          deep and timeless as the vines themselves.
+          At our table, wine is more than a drink — it is a bridge between past
+          and present, a celebration of life, family, and friendship. We invite
+          you to taste one of Georgia’s true treasures — a wine culture as
+          precious as the vine itself.
         </p>
       </div>
     </div>
