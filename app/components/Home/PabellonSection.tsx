@@ -15,14 +15,17 @@ export default function PabellonSection() {
           className="max-500:w-[200px] max-350:w-[170px]"
         />
         <p className="font-normal text-xl max-500:text-lg max-350:text-base">
-          Located in the heart of Kakheti,Pabellón promises to redefine your
-          travel experience with state-of-the-art amenities, exceptional service
-          and an atmosphere designed for both relaxation and inspiration.
-          Integrating elements of Georgian culture and heritage into the design
-          to tell Pabellón's unique story and create a sense of
-          authenticity.Whether you're traveling for business, leisure or a
-          special occasion, Pabellón offers everything you need to make your
-          stay memorable.
+          Pabellon Hotel, located in the heart of Kakheti, is the place that
+          fills each guest with amazing impressions. In addition to its concept
+          being rooted in the Chavchavadze mood, it stands out with comfort
+          suitable for modern times, high-level service, and a cozy atmosphere.
+          With such a synthesis, Pabellon Hotel is an ideal space for both rest
+          and inspiration.
+        </p>
+        <p className="font-normal text-lg max-500:text-lg max-350:text-base">
+          To bring the idea to life, the interior is full of elements
+          characteristic of Georgian culture and heritage, in order to create an
+          authentic and unforgettable atmosphere.
         </p>
       </div>
 
