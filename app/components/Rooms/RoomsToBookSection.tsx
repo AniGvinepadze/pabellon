@@ -6,7 +6,7 @@ export default function RoomsToBookSection() {
   return (
     <div>
       {" "}
-      <div className="w-full grid grid-cols-2 gap-10 my-16 max-750:grid-cols-1 max-750:gap-0">
+      <div className=" p-10 w-full grid grid-cols-2 gap-10 my-16 max-750:grid-cols-1 max-750:gap-0">
         {roomsBook.map((e) => (
           <div
             key={e.id}
