@@ -39,7 +39,7 @@ export default function Footer() {
       style={{ backgroundColor: footerBackgroundColor }}
     >
       <div
-        className={`max-w-[1300px] w-full m-auto px-12 bg-footerBg bg-cover text-beige mt-20`}
+        className={`max-w-[1100px] w-full m-auto px-12 bg-footerBg bg-cover text-beige mt-20`}
         style={{ backgroundColor: footerBackgroundColor }}
       >
         <div className="flex justify-between py-10 w-full">

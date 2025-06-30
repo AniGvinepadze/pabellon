@@ -18,8 +18,8 @@ const config: Config = {
         "max-1350": {
           max: "1350px",
         },
-        "max-1300": {
-          max: "1300px",
+        "max-1100": {
+          max: "1100px",
         },
         "max-1250": {
           max: "1250px",

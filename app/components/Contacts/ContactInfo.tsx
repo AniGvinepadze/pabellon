@@ -4,9 +4,9 @@ import React from "react";
 
 export default function ContactInfo() {
   return (
-    <div className="max-w-[1300px] w-full m-auto  text-black my-20 ">
+    <div className="max-w-[1100px] w-full m-auto  text-black my-20 ">
       <div>
-        <div className="max-w-[1300px] w-full flex justify-between gap-16 max-800:flex-col-reverse  ">
+        <div className="max-w-[1100px] w-full flex justify-between gap-16 max-800:flex-col-reverse  ">
           <div className="max-w-[850px] w-full my-10">
             <h2
               className="text-[26px] font-medium

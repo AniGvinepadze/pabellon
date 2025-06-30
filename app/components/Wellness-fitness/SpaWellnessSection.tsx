@@ -4,18 +4,22 @@ import React from "react";
 
 export default function SpaWellnessSection() {
   return (
-    <div className="max-w-[1300px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
+    <div className="max-w-[1100px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
       <div className="max-w-[950px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-400:gap-3">
         <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
           Spa / Wellness
         </h2>
 
         <p className="text-[17px] font-light max-w-[680px]  max-600:text-[15px] max-400:text-[13px]">
-   Located on level -1, the Spa & Wellness Center is designed to restore balance to your body, mind, and soul.
+          Located on level -1, the Spa & Wellness Center is designed to restore
+          balance to your body, mind, and soul.
         </p>
-             <p className="text-[17px] font-light max-600:text-[15px] max-400:text-[13px]">
-           Enjoy both indoor and outdoor pools, open year-round, with breathtaking views of Kakheti’s vineyards and the Caucasus Mountains. Any time of day offers a perfect moment here — whether it’s an energizing morning swim or a relaxing break at sunset.
-    </p>
+        <p className="text-[17px] font-light max-600:text-[15px] max-400:text-[13px]">
+          Enjoy both indoor and outdoor pools, open year-round, with
+          breathtaking views of Kakheti’s vineyards and the Caucasus Mountains.
+          Any time of day offers a perfect moment here — whether it’s an
+          energizing morning swim or a relaxing break at sunset.
+        </p>
       </div>
       <div className="w-full m-auto flex justify-between gap-6 my-20 max-750:flex-col max-750:mt-72 max-450:mt-56 max-400:mt-36">
         <div className="max-w-[700px] w-full flex flex-col justify-center items-center ">
@@ -29,11 +33,9 @@ export default function SpaWellnessSection() {
               className=" max-w-[470px] w-full object-cover max-1200:max-w-[300px] max-850:max-w-[240px] max-750:max-w-[700px] max-750:max-h-[600px] max-450:max-h-[550px]"
             />
             <p className="font-light text-base my-7 max-750:min-h-[300px] max-400:min-h-[230px] max-300:min-h-[190px]">
-          
-Room rates include access to the sauna and steam room.
-Opening hours: 08:00 – 22:00.
-Please note: Children under 16 must be accompanied by an adult.
-
+              Room rates include access to the sauna and steam room. Opening
+              hours: 08:00 – 22:00. Please note: Children under 16 must be
+              accompanied by an adult.
             </p>
           </div>
         </div>
