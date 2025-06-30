@@ -5,7 +5,7 @@ import React from "react";
 export default function AboutUsIliasSection() {
   return (
     <div className="max-w-[1100px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor ">
-      <div className=" max-w-[1000px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-16">
+      <div className=" max-w-[850px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-16">
         <div className="flex flex-col gap-6">
           <p className="font-light text-[17px] max-500:text-[15px]">
             At “Pabeloni,” inspired by Georgian hospitality, art, literature,
@@ -31,11 +31,11 @@ export default function AboutUsIliasSection() {
           priority={true}
           src={iliaLake}
           alt="ilialake"
-          width={978}
-          height={992}
+          width={778}
+          height={702}
         />
       </div>
-      <div className="flex flex-col gap-24 justify-center mt-16 max-450:gap-12">
+      <div className="flex flex-col gap-24 justify-center mt-10 max-450:gap-12">
         <p className="font-light text-[17px] max-500:text-[15px]">
           In Kvareli, where Ilia Chavchavadze spent his childhood, the
           surroundings create a fitting atmosphere and bring history to life. It
@@ -47,7 +47,7 @@ export default function AboutUsIliasSection() {
             priority={true}
             src={inscription}
             alt="ilialake"
-            width={660}
+            width={460}
             height={178}
           />
         </div>
