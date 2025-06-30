@@ -50,7 +50,7 @@ export default function BookSection() {
               startDate={checkIn}
               endDate={checkOut}
               placeholderText="Check-in"
-              className="border-none text-lg bg-beige placeholder-black outline-none font-serif max-400:text-base"
+              className="border-none text-lg bg-beige placeholder-black outline-none font-serif max-400:text-base custom-date-selector"
             />
             <div className="w-full h-[1px]  bg-black my-3" />
           </div>

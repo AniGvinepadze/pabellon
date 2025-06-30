@@ -127,3 +127,22 @@ body {
     text-wrap: balance;
   }
 }
+.react-datepicker__header,
+.react-datepicker__month,
+.react-datepicker__month-container,
+.react-datepicker__day,
+.react-datepicker__day--010,
+.react-datepicker__current-month,
+.selected_day,
+.react-datepicker__day-name {
+  background-color: #37292b !important;
+  color: white !important;
+  font-family: "Noto Serif", serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 300 !important;
+  font-style: normal;
+  font-variation-settings: "width" 100 !important;
+}
+.react-datepicker__current-month {
+  font-style: italic !important;
+}
