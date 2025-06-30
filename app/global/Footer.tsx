@@ -91,13 +91,13 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-col gap-1" style={{ color: textColor }}>
-              <p className="text-base font-light">contact us :</p>
+              <p className="text-base font-light">Contact us :</p>
               <p className="font-light text-base">Email : info@pabellon.ge</p>
               <p className="font-light text-base">
                 Phone Number: (+995) 35 2 200200
               </p>
             </div>
-            <div className="hidden max-650:flex">
+            {/* <div className="hidden max-650:flex">
               <Image
                 priority={true}
                 src={glovabIcon}
@@ -105,7 +105,7 @@ export default function Footer() {
                 width={24}
                 height={24}
               />
-            </div>
+            </div> */}
           </div>
 
           <div className="max-w-[240px] w-full flex justify-between mt-10 max-650:hidden">
@@ -144,7 +144,7 @@ export default function Footer() {
                   </Link>
                 ))}
               </div>
-              <div className="flex justify-end">
+              {/* <div className="flex justify-end">
                 <Image
                   priority={true}
                   src={glovabIcon}
@@ -152,7 +152,7 @@ export default function Footer() {
                   width={24}
                   height={24}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
