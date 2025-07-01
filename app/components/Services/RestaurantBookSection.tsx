@@ -55,7 +55,7 @@ export default function RestaurantBookSection() {
                 startDate={checkIn}
                 endDate={checkOut}
                 placeholderText="july 6 ,2025"
-                className="border-none max-w-[400px] w-full text-lg bg-beige placeholder-black outline-none font-serif max-400:text-base"
+                className="border-none max-w-[400px] w-full text-lg bg-beige placeholder-black outline-none font-serif max-400:text-base cursor-pointer"
               />
               <div className="w-full h-[1px]  bg-black my-3" />
             </div>
@@ -68,18 +68,18 @@ export default function RestaurantBookSection() {
                 type="text"
                 placeholder={selectedGuest ? selectedGuest.toString() : "1"}
                 onClick={handleInputClick}
-                className=" placeholder-black bg-beige outline-none font-serif max-w-[150px] w-full p-2 max-400:text-base"
+                className=" placeholder-black bg-beige outline-none font-serif max-w-[150px] w-full p-2 max-400:text-base cursor-pointer"
               />
               <div className="w-full h-[1px] bg-black " />
               {isPopupOpen && (
                 <div
                   ref={popupRef}
-                  className="absolute top-9  w-full bg-beige shadow-md border rounded-md"
+                  className="absolute top-36  w-full bg-beige shadow-md border rounded-md "
                 >
                   {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((number) => (
                     <div
                       key={number}
-                      className="p-[5px] hover:bg-gray-200 cursor-pointer"
+                      className="p-[5px] hover:bg-[#d7cebd] cursor-pointer"
                       onClick={() => handleSelect(number)}
                     >
                       <p>{number} People</p>
