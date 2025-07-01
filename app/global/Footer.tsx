@@ -12,14 +12,14 @@ export default function Footer() {
 
   const footerBackgroundColor =
     pathname === "/rooms" ||
-    pathname === "/kids" ||
+    pathname === "/kids-entertainment" ||
     pathname === "/agro" ||
     pathname === "/blogs"
       ? "#CDBDA4"
       : "#37292B";
   const textColor =
     pathname === "/rooms" ||
-    pathname === "/kids" ||
+    pathname === "/kids-entertainment" ||
     pathname === "/agro" ||
     pathname === "/blogs"
       ? "#37292B"
@@ -27,7 +27,7 @@ export default function Footer() {
 
   const logoImage =
     pathname === "/rooms" ||
-    pathname === "/kids" ||
+    pathname === "/kids-entertainment" ||
     pathname === "/agro" ||
     pathname === "/blogs"
       ? logo
