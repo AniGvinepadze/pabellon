@@ -51,7 +51,7 @@ export default function RoomsBookSection() {
               startDate={checkIn}
               endDate={checkOut}
               placeholderText="Check-in"
-              className="border-none text-lg bg-beige placeholder-black outline-none font-serif max-400:text-base"
+              className="border-none text-lg cursor-pointer bg-beige placeholder-black outline-none font-serif max-400:text-base"
             />
             <div className="w-full h-[1px]  bg-black my-3" />
           </div>
@@ -64,7 +64,7 @@ export default function RoomsBookSection() {
               startDate={checkIn}
               endDate={checkOut}
               placeholderText="Check-Out"
-              className="border-none bg-beige  placeholder-black  outline-none font-serif w-[150px] max-400:text-base"
+              className="border-none bg-beige  placeholder-black  outline-none font-serif w-[150px] max-400:text-base cursor-pointer"
             />
             <div className="w-full h-[1px] bg-black my-3" />
           </div>
@@ -81,10 +81,10 @@ export default function RoomsBookSection() {
                 ref={popupRef}
                 className="absolute top-9  w-full bg-beige shadow-md border rounded-md"
               >
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((number) => (
+                {[1, 2, 3, 4, 5].map((number) => (
                   <div
                     key={number}
-                    className="p-[5px] hover:bg-gray-200 cursor-pointer"
+                    className="p-[5px] hover:bg-[#d8cfbd] cursor-pointer"
                     onClick={() => handleSelect(number)}
                   >
                     <p>{number} People</p>

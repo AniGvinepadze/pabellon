@@ -1,5 +1,6 @@
 import { roomsBook } from "@/app";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function RoomsToBookSection() {
@@ -8,8 +9,9 @@ export default function RoomsToBookSection() {
       {" "}
       <div className=" p-10 w-full grid grid-cols-2 gap-10 my-16 max-750:grid-cols-1 max-750:gap-0 max-600:p-5 max-450:p-2">
         {roomsBook.map((e) => (
-          <div
-            key={e.id}
+          <Link
+          href={"/checkout"}
+             key={e.id}
             className="max-w-[714px] w-full  flex flex-col  gap-5 max-1100:my-10 max-750:my-4 "
           >
             <div className="">
@@ -108,7 +110,7 @@ export default function RoomsToBookSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
