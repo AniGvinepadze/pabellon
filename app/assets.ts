@@ -75,6 +75,7 @@ import next from "../public/assets/Group 16.svg";
 import chefImg from "../public/assets/image 36.svg"
 import conferencee from "../public/assets/image (69).svg"
 import whiteLogo from "../public/assets/Artboard 4@3x-8 1.svg"
+import agroLogo from "../public/assets/Artboard 20@3x-8 1.svg"
 export {
   logoCol,
   logo,
@@ -88,6 +89,8 @@ export {
   threeHuman,
   wifi,
   twoHuman,
+  agroLogo,
+  
   bath,
   meetingImg1,
   meetingImg2,
