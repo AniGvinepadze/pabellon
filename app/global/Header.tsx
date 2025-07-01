@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { navbar } from "..";
 import whiteglovabIcon from "../../public/assets/Vector (9).svg";
 import glovabIcon from "../../public/assets/Vector (10).svg";
@@ -19,7 +19,15 @@ export default function Header() {
   const [globalSrc, setGlobalSrc] = useState<any>(glovabIcon);
   const [showNewPopup, setShowNewPopup] = useState<boolean>(false);
   const [menuSrc, setMenuSrc] = useState<any>(mobilemenu);
+    const popupRef = useRef<HTMLDivElement | null>(null); 
+    const globalPopupRef = useRef <HTMLDivElement | null>(null)
   const handleScroll = () => {
+       if (showNewPopup) {
+      setShowNewPopup(false);
+    }
+        if (popup) {
+      setPopup(false);
+    }
     if (window.scrollY > 50) {
       setBgColor("bg-secondaryTextColor");
       setLogoSrc(whiteLogo);
@@ -36,13 +44,36 @@ export default function Header() {
   };
 
   useEffect(() => {
+        if (popup) {
+      document.addEventListener("click", handleClickOutsideSec);
+    } else {
+      document.removeEventListener("click", handleClickOutsideSec);
+    }
+    
+        if (showNewPopup) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+    
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+       document.removeEventListener("click", handleClickOutside)
+        document.removeEventListener("click", handleClickOutsideSec)
     };
-  }, []);
-
+  }, [showNewPopup,popup]);
+    const handleClickOutside = (e: MouseEvent) => {
+    if (popupRef.current && !popupRef.current.contains(e.target as Node)) {
+      setShowNewPopup(false); 
+    }
+  };
+ const handleClickOutsideSec = (e: MouseEvent) => {
+    if (globalPopupRef.current && !globalPopupRef.current.contains(e.target as Node)) {
+      setPopup(false); 
+    }
+  };
   const handleItemClick = (route: string | undefined) => {
     if (!route) {
       setShowNewPopup((prev) => !prev);
@@ -98,6 +129,7 @@ export default function Header() {
             )}
             {showNewPopup && (
               <div
+               ref={popupRef}
                 className={`absolute max-w-[300px]   right-[370px] mt-64 ${bgColor} ${textColor}  p-4 shadow-md flex flex-col `}
               >
                 <Link
@@ -142,6 +174,7 @@ export default function Header() {
             </button>
             {popup && (
               <div
+              ref={globalPopupRef}
                 className={`absolute w-[150px]  items-center -right-2 ${textColor} ${bgColor}   p-4 shadow-md `}
               >
                 <p className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300">
