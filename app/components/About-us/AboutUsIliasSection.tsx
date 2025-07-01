@@ -31,11 +31,11 @@ export default function AboutUsIliasSection() {
           priority={true}
           src={iliaLake}
           alt="ilialake"
-          width={778}
-          height={702}
+          width={678}
+          height={602}
         />
       </div>
-      <div className="flex flex-col gap-24 justify-center mt-10 max-450:gap-12">
+      <div className="flex flex-col gap-14 justify-center mt-7 max-450:gap-12">
         <p className="font-light text-[17px] max-500:text-[15px]">
           In Kvareli, where Ilia Chavchavadze spent his childhood, the
           surroundings create a fitting atmosphere and bring history to life. It
