@@ -1,6 +1,7 @@
 import { rooms } from "@/app";
 import { threeHuman } from "@/app/assets";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function RoomsSection() {
@@ -23,9 +24,9 @@ export default function RoomsSection() {
 
       <div className="w-full grid grid-cols-4 gap-2 my-16 max-1100:grid-cols-2 max-550:grid-cols-1">
         {rooms.map((e) => (
-          <div
+          <Link href={'/rooms'}
             key={e.id}
-            className="max-w-[640px] w-full max-h-[370px] flex flex-col h-full gap-7 max-1100:my-10 max-1100:min-h-[800px] max-800:min-h-[700px] max-650:min-h-[600px] max-550:min-h-[820px] max-500:min-h-[740px] max-400:min-h-[69    0px]"
+            className="max-w-[640px] w-full max-h-[370px] flex flex-col h-full gap-7  max-1100:my-10 max-1100:min-h-[800px] max-800:min-h-[700px] max-650:min-h-[600px] max-550:min-h-[820px] max-500:min-h-[740px] max-400:min-h-[690px] "
           >
             <div className="">
               <Image
@@ -110,7 +111,7 @@ export default function RoomsSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
