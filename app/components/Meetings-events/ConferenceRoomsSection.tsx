@@ -1,6 +1,7 @@
 "use client";
 import {
   artWork,
+  conferencee,
   meetingImg,
   meetingImg1,
   meetingImg3,
@@ -41,7 +42,7 @@ export default function ConferenceRoomsSection() {
       <div className=" my-20 flex flex-col gap-14 justify-center items-center">
         <Image
           priority={true}
-          src={meetingImg1}
+          src={conferencee}
           alt="meetingImg"
           width={1420}
           height={877}

@@ -24,7 +24,7 @@ export default function SpacesSection() {
             </div>
           ))}
         </div>
-        <div className=" grid grid-cols-2  max-w-[850px] w-full max-750:grid-cols-1 max-500:my-10">
+        <div className=" grid grid-cols-2  max-w-[550px] w-full max-750:grid-cols-1 max-500:my-10">
           {sapces2.map((e) => (
             <div key={e.id} className="bg-secondaryTextColor w-full ">
               <li className="font-light text-xl text-beige max-800:text-lg">

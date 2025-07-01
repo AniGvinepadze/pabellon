@@ -73,6 +73,7 @@ import makrineImg6 from "../public/assets/image (68).svg";
 import prev from "../public/assets/Group 24.svg";
 import next from "../public/assets/Group 16.svg";
 import chefImg from "../public/assets/image 36.svg"
+import conferencee from "../public/assets/image (69).svg"
 import whiteLogo from "../public/assets/Artboard 4@3x-8 1.svg"
 export {
   logoCol,
@@ -149,5 +150,5 @@ export {
   makrineImg6,
   next,
   prev,
-  chefImg,whiteLogo
+  chefImg,whiteLogo,conferencee
 };

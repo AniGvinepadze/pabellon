@@ -57,7 +57,7 @@ export default function MakrinerestaurantSection() {
           quality and the involvement of the local community.
         </p>
         <p className="text-[17px] font-light  max-600:text-[15px] max-400:text-[13px]">
-          We invite you to visit Makrine restaurant on the first floor and
+        Pabellón’s own winery on the first floor and
           explore the Georgian menu. Alongside Kakhetian specialties, from 12:00
           PM to 12:00 AM (kitchen until 11:30 PM), you can also enjoy a wide
           variety of wines produced at Pabeloni’s own winery in the restaurant’s
