@@ -19,13 +19,13 @@ export default function Header() {
   const [globalSrc, setGlobalSrc] = useState<any>(glovabIcon);
   const [showNewPopup, setShowNewPopup] = useState<boolean>(false);
   const [menuSrc, setMenuSrc] = useState<any>(mobilemenu);
-    const popupRef = useRef<HTMLDivElement | null>(null); 
-    const globalPopupRef = useRef <HTMLDivElement | null>(null)
+  const popupRef = useRef<HTMLDivElement | null>(null);
+  const globalPopupRef = useRef<HTMLDivElement | null>(null);
   const handleScroll = () => {
-       if (showNewPopup) {
+    if (showNewPopup) {
       setShowNewPopup(false);
     }
-        if (popup) {
+    if (popup) {
       setPopup(false);
     }
     if (window.scrollY > 50) {
@@ -44,34 +44,37 @@ export default function Header() {
   };
 
   useEffect(() => {
-        if (popup) {
+    if (popup) {
       document.addEventListener("click", handleClickOutsideSec);
     } else {
       document.removeEventListener("click", handleClickOutsideSec);
     }
-    
-        if (showNewPopup) {
+
+    if (showNewPopup) {
       document.addEventListener("click", handleClickOutside);
     } else {
       document.removeEventListener("click", handleClickOutside);
     }
-    
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-       document.removeEventListener("click", handleClickOutside)
-        document.removeEventListener("click", handleClickOutsideSec)
+      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("click", handleClickOutsideSec);
     };
-  }, [showNewPopup,popup]);
-    const handleClickOutside = (e: MouseEvent) => {
+  }, [showNewPopup, popup]);
+  const handleClickOutside = (e: MouseEvent) => {
     if (popupRef.current && !popupRef.current.contains(e.target as Node)) {
-      setShowNewPopup(false); 
+      setShowNewPopup(false);
     }
   };
- const handleClickOutsideSec = (e: MouseEvent) => {
-    if (globalPopupRef.current && !globalPopupRef.current.contains(e.target as Node)) {
-      setPopup(false); 
+  const handleClickOutsideSec = (e: MouseEvent) => {
+    if (
+      globalPopupRef.current &&
+      !globalPopupRef.current.contains(e.target as Node)
+    ) {
+      setPopup(false);
     }
   };
   const handleItemClick = (route: string | undefined) => {
@@ -103,7 +106,7 @@ export default function Header() {
           />
         </Link>
         <div
-          className={`flex gap-6 mt-1 max-w-[1100px] w-full max-1100:hidden ${textColor} transition-all duration-500 ease-in-out`}
+          className={`flex gap-6 mt-1 max-w-[1250px] w-full max-1250:hidden ${textColor} transition-all duration-500 ease-in-out`}
         >
           <div className="flex gap-7 w-full justify-end items-center mt-4 relative">
             {navbar.map((e) =>
@@ -129,7 +132,7 @@ export default function Header() {
             )}
             {showNewPopup && (
               <div
-               ref={popupRef}
+                ref={popupRef}
                 className={`absolute max-w-[300px]   right-[370px] mt-64 ${bgColor} ${textColor}  p-4 shadow-md flex flex-col `}
               >
                 <Link
@@ -174,7 +177,7 @@ export default function Header() {
             </button>
             {popup && (
               <div
-              ref={globalPopupRef}
+                ref={globalPopupRef}
                 className={`absolute w-[150px]  items-center -right-2 ${textColor} ${bgColor}   p-4 shadow-md `}
               >
                 <p className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300">
@@ -188,7 +191,7 @@ export default function Header() {
           </div>
         </div>
         <button
-          className="hidden max-1100:flex hover:scale-110 mt-3 transition-all ease-in-out duration-300"
+          className="hidden max-1250:flex hover:scale-110 mt-3 transition-all ease-in-out duration-300"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           <Image

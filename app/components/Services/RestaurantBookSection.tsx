@@ -36,7 +36,7 @@ export default function RestaurantBookSection() {
   };
   return (
     <div className="w-full m-auto text-secondaryTextColor my-20 max-700:my-0">
-      <div className="max-w-[1100px] w-full m-auto flex flex-col justify-center">
+      <div className="max-w-[1250px] w-full m-auto flex flex-col justify-center">
         <div className="flex justify-center my-10 max-500:my-0">
           <h2 className="italic font-semibold text-[40px] max-500:text-[32px]">
             Book Restaurant

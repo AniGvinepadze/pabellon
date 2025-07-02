@@ -12,7 +12,7 @@ import { useRef } from "react";
 const MakrineLobbyBarSection = () => {
   const swiperRef = useRef<any>(null);
   return (
-    <div className="max-w-[1100px] w-full my-20 m-auto">
+    <div className="max-w-[1250px] w-full my-20 m-auto">
       <div className="max-w-[1000px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-400:gap-3 m-auto my-20">
         <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
           Lobby Bar
@@ -28,7 +28,7 @@ const MakrineLobbyBarSection = () => {
         </p>
       </div>
 
-      <div className="max-w-[1100px] w-full flex flex-col  relative">
+      <div className="max-w-[1250px] w-full flex flex-col  relative">
         <Swiper
           ref={swiperRef}
           modules={[Navigation]}

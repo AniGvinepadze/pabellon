@@ -18,10 +18,10 @@ const config: Config = {
         "max-1350": {
           max: "1350px",
         },
-        "max-1100": {
-          max: "1100px",
-        },
         "max-1250": {
+          max: "1250px",
+        },
+        "max-1100": {
           max: "1250px",
         },
         "max-1200": {
@@ -30,9 +30,7 @@ const config: Config = {
         "max-1150": {
           max: "1150px",
         },
-        "max-1100": {
-          max: "1100px",
-        },
+
         "max-1050": {
           max: "1050px",
         },

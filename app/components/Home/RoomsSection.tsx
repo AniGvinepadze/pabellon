@@ -22,11 +22,12 @@ export default function RoomsSection() {
         </p>
       </div>
 
-      <div className="w-full grid grid-cols-4 gap-2 my-16 max-1100:grid-cols-2 max-550:grid-cols-1">
+      <div className="w-full grid grid-cols-4 gap-2 my-16 max-1250:grid-cols-2 max-550:grid-cols-1">
         {rooms.map((e) => (
-          <Link href={'/rooms'}
+          <Link
+            href={"/rooms"}
             key={e.id}
-            className="max-w-[640px] w-full max-h-[370px] flex flex-col h-full gap-7  max-1100:my-10 max-1100:min-h-[800px] max-800:min-h-[700px] max-650:min-h-[600px] max-550:min-h-[820px] max-500:min-h-[740px] max-400:min-h-[690px] "
+            className="max-w-[640px] w-full max-h-[370px] flex flex-col h-full gap-7  max-1250:my-10 max-1250:min-h-[800px] max-800:min-h-[700px] max-650:min-h-[600px] max-550:min-h-[820px] max-500:min-h-[740px] max-400:min-h-[690px] "
           >
             <div className="">
               <Image
@@ -35,11 +36,11 @@ export default function RoomsSection() {
                 alt={e.title}
                 width={680}
                 height={429}
-                className="max-w-[388px] w-full  min-h-[370px] max-1100:max-w-[690px] "
+                className="max-w-[388px] w-full  min-h-[370px] max-1250:max-w-[690px] "
               />
             </div>
 
-            <div className="flex flex-col  text-start gap-8 min-h-[180px] max-1100:min-h-[240px]  max-550:min-h-[0px]">
+            <div className="flex flex-col  text-start gap-8 min-h-[180px] max-1250:min-h-[240px]  max-550:min-h-[0px]">
               <h2 className="font-semibold italic text-[25px]">{e.title}</h2>
               <p className="font-normal text-[15px]">{e.description}</p>
             </div>

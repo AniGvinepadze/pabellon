@@ -20,7 +20,7 @@ import ContactUsSection from "../Home/ContactUsSection";
 
 export default function MakrinerestaurantSection() {
   return (
-    <div className="max-w-[1100px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor my-20">
+    <div className="max-w-[1250px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor my-20">
       <div className="max-w-[1000px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-400:gap-3">
         <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
           Makrine Restaurant
@@ -57,11 +57,10 @@ export default function MakrinerestaurantSection() {
           quality and the involvement of the local community.
         </p>
         <p className="text-[17px] font-light  max-600:text-[15px] max-400:text-[13px]">
-        Pabellón’s own winery on the first floor and
-          explore the Georgian menu. Alongside Kakhetian specialties, from 12:00
-          PM to 12:00 AM (kitchen until 11:30 PM), you can also enjoy a wide
-          variety of wines produced at Pabeloni’s own winery in the restaurant’s
-          bar.
+          Pabellón’s own winery on the first floor and explore the Georgian
+          menu. Alongside Kakhetian specialties, from 12:00 PM to 12:00 AM
+          (kitchen until 11:30 PM), you can also enjoy a wide variety of wines
+          produced at Pabeloni’s own winery in the restaurant’s bar.
         </p>
       </div>
     </div>
