@@ -10,12 +10,13 @@ export default function MeetingSection() {
           Meetings & Events
         </h2>
         <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px] custom-font">
-          Here, business is more than just an agenda. Our event spaces are
+          Here, business is more than just an agenda. 
+        </h2>
+        <p className="text-[17px] font-light  max-600:text-[15px] max-400:text-[13px]">
+          Our event spaces are
           designed to inspire, motivate, and spark new ideas. Each room is
           thoughtfully arranged to transform any type of gathering into a
           memorable experience.
-        </h2>
-        <p className="text-[17px] font-light  max-600:text-[15px] max-400:text-[13px]">
           Naturally, the signature elements of Georgian hospitality are woven
           into these spaces as well. The rooms are also equipped with the latest
           technology to meet all your event needs.
