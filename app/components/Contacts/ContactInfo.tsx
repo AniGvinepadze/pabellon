@@ -1,5 +1,5 @@
 "use client";
-import { chefImg } from "@/app/assets";
+import { barImg, chefImg } from "@/app/assets";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
@@ -8,7 +8,6 @@ export default function ContactInfo() {
   const [showNewPopup, setShowNewPopup] = useState<boolean>(false);
   const popupRef = useRef<HTMLDivElement | null>(null);
 
-  // Close the popup if clicked outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
@@ -94,15 +93,15 @@ export default function ContactInfo() {
             <div className="w-full flex flex-col justify-center text-center gap-6 items-center p-6 border-white border shadow-md shadow-gray-500">
               <Image
                 priority={true}
-                src={chefImg}
+                src={barImg}
                 alt="img"
                 width={528}
                 height={528}
               />
               <div className="w-full flex flex-col items-center justify-center p-6 gap-5">
-                <p className="italic font-normal text-[26px]">EXPERIENCES</p>
+                <p className="italic font-normal text-[40px] custom-font">EXPERIENCES</p>
                 <p className="text-base font-normal">
-                  Hidden on the main floor of a building in Barcelona's Eixample, this small hotel is another layer of the city's history.
+           Our mission is to create a haven of hospitality that ignites childlike wonder and unforgettable memories for our guests. 
                 </p>
                 <button
                   className="relative bg-transparent border border-black flex flex-col justify-center items-center px-10 py-1 my-7"
