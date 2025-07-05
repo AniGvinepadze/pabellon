@@ -13,7 +13,7 @@ import twoHuman from "../public/assets/Group (4).svg";
 import bath from "../public/assets/Group (5).svg";
 import iliaLake from "../public/assets/ILIA-LAKE 1 (1).svg";
 import footerBg from "../public/assets/32.svg";
-import pabellonSvg from "../public/assets/Group 7.svg";
+import pabellonSvg from "../public/assets/2.png";
 import pabellonSvg2 from "../public/assets/image 116.svg";
 import inscription from "../public/assets/Artboard 3@3x 1.svg";
 import resImg from "../public/assets/image (40).svg";
