@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -92,12 +93,13 @@ export default function BookSection() {
               </div>
             )}
           </div>
-          <div className="max-600:col-span-2">
+          <Link
+            href={`https://live.ipms247.com/booking/book-rooms-pabellonhotel`} className="max-600:col-span-2">
             <button className="max-w-[140px] w-full text-lg font-medium cursor-pointer hover:scale-110  transition-all ease-in-out duration-300 max-400:text-base">
               Book
             </button>
             <div className="hidden w-full h-[1px] bg-black my-3 max-600:flex" />
-          </div>
+          </Link>
         </div>
       </div>
     </div>
