@@ -20,10 +20,14 @@ export default function Header() {
   const [showNewPopup, setShowNewPopup] = useState<boolean>(false);
   const [menuSrc, setMenuSrc] = useState<any>(mobilemenu);
 
-  // New state variables for margin-top, max-width, and border-radius
   const [marginTop, setMarginTop] = useState<string>("mt-0");
   const [maxWidth, setMaxWidth] = useState<string>("max-w-[3600px]");
   const [borderRadius, setBorderRadius] = useState<string>("rounded-none");
+  const [mobbgColor, setMobBgColor] = useState<string>("bg-beige");
+  const [mobtextColor, setMobTextColor] = useState<string>("text-beige");
+  const [mobglobalSrc, setMobGlobalSrc] = useState<any>(glovabIcon);
+  const [mobshowNewPopup, setMobShowNewPopup] = useState<boolean>(false);
+  const [mobmarginTop, setMobMarginTop] = useState<string>("top-16");
 
   const popupRef = useRef<HTMLDivElement | null>(null);
   const globalPopupRef = useRef<HTMLDivElement | null>(null);
@@ -36,26 +40,35 @@ export default function Header() {
       setPopup(false);
     }
 
-    // Modify styles on scroll
     if (window.scrollY > 50) {
       setBgColor("bg-secondaryTextColor");
       setLogoSrc(whiteLogo);
       setGlobalSrc(whiteglovabIcon);
       setMenuSrc(whiteMobileMenu);
       setTextColor("text-beige");
-      setMarginTop("top-5"); // Set margin top to 10px
-      setMaxWidth("max-w-[1200px]"); // Set max-width to 1200px
-      setBorderRadius("rounded-[10px]"); // Set border-radius to 10px
+      setMarginTop("top-5");
+      setMaxWidth("max-w-[1200px]");
+      setBorderRadius("rounded-[10px]");
+      setMobBgColor("bg-secondaryTextColor");
+      setMobGlobalSrc(whiteglovabIcon);
+      setMobTextColor("text-beige");
+      setMobMarginTop("top-24");
     } else {
       setBgColor("bg-beige");
       setLogoSrc(logo);
       setGlobalSrc(glovabIcon);
       setMenuSrc(mobilemenu);
       setTextColor("text-black");
-      setMarginTop("mt-0"); // Reset margin-top to 0
-      setMaxWidth("max-w-[3600px]"); // Reset max-width
-      setBorderRadius("rounded-none"); // Reset border-radius
+      setMarginTop("mt-0");
+      setMaxWidth("max-w-[3600px]");
+      setBorderRadius("rounded-none");
+      setMobBgColor("bg-beige");
+      setMobGlobalSrc(glovabIcon);
+      setMobTextColor("text-black");
+      setMobMarginTop("top-16");
     }
+    setIsOpen(false);
+    setMobShowNewPopup(false);
   };
 
   useEffect(() => {
@@ -226,6 +239,13 @@ export default function Header() {
             setIsOpen={setIsOpen}
             popup={popup}
             setPopup={setPopup}
+            handleScroll={handleScroll}
+            mobbgColor={mobbgColor}
+            mobtextColor={mobtextColor}
+            mobglobalSrc={mobglobalSrc}
+            mobshowNewPopup={mobshowNewPopup}
+            setMobShowNewPopup={setMobShowNewPopup}
+            mobmarginTop={mobmarginTop}
           />
         )}
       </div>
