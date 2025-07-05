@@ -93,7 +93,7 @@ export default function MobileMenu({
       {isOpen && (
         <motion.div
           ref={mobileMenuRef}
-          className={`fixed  left-0 right-0 z-50 max-1250:block hidden max-700:top-20 ${mobbgColor} ${mobtextColor} ${mobmarginTop} max-1250:max-w-[1000px] max-350:max-w-[500px] w-full max-h-[calc(100vh-64px)] overflow-y-auto rounded-b-lg`}
+          className={`fixed  left-0 right-0 z-50 max-1250:block hidden ${mobbgColor} ${mobtextColor} ${mobmarginTop} max-1250:max-w-[1000px] max-350:max-w-[500px] w-full max-h-[calc(100vh-64px)] overflow-y-auto rounded-b-lg`}
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 2 }}
           exit={{ y: -40, opacity: 0 }}
@@ -125,7 +125,7 @@ export default function MobileMenu({
                 )}
                 {mobshowNewPopup && (
                   <div
-                    ref={showNewPopupRef} 
+                    ref={showNewPopupRef}
                     className={`absolute max-w-[300px]  mt-56 ${mobbgColor} ${mobtextColor}  p-4 shadow-md flex flex-col `}
                   >
                     <Link
@@ -154,14 +154,14 @@ export default function MobileMenu({
                     </Link>
                   </div>
                 )}
-                <div className="relative w-fit -ml-4">
+                <div className="relative w-fit -ml-2  ">
                   <button onClick={() => setPopup((prev) => !prev)}>
                     <Image
                       priority={true}
                       src={mobglobalSrc}
                       alt="globalIcon"
-                      width={24}
-                      height={24}
+                      width={20}
+                      height={20}
                       className="cursor-pointer hover:w-[30px] transition-all ease-in-out duration-300 mx-2"
                     />
                   </button>

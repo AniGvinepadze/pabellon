@@ -15,7 +15,7 @@ export default function Header() {
   const [popup, setPopup] = useState<boolean>(false);
   const [bgColor, setBgColor] = useState<string>("bg-beige");
   const [logoSrc, setLogoSrc] = useState<string>(logo);
-  const [textColor, setTextColor] = useState<string>("text-beige");
+  const [textColor, setTextColor] = useState<string>("text-secondaryTextColor");
   const [globalSrc, setGlobalSrc] = useState<any>(glovabIcon);
   const [showNewPopup, setShowNewPopup] = useState<boolean>(false);
   const [menuSrc, setMenuSrc] = useState<any>(mobilemenu);
