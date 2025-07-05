@@ -91,7 +91,7 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-col gap-1" style={{ color: textColor }}>
-              <p className="text-base font-light">Contact us :</p>
+              <p className="text-base font-light">Contact us </p>
               <p className="font-light text-base">Email : info@pabellon.ge</p>
               <p className="font-light text-base">
                 Phone Number: (+995) 35 2 200200

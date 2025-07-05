@@ -1,52 +1,70 @@
-import { chefImg, roomImg3, roomImg4 } from "@/app/assets";
+"use client";
+import { chefImg } from "@/app/assets";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function ContactInfo() {
+  const [showNewPopup, setShowNewPopup] = useState<boolean>(false);
+  const popupRef = useRef<HTMLDivElement | null>(null);
+
+  // Close the popup if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
+        setShowNewPopup(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="max-w-[1250px] w-full m-auto  text-black my-20 ">
-      <div>
-        <div className="max-w-[1250px] w-full flex justify-between gap-16 max-800:flex-col-reverse  ">
+    <div className="max-w-[1250px] w-full m-auto text-black my-20">
+      <div
+        className={`transition-all duration-300 ease-in-out ${
+          showNewPopup ? "min-h-[700px]" : "min-h-[500px]"
+        }`}
+      >
+        <div className="max-w-[1250px] w-full flex justify-between gap-16 max-800:flex-col-reverse">
           <div className="max-w-[850px] w-full my-10">
-            <h2
-              className="text-[26px] font-medium
-        "
-            >
-              CONTACT INFO:
-            </h2>
-            <div className="max-w-[850px] w-full my-10 ">
+            <h2 className="text-[26px] font-medium">CONTACT INFO:</h2>
+            <div className="max-w-[850px] w-full my-10">
               <div>
                 <label className="mb-6">Name</label>
                 <input
                   type="text"
-                  className=" placeholder-secondaryTextColor bg-beige outline-none font-serif w-full p-2 max-400:text-base  cursor-pointer"
+                  className="placeholder-secondaryTextColor bg-beige outline-none font-serif w-full p-2 max-400:text-base cursor-pointer"
                 />
-                <div className="w-full h-[1px]   bg-[#7f7e7e] " />
+                <div className="w-full h-[1px] bg-[#7f7e7e]" />
               </div>
-              <div className="max-w-[800px] w-full flex justify-between  gap-7 my-9 max-500:flex-col ">
-                <div className="w-full max-w-[450px] ">
-                  <label className="mb-6">Email adress</label>
+              <div className="max-w-[800px] w-full flex justify-between gap-7 my-9 max-500:flex-col">
+                <div className="w-full max-w-[450px]">
+                  <label className="mb-6">Email address</label>
                   <input
                     type="text"
-                    className=" placeholder-secondaryTextColor bg-beige outline-none font-serif p-2 max-400:text-base  cursor-pointer"
+                    className="placeholder-secondaryTextColor bg-beige outline-none font-serif p-2 max-400:text-base cursor-pointer"
                   />
-                  <div className="w-full h-[1px]   bg-[#7f7e7e] max-500:mt-8 " />
-                </div>{" "}
+                  <div className="w-full h-[1px] bg-[#7f7e7e] max-500:mt-8" />
+                </div>
                 <div className="w-full max-w-[450px]">
                   <label className="mb-6">Mobile Phone</label>
                   <input
                     type="number"
                     className="placeholder-secondaryTextColor bg-beige outline-none font-serif p-2 max-400:text-base cursor-pointer"
                   />
-                  <div className="w-full h-[1px]  bg-[#7f7e7e]  max-500:mt-8 max-400:mt-4" />
+                  <div className="w-full h-[1px] bg-[#7f7e7e] max-500:mt-8 max-400:mt-4" />
                 </div>
               </div>
               <div className="flex flex-col w-full my-10">
                 <label className="mb-6">Message</label>
                 <input
                   type="text"
-                  className="  cursor-pointer placeholder-secondaryTextColor bg-beige outline-none font-serif w-full p-2 max-400:text-base min-h-[240px] border border-[#7f7e7e] "
+                  className="cursor-pointer placeholder-secondaryTextColor bg-beige outline-none font-serif w-full p-2 max-400:text-base min-h-[240px] border border-[#7f7e7e]"
                 />
               </div>
               <div className="flex gap-3 my-4">
@@ -55,9 +73,14 @@ export default function ContactInfo() {
                   className="max-w-[20px] w-full accent-beige max-400:max-w-[17px] cursor-pointer"
                 />
                 <p className="text-xl font-normal max-450:text-lg max-400:text-base">
-                  I have read and accept the 
+                  I have read and accept the
                 </p>
-                <Link href={"/privacy-policy"} className="text-xl font-normal max-450:text-lg max-400:text-base underline">privacy policy.</Link>
+                <Link
+                  href={"/privacy-policy"}
+                  className="text-xl font-normal max-450:text-lg max-400:text-base underline"
+                >
+                  privacy policy.
+                </Link>
               </div>
               <div className="my-7">
                 <button className="bg-transparent shadow-md shadow-gray-400 flex flex-col justify-center items-center p-1 px-7 text-lg font-bold">
@@ -67,8 +90,8 @@ export default function ContactInfo() {
             </div>
           </div>
 
-          <div className="max-w-[554px] w-full flex flex-col gap-6 items-center justify-center max-800:max-w-[720px] ">
-            <div className="w-full  flex flex-col justify-center text-center gap-6 items-center p-6 border-white border shadow-md shadow-gray-500">
+          <div className="max-w-[554px] w-full flex flex-col gap-6 items-center justify-center max-800:max-w-[720px] relative">
+            <div className="w-full flex flex-col justify-center text-center gap-6 items-center p-6 border-white border shadow-md shadow-gray-500">
               <Image
                 priority={true}
                 src={chefImg}
@@ -79,13 +102,47 @@ export default function ContactInfo() {
               <div className="w-full flex flex-col items-center justify-center p-6 gap-5">
                 <p className="italic font-normal text-[26px]">EXPERIENCES</p>
                 <p className="text-base font-normal">
-                  Hidden on the main floor of a building in Barcelona's
-                  Eixample, this small hotel is another layer of the city's
-                  history.
+                  Hidden on the main floor of a building in Barcelona's Eixample, this small hotel is another layer of the city's history.
                 </p>
-                <button className="bg-transparent border border-black flex flex-col justify-center items-center px-10 py-1 my-7">
+                <button
+                  className="relative bg-transparent border border-black flex flex-col justify-center items-center px-10 py-1 my-7"
+                  onClick={() => setShowNewPopup(true)}
+                >
                   More Information
                 </button>
+                {showNewPopup && (
+                  <div
+                    ref={popupRef}
+                    className={`absolute max-w-[350px] -bottom-32 text-start p-4 shadow-xl flex flex-col bg-beige transition-transform duration-300 ease-in-out transform ${
+                      showNewPopup ? "translate-y-0" : "translate-y-5"
+                    }`}
+                  >
+                    <Link
+                      href={"/makrine-restaurant"}
+                      className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+                    >
+                      Bars & Restaurants
+                    </Link>
+                    <Link
+                      href={"/meetings-events"}
+                      className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+                    >
+                      Meetings & Events
+                    </Link>
+                    <Link
+                      href={"/wellness-fitness"}
+                      className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+                    >
+                      Spa & Wellness
+                    </Link>
+                    <Link
+                      href={"/kids-entertainment"}
+                      className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+                    >
+                      Kids Entertainment
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
           </div>
