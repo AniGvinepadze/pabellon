@@ -26,7 +26,7 @@ export default function PoolSection() {
           find their perfect escape.
         </p>
       </div>
-      <div className="my-20">
+      {/* <div className="my-20">
         <Image
           priority={true}
           src={wellnessImg4}
@@ -35,7 +35,7 @@ export default function PoolSection() {
           height={940}
           className="max-w-[1600px] w-full "
         />
-      </div>
+      </div> */}
       <div className="max-w-[900px] w-full ">
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
           Step outside and soak up the sun at our outdoor pool, surrounded by
