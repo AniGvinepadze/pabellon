@@ -16,29 +16,29 @@ export default function ContactInfo() {
             </h2>
             <div className="max-w-[850px] w-full my-10 ">
               <div>
+                <label className="mb-6">Name</label>
                 <input
                   type="text"
-                  placeholder="Name"
                   className=" placeholder-secondaryTextColor bg-beige outline-none font-serif w-full p-2 max-400:text-base  cursor-pointer"
                 />
-                <div className="w-full h-[1px]   bg-[#7f7e7e] mt-9 max-1000:mt-4 max-450:mt-2" />
+                <div className="w-full h-[1px]   bg-[#7f7e7e] " />
               </div>
-              <div className="max-w-[800px] w-full flex justify-between gap-7 my-5 max-500:flex-col">
-                <div className="w-full max-w-[450px]">
+              <div className="max-w-[800px] w-full flex justify-between  gap-7 my-9 max-500:flex-col ">
+                <div className="w-full max-w-[450px] ">
+                  <label className="mb-6">Email adress</label>
                   <input
                     type="text"
-                    placeholder="Email Adress"
                     className=" placeholder-secondaryTextColor bg-beige outline-none font-serif p-2 max-400:text-base  cursor-pointer"
                   />
-                  <div className="w-full h-[1px]   bg-[#7f7e7e] mt-9 max-1000:mt-4 max-450:mt-2" />
+                  <div className="w-full h-[1px]   bg-[#7f7e7e] max-500:mt-8 max-400:mt-4" />
                 </div>{" "}
                 <div className="w-full max-w-[450px]">
+                  <label className="mb-6">Mobile Phone</label>
                   <input
                     type="number"
-                    placeholder="Mobile Phone"
                     className="placeholder-secondaryTextColor bg-beige outline-none font-serif p-2 max-400:text-base cursor-pointer"
                   />
-                  <div className="w-full h-[1px]  bg-[#7f7e7e] mt-9 max-1000:mt-4 max-450:mt-2" />
+                  <div className="w-full h-[1px]  bg-[#7f7e7e]  max-500:mt-8 max-400:mt-4" />
                 </div>
               </div>
               <div className="flex flex-col w-full my-10">
