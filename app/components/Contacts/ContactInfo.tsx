@@ -1,5 +1,6 @@
 import { chefImg, roomImg3, roomImg4 } from "@/app/assets";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function ContactInfo() {
@@ -30,7 +31,7 @@ export default function ContactInfo() {
                     type="text"
                     className=" placeholder-secondaryTextColor bg-beige outline-none font-serif p-2 max-400:text-base  cursor-pointer"
                   />
-                  <div className="w-full h-[1px]   bg-[#7f7e7e] max-500:mt-8 max-400:mt-4" />
+                  <div className="w-full h-[1px]   bg-[#7f7e7e] max-500:mt-8 " />
                 </div>{" "}
                 <div className="w-full max-w-[450px]">
                   <label className="mb-6">Mobile Phone</label>
@@ -54,8 +55,9 @@ export default function ContactInfo() {
                   className="max-w-[20px] w-full accent-beige max-400:max-w-[17px] cursor-pointer"
                 />
                 <p className="text-xl font-normal max-450:text-lg max-400:text-base">
-                  I have read and accept the privacy policy.
+                  I have read and accept the 
                 </p>
+                <Link href={"/privacy-policy"} className="text-xl font-normal max-450:text-lg max-400:text-base underline">privacy policy.</Link>
               </div>
               <div className="my-7">
                 <button className="bg-transparent shadow-md shadow-gray-400 flex flex-col justify-center items-center p-1 px-7 text-lg font-bold">
