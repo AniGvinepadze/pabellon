@@ -108,7 +108,7 @@ export const rooms: Rooms[] = [
   {
     id: 1,
     img: standartKing,
-    title: "Standard King",
+    title: "Rcheuli Standard Room",
     description:
       "Soak in the scenery and unwind in style from your spacious king-bed retreat.",
     humanIcon: threeHuman,
@@ -125,7 +125,7 @@ export const rooms: Rooms[] = [
   {
     id: 2,
     img: duplex,
-    title: "Duplec",
+    title: "Verde Duplex",
     description:
       "Designed over two levels, the lower floor offers a cozy living area with patio garden, cozy yet sophisticated ambiance, while upstairs, the sleeping area invites restful nights. ",
     humanIcon: fourHuman,
@@ -142,7 +142,7 @@ export const rooms: Rooms[] = [
   {
     id: 3,
     img: superiorDuplex,
-    title: "Superior Duplex",
+    title: "Gantiani Duplex",
     description:
       "Duplex spans two levels, offering a separate living area below and a tranquil sleeping space above. Ideal for guests seeking a little extra luxury, enjoying the bath and calm atmosphere.",
     humanIcon: fourHuman,
@@ -159,7 +159,7 @@ export const rooms: Rooms[] = [
   {
     id: 4,
     img: pabellonSuite,
-    title: "Pabellon Suite",
+    title: "Tsiagi Suite",
     description:
       "Our Suite is the pinnacle of comfort. The space creates a tranquil atmosphere ideal for relaxation and inspiration, perfect choice for guests who appreciate refined living.",
     humanIcon: fourHuman,
