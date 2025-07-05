@@ -73,11 +73,11 @@ export const navbar: Navbar[] = [
     title: "Agriculture",
     route: "/agro",
   },
-  {
-    id: 8,
-    title: "Blog",
-    route: "/blog",
-  },
+  // {
+  //   id: 8,
+  //   title: "Blog",
+  //   route: "/blog",
+  // },
   {
     id: 9,
     title: "Contact",
@@ -175,11 +175,11 @@ export const rooms: Rooms[] = [
 ];
 
 export const footerNavbar: Navbar[] = [
-  {
-    id: 1,
-    title: "Blog",
-    route: "/blog",
-  },
+  // {
+  //   id: 1,
+  //   title: "Blog",
+  //   route: "/blog",
+  // },
   {
     id: 2,
     title: "Rooms",
@@ -198,12 +198,12 @@ export const footerNavbar: Navbar[] = [
   {
     id: 5,
     title: "Restaurnat",
-    route: "/restaurant",
+    route: "/makrine-restaurant",
   },
   {
     id: 6,
     title: "FAQs",
-    route: "/faqs",
+    route: "/home",
   },
 ];
 
