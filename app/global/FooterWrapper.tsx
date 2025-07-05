@@ -4,9 +4,9 @@ import { usePathname } from "next/navigation";
 import Footer from "./Footer";
 
 export default function FooterWrapper() {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
-  if (pathname === "/") return null;
+  // if (pathname === "/") return null;
 
   return <Footer />;
 }

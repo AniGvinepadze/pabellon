@@ -124,7 +124,7 @@ export default function Header() {
         className={`max-w-[1400px] w-full m-auto px-3 pb-1 flex justify-between items-center max-1000:gap-10`}
       >
         <Link
-          href="/home"
+          href="/"
           className="hover:scale-110 transition-all ease-in-out duration-300"
         >
           <Image

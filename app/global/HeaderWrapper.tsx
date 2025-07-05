@@ -4,9 +4,9 @@ import { usePathname } from 'next/navigation';
 import Header from './Header';
 
 export default function HeaderWrapper() {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
-  if (pathname === '/') return null;
+  // if (pathname === '/') return null;
 
   return <Header />;
 }

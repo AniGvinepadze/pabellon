@@ -40,7 +40,7 @@ export const navbar: Navbar[] = [
   {
     id: 1,
     title: "Home",
-    route: "/home",
+    route: "/",
   },
   {
     id: 2,
@@ -188,7 +188,7 @@ export const footerNavbar: Navbar[] = [
   {
     id: 3,
     title: "Home",
-    route: "/home",
+    route: "/",
   },
   {
     id: 4,
@@ -203,7 +203,7 @@ export const footerNavbar: Navbar[] = [
   {
     id: 6,
     title: "FAQs",
-    route: "/home",
+    route: "/",
   },
 ];
 
