@@ -1,5 +1,3 @@
-import { pabellonSvg2 } from "@/app/assets";
-import Image from "next/image";
 import React from "react";
 
 export default function AboutUsaSection() {
@@ -21,14 +19,15 @@ export default function AboutUsaSection() {
         </p>
       </div>
       <div className="my-20">
-        <Image
-          priority={true}
-          src={pabellonSvg2}
-          alt="icon"
-          width={1540}
-          height={940}
-          className="max-w-[1600px] w-full "
-        />
+        <video
+          className="max-w-[1600px] w-full"
+          controls
+          autoPlay
+          loop
+          muted
+        >
+          <source src="/videos/PABELLON-STORY-NEW-V1-SD.mp4" type="video/mp4" />
+        </video>
       </div>
     </div>
   );
