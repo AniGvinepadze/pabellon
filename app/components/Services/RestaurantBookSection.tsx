@@ -54,7 +54,7 @@ export default function RestaurantBookSection() {
                 selectsStart
                 startDate={checkIn}
                 endDate={checkOut}
-                placeholderText="july 6 ,2025"
+                placeholderText="July 6, 2025"
                 className="border-none max-w-[400px] w-full text-lg bg-beige placeholder-black outline-none font-serif max-400:text-base cursor-pointer"
               />
               <div className="w-full h-[1px]  bg-black my-3" />
