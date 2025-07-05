@@ -211,17 +211,17 @@ export const footerSoc = [
   {
     id: 1,
     soc: "Instagram",
-    link: "https://www.instagram.com",
+    link: " https://www.instagram.com/pabellonhotel/",
   },
   {
     id: 2,
     soc: "Facebook",
-    link: "https://www.facebook.com/",
+    link: "https://www.facebook.com/profile.php?id=61576125146141",
   },
   {
     id: 1,
     soc: "LinkedIn",
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/company/pabell%C3%B3n-hotel/posts/?feedView=all",
   },
 ];
 type Facilities = {
