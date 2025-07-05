@@ -24,7 +24,7 @@ export default function Header() {
   const [maxWidth, setMaxWidth] = useState<string>("max-w-[3600px]");
   const [borderRadius, setBorderRadius] = useState<string>("rounded-none");
   const [mobbgColor, setMobBgColor] = useState<string>("bg-beige");
-  const [mobtextColor, setMobTextColor] = useState<string>("text-beige");
+  const [mobtextColor, setMobTextColor] = useState<string>("text-secondaryTextColor");
   const [mobglobalSrc, setMobGlobalSrc] = useState<any>(glovabIcon);
   const [mobshowNewPopup, setMobShowNewPopup] = useState<boolean>(false);
   const [mobmarginTop, setMobMarginTop] = useState<string>("top-16");
