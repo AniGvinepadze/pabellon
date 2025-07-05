@@ -19,8 +19,15 @@ export default function Header() {
   const [globalSrc, setGlobalSrc] = useState<any>(glovabIcon);
   const [showNewPopup, setShowNewPopup] = useState<boolean>(false);
   const [menuSrc, setMenuSrc] = useState<any>(mobilemenu);
+
+  // New state variables for margin-top, max-width, and border-radius
+  const [marginTop, setMarginTop] = useState<string>("mt-0");
+  const [maxWidth, setMaxWidth] = useState<string>("max-w-[3600px]");
+  const [borderRadius, setBorderRadius] = useState<string>("rounded-none");
+
   const popupRef = useRef<HTMLDivElement | null>(null);
   const globalPopupRef = useRef<HTMLDivElement | null>(null);
+
   const handleScroll = () => {
     if (showNewPopup) {
       setShowNewPopup(false);
@@ -28,18 +35,26 @@ export default function Header() {
     if (popup) {
       setPopup(false);
     }
+
+    // Modify styles on scroll
     if (window.scrollY > 50) {
       setBgColor("bg-secondaryTextColor");
       setLogoSrc(whiteLogo);
       setGlobalSrc(whiteglovabIcon);
       setMenuSrc(whiteMobileMenu);
       setTextColor("text-beige");
+      setMarginTop("top-5"); // Set margin top to 10px
+      setMaxWidth("max-w-[1200px]"); // Set max-width to 1200px
+      setBorderRadius("rounded-[10px]"); // Set border-radius to 10px
     } else {
       setBgColor("bg-beige");
       setLogoSrc(logo);
       setGlobalSrc(glovabIcon);
       setMenuSrc(mobilemenu);
       setTextColor("text-black");
+      setMarginTop("mt-0"); // Reset margin-top to 0
+      setMaxWidth("max-w-[3600px]"); // Reset max-width
+      setBorderRadius("rounded-none"); // Reset border-radius
     }
   };
 
@@ -64,11 +79,13 @@ export default function Header() {
       document.removeEventListener("click", handleClickOutsideSec);
     };
   }, [showNewPopup, popup]);
+
   const handleClickOutside = (e: MouseEvent) => {
     if (popupRef.current && !popupRef.current.contains(e.target as Node)) {
       setShowNewPopup(false);
     }
   };
+
   const handleClickOutsideSec = (e: MouseEvent) => {
     if (
       globalPopupRef.current &&
@@ -77,6 +94,7 @@ export default function Header() {
       setPopup(false);
     }
   };
+
   const handleItemClick = (route: string | undefined) => {
     if (!route) {
       setShowNewPopup((prev) => !prev);
@@ -87,7 +105,7 @@ export default function Header() {
 
   return (
     <div
-      className={`max-w-[3600px] w-full ${bgColor}  sticky top-0 z-50   transition-all ease-in-out duration-500`}
+      className={`w-full ${bgColor} sticky top-0 z-50 transition-all ease-in-out duration-500 ${maxWidth} ${borderRadius} ${marginTop} mx-auto  `}
     >
       <div
         className={`max-w-[1400px] w-full m-auto px-3 pb-1 flex justify-between items-center max-1000:gap-10`}
