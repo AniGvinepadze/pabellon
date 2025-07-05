@@ -1,5 +1,6 @@
 import { wellnessImg1, wellnessImg2, wellnessImg3 } from "@/app/assets";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function SpaWellnessSection() {
@@ -67,9 +68,9 @@ export default function SpaWellnessSection() {
               {" "}
               Let ancient worlds and wonder guide an unforgettable adventure
             </p>
-            <button className="bg-secondaryTextColor px-8 py-2 border border-secondaryTextColor hover:bg-transparent transition-all ease-in-out duration-300 text-beige hover:text-secondaryTextColor text-[17px] font-normal my-8">
+            <Link href={"/menu"} className="bg-secondaryTextColor px-8 py-2 border border-secondaryTextColor hover:bg-transparent transition-all ease-in-out duration-300 text-beige hover:text-secondaryTextColor text-[17px] font-normal my-8">
               see the menu
-            </button>
+            </Link>
           </div>
         </div>
       </div>
