@@ -44,7 +44,7 @@ export default function RestaurantBookSection() {
         </div>
         <div className="flex gap-10 items-center relative max-w-[1000px] m-auto w-full justify-between mt-6  max-600:px-10 max-450:px-3 max-450:gap-6 max-400:px-0 max-650:flex-col">
           <div className="w-full flex justify-between gap-7 ">
-            <div className="flex flex-col w-full cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 ">
+            <div className="flex flex-col w-full cursor-pointer transition-all ease-in-out duration-300 ">
               <p className="font-normal text-[17px] my-8 max-500:text-[15px]">
                 Select Date
               </p>
@@ -60,7 +60,7 @@ export default function RestaurantBookSection() {
               <div className="w-full h-[1px]  bg-black my-3" />
             </div>
 
-            <div className="flex flex-col w-full  cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 max-600:col-span-2 max-400:-mt-1">
+            <div className="flex flex-col w-full  cursor-pointer  transition-all ease-in-out duration-300 max-600:col-span-2 max-400:-mt-1">
               <p className="font-normal text-[17px] my-8 max-500:text-[15px] ">
                 Adults
               </p>
