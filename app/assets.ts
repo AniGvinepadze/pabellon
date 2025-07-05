@@ -20,7 +20,7 @@ import resImg from "../public/assets/image (40).svg";
 import barImg from "../public/assets/image 634.svg";
 import meetingImg from "../public/assets/image 51.svg";
 import artWork from "../public/assets/Untitled_Artwork 3 1.svg";
-import wellnessImg from "../public/assets/image (41).svg";
+import wellnessImg from "../public/assets/Swimming pool Reception Lobby.png";
 import kidsErImg from "../public/assets/image (42).svg";
 import kidsErImg2 from "../public/assets/image (44).svg";
 import kidsErImg3 from "../public/assets/image (45).svg";

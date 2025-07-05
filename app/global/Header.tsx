@@ -47,7 +47,7 @@ export default function Header() {
       setMenuSrc(whiteMobileMenu);
       setTextColor("text-beige");
       setMarginTop("top-5");
-      setMaxWidth("max-w-[1200px]");
+      setMaxWidth("max-w-[1245px]");
       setBorderRadius("rounded-[10px]");
       setMobBgColor("bg-secondaryTextColor");
       setMobGlobalSrc(whiteglovabIcon);
