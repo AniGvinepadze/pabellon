@@ -4,7 +4,7 @@ import standartKing from "../public/assets/Standard King Room 1.svg";
 import duplex from "../public/assets/Frame 10 (1).svg";
 import superiorDuplex from "../public/assets/Frame 11.svg";
 import pabellonSuite from "../public/assets/Frame 12.svg";
-import threeHuman from "../public/assets/Group.svg";
+import threeHuman from "../public/assets/Group (6).svg";
 import bed from "../public/assets/Vector (8).svg";
 import sofa from "../public/assets/Group (1).svg";
 import areaIcon from "../public/assets/Group (2).svg";
@@ -76,7 +76,9 @@ import chefImg from "../public/assets/image 36.svg"
 import conferencee from "../public/assets/image (69).svg"
 import whiteLogo from "../public/assets/Artboard 4@3x-8 1.svg"
 import agroLogo from "../public/assets/Artboard 20@3x-8 1.svg"
+import fourHuman from "../public/assets/4 person icon.svg"
 export {
+  fourHuman,
   logoCol,
   logo,
   duplex,

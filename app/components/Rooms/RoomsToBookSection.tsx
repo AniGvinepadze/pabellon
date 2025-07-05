@@ -10,7 +10,7 @@ export default function RoomsToBookSection() {
       <div className=" p-10 w-full grid grid-cols-2 gap-10 my-16 max-750:grid-cols-1 max-750:gap-0 max-600:p-5 max-450:p-2">
         {roomsBook.map((e) => (
           <Link
-            href={"/checkout"}
+              href={`https://live.ipms247.com/booking/book-rooms-pabellonhotel`}
             key={e.id}
             className="max-w-[714px] w-full  flex flex-col  gap-5 max-1250:my-10 max-750:my-4 "
           >
@@ -101,12 +101,12 @@ export default function RoomsToBookSection() {
                   </div>
                 </div>
                 <div>
-                  <p className="font-normal text-[40px] max-500:text-[28px]">
+                  {/* <p className="font-normal text-[40px] max-500:text-[28px]">
                     ${e.price}
                     <span className="text-xs font-normal mx-2">
                       From / Per Night
                     </span>
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
