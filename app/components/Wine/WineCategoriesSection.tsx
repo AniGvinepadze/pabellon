@@ -24,7 +24,7 @@ export default function WineCategoriesSection() {
           alt="walnut"
           width={270}
           height={360}
-          className="absolute -left-10 -mt-20 max-700:max-w-[200px] w-full max-500:max-w-[140px] max-500:-mt-28 max-350:max-w-[120px] max-350:-mt-5"
+          className="absolute max-w-[270px] w-full -left-10 -mt-20 max-700:max-w-[200px] max-500:max-w-[140px] max-500:-mt-28 max-350:max-w-[120px] max-350:-mt-5"
         />
         <h2 className="font-semibold italic text-[40px]  max-500:text-3xl">Categories</h2>
         <div>

@@ -35,7 +35,7 @@ export default function Footer() {
 
   return (
     <div
-      className="max-w-[3600px] w-full "
+      className="max-w-[3600px] w-full m-auto"
       style={{ backgroundColor: footerBackgroundColor }}
     >
       <div
