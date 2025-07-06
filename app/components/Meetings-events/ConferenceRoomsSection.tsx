@@ -58,7 +58,7 @@ export default function ConferenceRoomsSection() {
             <p className="max-w-[250px] w-full font-light text-xl max-800:text-lg">
               Meeting Room Kamara - 83.64 m²
             </p>
-            <p className="font-light max-w-[250px] w-full text-xl max-800:text-lg">
+            <p className="font-light max-w-[230px] w-full text-xl max-800:text-lg">
               Iliauri & Kamara - 167.28 m²
             </p>
         

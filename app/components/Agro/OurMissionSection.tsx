@@ -51,25 +51,28 @@ export default function OurMissionSection() {
             priority={true}
             src={agroImg2}
             alt="icon"
-            width={388}
-            height={518}
-            className="max-800:max-w-[300px] max-800:max-h-[370px] max-800:mt-3 w-full"
+            width={358}
+            height={500}
+            className="object-cover max-w-[320px] w-full"
+            // className="max-800:max-w-[300px] max-800:max-h-[370px] max-800:mt-3 w-full"
           />{" "}
           <Image
             priority={true}
             src={agroImg3}
             alt="icon"
-            width={300}
-            height={450}
-            className="object-contain max-h-[450px] max-w-[306px] w-full mt-5 max-800:max-w-[300px] max-1000:mt-0 max-650:mt-2 max-600:mt-5"
+            width={388}
+            height={518}
+                 className="object-cover max-w-[350px] w-full"
+            // className="object-contain max-h-[450px] max-w-[306px] w-full mt-5 max-800:max-w-[300px] max-1000:mt-0 max-650:mt-2 max-600:mt-5"
           />{" "}
           <Image
             priority={true}
             src={agroImg4}
             alt="icon"
-            width={300}
-            height={450}
-            className="max-800:max-w-[300px]w-[300px] w-[300px] mt-5  max-800:max-h-[380px] max-1000:mt-0"
+            width={388}
+            height={518}
+                   className="object-cover max-w-[323px] w-full"
+            // className="max-800:max-w-[300px]w-[300px] w-[300px] mt-5  max-800:max-h-[380px] max-1000:mt-0"
           />
           <Image
             priority={true}
@@ -77,7 +80,8 @@ export default function OurMissionSection() {
             alt="icon"
             width={388}
             height={518}
-            className=" max-800:max-w-[300px] w-full"
+                 className="object-cover max-w-[313px] w-full"
+            // className=" max-800:max-w-[300px] w-full"
           />
         </div>
       </div>
