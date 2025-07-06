@@ -17,7 +17,7 @@ export default function RoomsSection() {
         </h2>
         <p className="text-[17px] font-light max-w-[700px]  max-600:text-[15px] max-400:text-[13px]">
           Rooms are designed to help you slow down and unwind, offering a
-          peaceful retreat inspired by the beauty of the surrounding vineyards
+          peaceful retreat Inspired by the beauty of the surrounding vineyards
           and mountains.
         </p>
       </div>

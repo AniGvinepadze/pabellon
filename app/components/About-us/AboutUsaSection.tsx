@@ -8,7 +8,7 @@ export default function AboutUsaSection() {
           About Us
         </h2>
         <h2 className="custom-font font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px]">
-          inspired by traditional Georgian archeology, art, literature, history
+          Inspired by traditional Georgian archeology, art, literature, history
           and motifs
         </h2>
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
@@ -19,13 +19,7 @@ export default function AboutUsaSection() {
         </p>
       </div>
       <div className="my-20">
-        <video
-          className="max-w-[1600px] w-full"
-          controls
-          autoPlay
-          loop
-          muted
-        >
+        <video className="max-w-[1600px] w-full" controls autoPlay loop muted>
           <source src="/videos/PABELLON-STORY-NEW-V1-SD.mp4" type="video/mp4" />
         </video>
       </div>
