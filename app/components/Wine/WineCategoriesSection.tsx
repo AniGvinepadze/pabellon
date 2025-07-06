@@ -17,21 +17,21 @@ export default function WineCategoriesSection() {
           and the Georgian soul.
         </p>
       </div>
-      <div className="relative my-20 max-w-[1150px] w-full bg-[#907655] flex flex-col justify-between items-center text-center p-16 gap-10 shadow-lg shadow-gray-500">
+      <div className="relative my-20 max-w-[1150px] w-full bg-[#907655] flex flex-col justify-between items-center text-center p-16 gap-10 shadow-lg shadow-gray-500 max-500:p-4 max-500:py-10">
         <Image
           priority={true}
           src={walnut}
           alt="walnut"
           width={270}
           height={360}
-          className="absolute -left-10 -mt-20"
+          className="absolute -left-10 -mt-20 max-700:max-w-[200px] w-full max-500:max-w-[140px] max-500:-mt-28 max-350:max-w-[120px] max-350:-mt-5"
         />
-        <h2 className="font-semibold italic text-[40px]">Categories</h2>
+        <h2 className="font-semibold italic text-[40px]  max-500:text-3xl">Categories</h2>
         <div>
           {wine.map((e) => (
             <div key={e.id} className="py-3">
-              <p className="font-bold text-2xl my-1">{e.title}</p>
-              <p className="font-light text-2xl">{e.description}</p>
+              <p className="font-bold text-2xl my-1 max-500:text-lg">{e.title}</p>
+              <p className="font-light text-2xl  max-500:text-lg">{e.description}</p>
             </div>
           ))}
         </div>
