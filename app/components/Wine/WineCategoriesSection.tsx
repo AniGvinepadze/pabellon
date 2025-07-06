@@ -10,7 +10,7 @@ export default function WineCategoriesSection() {
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
           Our mission is to craft exceptional wines that reflect Georgia’s rich
           heritage and unique character. We use the finest grape varieties and
-          traditional methods passed down through generations. Pabeloni’s winery
+          traditional methods passed down through generations. Pabellón’s winery
           embodies the spirit of Georgia’s 8,000-year-old winemaking legacy.
           Local grape varieties thrive under the Kakhetian sun, cultivated using
           ancient techniques. Each bottle tells a story — of the land, the sun,

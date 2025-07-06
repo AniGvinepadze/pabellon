@@ -8,7 +8,7 @@ export default function FurtherQuestionSection() {
           Further Questions
         </h2>
         <p className="font-light text-base">
-          Pabellon Hotel team is available to assist you with reservation and
+         Pabellón Hotel team is available to assist you with reservation and
           other inquiries.
         </p>
         <p className="italic font-normal custom-font text-xl">

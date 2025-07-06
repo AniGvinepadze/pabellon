@@ -15,11 +15,11 @@ export default function PabellonSection() {
           className="max-500:w-[200px] max-350:w-[170px]"
         />
         <p className="font-normal text-xl max-500:text-lg max-350:text-base">
-          Pabellon Hotel, located in the heart of Kakheti, is the place that
+          Pabellón Hotel, located in the heart of Kakheti, is the place that
           fills each guest with amazing impressions. In addition to its concept
           being rooted in the Chavchavadze mood, it stands out with comfort
           suitable for modern times, high-level service, and a cozy atmosphere.
-          With such a synthesis, Pabellon Hotel is an ideal space for both rest
+          With such a synthesis, Pabellón Hotel is an ideal space for both rest
           and inspiration.
         </p>
         <p className="font-normal text-lg max-500:text-lg max-350:text-base">

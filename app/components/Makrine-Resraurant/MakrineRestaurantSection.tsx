@@ -60,7 +60,7 @@ export default function MakrinerestaurantSection() {
           Pabellón’s own winery on the first floor and explore the Georgian
           menu. Alongside Kakhetian specialties, from 12:00 PM to 12:00 AM
           (kitchen until 11:30 PM), you can also enjoy a wide variety of wines
-          produced at Pabeloni’s own winery in the restaurant’s bar.
+          produced at Pabellón’s own winery in the restaurant’s bar.
         </p>
       </div>
     </div>

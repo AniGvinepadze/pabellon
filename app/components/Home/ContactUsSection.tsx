@@ -12,7 +12,7 @@ export default function ContactUsSection() {
         </p>
         <p className="italic font-normal text-xl custom-font">Get in touch:</p>
         <div>
-          <p className="font-light text-sm">Email address : info@pabellon.ge</p>
+          <p className="font-light text-sm">Email address : info@pabellón.ge</p>
           <p className="font-light text-sm">Phone : (+995) 35 2 200200</p>
         </div>
       </div>

@@ -40,7 +40,7 @@ export default function BookSection() {
     <div className=" max-w-[1600px] w-full m-auto my-7 p-5">
       <div className=" max-w-[1600px] w-full flex flex-col justify-center items-center text-center">
         <h2 className="text-[40px] font-normal my-10 max-500:my-4 max-550:text-[34px] max-450:text-[30px] max-400:text-[25px] max-350:text-[21px] max-300:text-[18px] max-300:my-1">
-          Book Your Stay At Pabellon
+          Book Your Stay At Pabellón 
         </h2>
         <div className="grid grid-cols-4 gap-10 items-center relative max-w-[800px] m-auto w-full justify-between mt-6 max-600:grid-cols-2 max-600:px-10 max-450:px-3 max-450:gap-6 max-400:px-0">
           <div className="flex flex-col w-full cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 ">

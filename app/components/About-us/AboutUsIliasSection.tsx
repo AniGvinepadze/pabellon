@@ -8,7 +8,7 @@ export default function AboutUsIliasSection() {
       <div className=" max-w-[850px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-16">
         <div className="flex flex-col gap-6">
           <p className="font-light text-[17px] max-500:text-[15px]">
-            At “Pabeloni,” inspired by Georgian hospitality, art, literature,
+            At “Pabellón,” inspired by Georgian hospitality, art, literature,
             and history, you'll discover a world where warmth, generosity, and
             joy-filled adventure await you. Here, every detail is connected to
             history, adding nostalgic notes to your unforgettable memories and
