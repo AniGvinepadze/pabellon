@@ -67,10 +67,13 @@ export default function ContactInfo() {
                 />
               </div>
               <div className="flex gap-3 my-4">
+                <div>
                 <input
                   type="checkbox"
                   className="max-w-[20px] w-full accent-beige max-400:max-w-[17px] cursor-pointer"
                 />
+                </div>
+                <div className="flex gap-2">
                 <p className="text-xl font-normal max-450:text-lg max-400:text-base">
                   I have read and accept the
                 </p>
@@ -80,6 +83,7 @@ export default function ContactInfo() {
                 >
                   privacy policy.
                 </Link>
+                </div>
               </div>
               <div className="my-7">
                 <button className="bg-transparent shadow-md shadow-gray-400 flex flex-col justify-center items-center p-1 px-7 text-lg font-bold">

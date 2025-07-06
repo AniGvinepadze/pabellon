@@ -1,4 +1,3 @@
-// app/layout.tsx
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -7,21 +6,18 @@ import Header from "./global/Header";
 import HeaderWrapper from "./global/HeaderWrapper";
 import FooterWrapper from "./global/FooterWrapper";
 
-// Restore GeistSans font
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",  // Ensure this file exists in the 'public/fonts/' folder
+  src: "./fonts/GeistVF.woff", 
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 
-// Restore GeistMono font
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",  // Ensure this file exists in the 'public/fonts/' folder
+  src: "./fonts/GeistMonoVF.woff",  
   variable: "--font-geist-mono",
   weight: "100 900",
 });
 
-// Google font Noto Serif
 const notoSerif = Noto_Serif({
   subsets: ["latin"],
   variable: "--font-noto-serif",

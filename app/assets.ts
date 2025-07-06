@@ -44,7 +44,7 @@ import walnut from "../public/assets/walnut_silver 1.svg";
 import wineImg1 from "../public/assets/image (56).svg";
 import artWork2 from "../public/assets/Artboard 4@3x 1.svg";
 import agroImg from "../public/assets/image (57).svg";
-import walnut2 from "../public/assets/WALNUT1.jpg 1 (2).svg";
+import walnut2 from "../public/assets/WALNUT1.jpg 1.png";
 import agroImg2 from "../public/assets/image (58).svg";
 import agroImg3 from "../public/assets/Agriculture 1.svg";
 import agroImg4 from "../public/assets/image (59).svg";
