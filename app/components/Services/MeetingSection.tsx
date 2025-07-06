@@ -21,10 +21,7 @@ export default function MeetingSection() {
           into these spaces as well. The rooms are also equipped with the latest
           technology to meet all your event needs.
         </p>
-        <p className="text-[17px] font-normal  max-600:text-[15px] max-400:text-[13px]">
-          For more information, to view the venue, or to make a reservation,
-          please contact the reception at extension 100.
-        </p>
+   
       </div>
 
       <div className=" my-20 flex flex-col gap-14 justify-center items-center">

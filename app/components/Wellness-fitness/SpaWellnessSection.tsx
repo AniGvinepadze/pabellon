@@ -69,7 +69,7 @@ export default function SpaWellnessSection() {
               Let ancient worlds and wonder guide an unforgettable adventure
             </p>
             <Link href={"/menu"} className="bg-secondaryTextColor px-8 py-2 border border-secondaryTextColor hover:bg-transparent transition-all ease-in-out duration-300 text-beige hover:text-secondaryTextColor text-[17px] font-normal ">
-              see the menu
+              See the menu
             </Link>
           </div>
         </div>
