@@ -5,7 +5,6 @@ import { Noto_Serif } from "next/font/google";
 import Header from "./global/Header";
 import HeaderWrapper from "./global/HeaderWrapper";
 import FooterWrapper from "./global/FooterWrapper";
-import { LanguageProvider } from "./LanguageContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -44,11 +43,9 @@ export default function RootLayout({
           font-serif
         `}
       >
-        <LanguageProvider>
         <HeaderWrapper />
         {children}
         <FooterWrapper />
-        </LanguageProvider>
       </body>
     </html>
   );

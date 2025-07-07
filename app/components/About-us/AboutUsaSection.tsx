@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 
 import { axiosInstance } from "@/app/lib/axiosInstance";
-import { useLanguage } from "@/app/LanguageContext";
 
 type AboutUsData = {
   aboutus_title: string;
@@ -11,7 +10,6 @@ type AboutUsData = {
 };
 
 export default function AboutUsSection() {
-  const { language } = useLanguage();
   const [data, setData] = useState<AboutUsData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -26,6 +24,7 @@ export default function AboutUsSection() {
 
     const fetchData = async () => {
       try {
+        const language = localStorage.getItem("language") || "en";
         const response = await axiosInstance.get(
           `/api/aboutUs?lang=${language}`
         );
@@ -40,7 +39,7 @@ export default function AboutUsSection() {
     };
 
     fetchData();
-  }, [language]);
+  }, []);
 
   // if (!isClient) {
   //   return null;

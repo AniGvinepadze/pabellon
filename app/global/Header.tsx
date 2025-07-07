@@ -9,7 +9,6 @@ import mobilemenu from "../../public/assets/Vector.svg";
 import MobileMenu from "./MobileMenu";
 import whiteMobileMenu from "../../public/assets/burgerwhite.svg";
 import { logo, whiteLogo } from "../assets";
-import { useLanguage } from "../LanguageContext";
 import { axiosInstance } from "../lib/axiosInstance";
 
 export default function Header() {
@@ -32,10 +31,20 @@ export default function Header() {
   const [mobglobalSrc, setMobGlobalSrc] = useState<any>(glovabIcon);
   const [mobshowNewPopup, setMobShowNewPopup] = useState<boolean>(false);
   const [mobmarginTop, setMobMarginTop] = useState<string>("top-16");
-  const { language, setLanguage } = useLanguage();
+  const [language, setLanguage] = useState<"en" | "ge">("en");
   const popupRef = useRef<HTMLDivElement | null>(null);
   const globalPopupRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language") || "en";
+    setLanguage(savedLanguage as "en" | "ge"); 
+  }, []);
 
+  const toggleLanguage = (selectedLanguage: "en" | "ge") => {
+    setLanguage(selectedLanguage);
+    localStorage.setItem("language", selectedLanguage);
+    window.location.reload();
+    setPopup(false);
+  };
   const handleScroll = () => {
     if (showNewPopup) {
       setShowNewPopup(false);
@@ -120,28 +129,27 @@ export default function Header() {
     }
   };
 
-    // const fetchData = async () => {
-    //     try {
-    //       const response = await axiosInstance.get(
-    //         `/api/aboutUs?lang=${language}`,
-    //         {
-    //           withCredentials: true,
-    //           headers: { "Content-Type": "application/json" },
-    //         }
-    //       );
-  
-    //       const data = response.data;
-    //       console.log(data);
-    //       setData(data);
-    //     } catch (err: any) {
-    //       setError(err.message ?? "An error occurred while fetching data.");
-    //     } finally {
-    //       setLoading(false);
-    //     }
-    //   };
-  
-      // fetchData();
+  // const fetchData = async () => {
+  //     try {
+  //       const response = await axiosInstance.get(
+  //         `/api/aboutUs?lang=${language}`,
+  //         {
+  //           withCredentials: true,
+  //           headers: { "Content-Type": "application/json" },
+  //         }
+  //       );
 
+  //       const data = response.data;
+  //       console.log(data);
+  //       setData(data);
+  //     } catch (err: any) {
+  //       setError(err.message ?? "An error occurred while fetching data.");
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+
+  // fetchData();
 
   return (
     <div
@@ -237,13 +245,13 @@ export default function Header() {
                 className={`absolute w-[150px]  items-center -right-2 ${textColor} ${bgColor} p-4 shadow-md`}
               >
                 <p
-                  onClick={() => handleLanguageChange("en")}
+                  onClick={() => toggleLanguage("en")} 
                   className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
                 >
                   ENG
                 </p>
                 <p
-                  onClick={() => handleLanguageChange("ge")}
+                  onClick={() => toggleLanguage("ge")} 
                   className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
                 >
                   GEO

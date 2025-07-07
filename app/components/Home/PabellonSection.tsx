@@ -2,7 +2,6 @@
 import { logoCol, pabellonSvg } from "@/app/assets";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { useLanguage } from "@/app/LanguageContext"; // Language context
 import { axiosInstance } from "@/app/lib/axiosInstance";
 interface Home {
   home_pabellon_section_description_en: string;
@@ -11,11 +10,10 @@ interface Home {
   home_pabellon_section_little_description_ge: string;
 }
 const PabellonSection = () => {
-  const { language } = useLanguage(); // Current language (en or ge)
   const [homeData, setHomeData] = useState<Home | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-
+  const language = "en";
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,7 +27,7 @@ const PabellonSection = () => {
     };
 
     fetchData();
-  }, [language]); // Fetch new data when the language changes
+  }, []); // Fetch new data when the language changes
 
   if (loading) {
     return <div>Loading...</div>;
