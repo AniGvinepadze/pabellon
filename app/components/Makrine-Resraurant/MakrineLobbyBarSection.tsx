@@ -7,28 +7,77 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 import { makrineImg5, meetingImg4, next, prev } from "@/app/assets";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { IMakrine } from "./MakrineSection";
+import { axiosInstance } from "@/app/lib/axiosInstance";
 
 const MakrineLobbyBarSection = () => {
   const swiperRef = useRef<any>(null);
+  const [restaurantData, setRestaurantData] = useState<IMakrine | null>(null);
+
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+  const language = "en";
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const language = localStorage.getItem("language") || "en";
+
+      try {
+        const response = await axiosInstance.get(
+          `/api/restaurantbar?lang=${language}`
+        );
+        setRestaurantData(response.data);
+
+        if (response.data && response.data.length > 0) {
+          setRestaurantData(response.data[0]);
+        }
+      } catch (err: any) {
+        setError(err.message ?? "Unknown error");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (!restaurantData) {
+    return <div>No data available.</div>;
+  }
   return (
     <div className="max-w-[1250px] w-full my-20 m-auto">
       <div className="max-w-[1000px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-400:gap-3 m-auto my-20">
         <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
-          Lobby Bar
+          {restaurantData.lobby_bar_title}
         </h2>
         <p className="font-light text-[17px] max-600:text-[15px] max-400:text-[13px]">
-          Warm hospitality, great music, delicious Georgian bites, a tapas menu,
-          and stories shared over a glass of wine — this is the spirit of our
-          bar. You are welcome to the billiards corner, also on the first floor,
-          where friendly competition meets a lively and interactive setting.
+          {restaurantData.lobby_bar_description}
         </p>
         <p className="font-medium text-[17px] max-600:text-[15px] max-400:text-[13px]">
-          Join us daily from 12:00 PM to 12:00 AM (kitchen closes at 11:30 PM).
+          {restaurantData.lobby_bar_little_description}
         </p>
       </div>
+      <div className="my-20">
+        <Image
+          priority={true}
+          src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${restaurantData.lobbyImageUrl}`}
+          alt="icon"
+          width={1440}
+          height={890}
+          className="max-w-[1600px] w-full "
+        />
+      </div>
 
-      <div className="max-w-[1250px] w-full flex flex-col  relative">
+      {/* <div className="max-w-[1250px] w-full flex flex-col  relative">
         <Swiper
           ref={swiperRef}
           modules={[Navigation]}
@@ -107,7 +156,7 @@ const MakrineLobbyBarSection = () => {
             />
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
