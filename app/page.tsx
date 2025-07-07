@@ -6,6 +6,7 @@ import PabellonSection from "./components/Home/PabellonSection";
 import RoomsSection from "./components/Home/RoomsSection";
 import TextSection from "./components/Home/TextSection";
 import ContactUsSection from "./components/Home/ContactUsSection";
+import { LanguageProvider } from "./LanguageContext";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
 //  <LanginPage/>
  
 //   </div>
+<LanguageProvider>
 <div className="max-w-[1600px]  w-full m-auto p-3">
       <Hero />
       <div className="max-w-[1600px]  w-full ">
@@ -25,6 +27,6 @@ export default function Home() {
         </div>
       </div>
     </div>
-
+</LanguageProvider>
   );
 }

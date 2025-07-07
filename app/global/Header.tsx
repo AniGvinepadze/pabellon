@@ -9,6 +9,8 @@ import mobilemenu from "../../public/assets/Vector.svg";
 import MobileMenu from "./MobileMenu";
 import whiteMobileMenu from "../../public/assets/burgerwhite.svg";
 import { logo, whiteLogo } from "../assets";
+import { useLanguage } from "../LanguageContext";
+import { axiosInstance } from "../lib/axiosInstance";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -24,11 +26,13 @@ export default function Header() {
   const [maxWidth, setMaxWidth] = useState<string>("max-w-[3600px]");
   const [borderRadius, setBorderRadius] = useState<string>("rounded-none");
   const [mobbgColor, setMobBgColor] = useState<string>("bg-beige");
-  const [mobtextColor, setMobTextColor] = useState<string>("text-secondaryTextColor");
+  const [mobtextColor, setMobTextColor] = useState<string>(
+    "text-secondaryTextColor"
+  );
   const [mobglobalSrc, setMobGlobalSrc] = useState<any>(glovabIcon);
   const [mobshowNewPopup, setMobShowNewPopup] = useState<boolean>(false);
   const [mobmarginTop, setMobMarginTop] = useState<string>("top-16");
-
+  const { language, setLanguage } = useLanguage();
   const popupRef = useRef<HTMLDivElement | null>(null);
   const globalPopupRef = useRef<HTMLDivElement | null>(null);
 
@@ -116,13 +120,34 @@ export default function Header() {
     }
   };
 
+    // const fetchData = async () => {
+    //     try {
+    //       const response = await axiosInstance.get(
+    //         `/api/aboutUs?lang=${language}`,
+    //         {
+    //           withCredentials: true,
+    //           headers: { "Content-Type": "application/json" },
+    //         }
+    //       );
+  
+    //       const data = response.data;
+    //       console.log(data);
+    //       setData(data);
+    //     } catch (err: any) {
+    //       setError(err.message ?? "An error occurred while fetching data.");
+    //     } finally {
+    //       setLoading(false);
+    //     }
+    //   };
+  
+      // fetchData();
+
+
   return (
     <div
-      className={`w-full ${bgColor} sticky top-0 z-50 transition-all ease-in-out duration-500 ${maxWidth} ${borderRadius} ${marginTop} mx-auto  `}
+      className={`w-full ${bgColor} sticky top-0 z-50 transition-all ease-in-out duration-500 ${maxWidth} ${borderRadius} ${marginTop} mx-auto`}
     >
-      <div
-        className={`max-w-[1400px] w-full m-auto px-3 pb-1 flex justify-between items-center max-1000:gap-10`}
-      >
+      <div className="max-w-[1400px] w-full m-auto px-3 pb-1 flex justify-between items-center max-1000:gap-10">
         <Link
           href="/"
           className="hover:scale-110 transition-all ease-in-out duration-300"
@@ -164,7 +189,7 @@ export default function Header() {
             {showNewPopup && (
               <div
                 ref={popupRef}
-                className={`absolute max-w-[300px]   right-[370px] mt-64 ${bgColor} ${textColor}  p-4 shadow-md flex flex-col `}
+                className={`absolute max-w-[300px] right-[370px] mt-64 ${bgColor} ${textColor} p-4 shadow-md flex flex-col `}
               >
                 <Link
                   href={"/makrine-restaurant"}
@@ -209,12 +234,18 @@ export default function Header() {
             {popup && (
               <div
                 ref={globalPopupRef}
-                className={`absolute w-[150px]  items-center -right-2 ${textColor} ${bgColor}   p-4 shadow-md `}
+                className={`absolute w-[150px]  items-center -right-2 ${textColor} ${bgColor} p-4 shadow-md`}
               >
-                <p className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300">
+                <p
+                  onClick={() => handleLanguageChange("en")}
+                  className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+                >
                   ENG
                 </p>
-                <p className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300">
+                <p
+                  onClick={() => handleLanguageChange("ge")}
+                  className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+                >
                   GEO
                 </p>
               </div>
@@ -230,7 +261,7 @@ export default function Header() {
             alt="mobilemenu"
             width={35}
             height={35}
-            className="max-700:max-w-[30px] max-400:max-w-[26px] max-300:max-w-[20px] "
+            className="max-700:max-w-[30px] max-400:max-w-[26px] max-300:max-w-[20px]"
           />
         </button>
         {isOpen && (

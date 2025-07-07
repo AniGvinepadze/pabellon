@@ -219,7 +219,7 @@ export const footerSoc = [
     link: "https://www.facebook.com/profile.php?id=61576125146141",
   },
   {
-    id: 1,
+    id: 3,
     soc: "LinkedIn",
     link: "https://www.linkedin.com/company/pabell%C3%B3n-hotel/posts/?feedView=all",
   },
