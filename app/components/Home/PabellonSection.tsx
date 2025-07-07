@@ -3,12 +3,31 @@ import { logoCol, pabellonSvg } from "@/app/assets";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { axiosInstance } from "@/app/lib/axiosInstance";
-interface Home {
+export interface Home {
   home_pabellon_section_description_en: string;
   home_pabellon_section_description_ge: string;
   home_pabellon_section_little_description_en: string;
   home_pabellon_section_little_description_ge: string;
+  home_rooms_section_title_en: string;
+  home_rooms_section_title_ge: string;
+  home_rooms_section_description_en: string;
+  home_rooms_section_description_ge: string;
+  home_rooms_section_little_description_en: string;
+  home_rooms_section_little_description_ge: string;
+  home_big_description_en: string;
+  home_big_description_ge: string;
+  home_contact_section_title_en: string;
+  home_contact_section_title_ge: string;
+  home_contact_section_getInTouch_en: string;
+  home_contact_section_getInTouch_ge: string;
+  home_contact_section_about_team_en: string;
+  home_contact_section_about_team_ge: string;
+  home_contact_section_email: string;
+  home_contact_section_phone: string;
+  hero_imageUrl: string;
+  pabellon_imageUrl: string;
 }
+
 const PabellonSection = () => {
   const [homeData, setHomeData] = useState<Home | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -16,6 +35,8 @@ const PabellonSection = () => {
   const language = "en";
   useEffect(() => {
     const fetchData = async () => {
+        const language = localStorage.getItem("language") || "en";
+
       try {
         const response = await axiosInstance.get(`/api/home?lang=${language}`);
         setHomeData(response.data);
@@ -25,9 +46,9 @@ const PabellonSection = () => {
         setLoading(false);
       }
     };
-
+ 
     fetchData();
-  }, []); // Fetch new data when the language changes
+  }, []);
 
   if (loading) {
     return <div>Loading...</div>;
