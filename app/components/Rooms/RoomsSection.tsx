@@ -27,9 +27,8 @@ export default function RoomsSection() {
         const response = await axiosInstance.get(`/api/rooms?lang=${language}`);
         setRoomData(response.data);
 
-        // Set roomMainData from the first room in the roomData array
         if (response.data && response.data.length > 0) {
-          setRoomMainData(response.data[0]); // Assume you're showing the first room
+          setRoomMainData(response.data[0]);
         }
       } catch (err: any) {
         setError(err.message ?? "Unknown error");
