@@ -12,7 +12,6 @@ export default function SpaWellnessSection() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // if (!isClient) return;
 
     const fetchData = async () => {
       try {
