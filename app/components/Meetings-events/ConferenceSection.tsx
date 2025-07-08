@@ -1,32 +1,79 @@
+"use client";
 import { meetingImg, resImg } from "@/app/assets";
+import { axiosInstance } from "@/app/lib/axiosInstance";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
+export interface iMeeting {
+  conference_ballroom_title: string;
+  conference_ballroom_section_little_description: string;
+  conference_ballroom_section_description: string;
+  spaces_title: string;
+  conference_rooms_title: string;
+  conference_rooms_section_description: string;
+  conference_rooms_section_little_description: string;
+
+  conferenceImageUrl: string;
+  artWorkImageUrl: string;
+  conferenceRoomsImageUrl: string;
+}
 export default function ConferenceSection() {
+  const [data, setData] = useState<iMeeting | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // if (!isClient) return;
+
+    const fetchData = async () => {
+      try {
+        const language = localStorage.getItem("language") || "en";
+        const response = await axiosInstance.get(
+          `/api/meetings-events?lang=${language}`
+        );
+        const resData = await response.data;
+         if (response.data && response.data.length > 0) {
+          setData(response.data[0]);
+        }
+      } catch (err: any) {
+        setError(err.message ?? "Unknown error");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+
+  if (loading) {
+    return <div className="text-center py-10">Loading...</div>;
+  }
+  if (error) {
+    return <div className="text-center py-10 text-red-600">Error: {error}</div>;
+  }
+  if (!data) {
+    return <div className="text-center py-10">No data available.</div>;
+  }
+
   return (
     <div className="max-w-[1250px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor mt-20">
       <div className="max-w-[1250px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-400:gap-3">
         <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
-          Conference & Ballroom
+        {data.conference_ballroom_title}
         </h2>
         <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px] custom-font">
-          Where ideas come to life and every celebration feels effortless
+         {data.conference_ballroom_section_little_description}
         </h2>
         <p className="text-[17px] font-light max-w-[1030px] max-600:text-[15px] max-400:text-[13px]">
-          Elegant and spacious, our ballroom is the centerpiece of our event
-          offerings - perfect for weddings, gala dinners or large corporate
-          events. Hall effortlessly blends sophistication with functionality. It
-          can accommodate both intimate celebrations and grand receptions, with
-          optional staging, dance floors, and banquet seating. Our dedicated
-          events team is on hand to assist with every detail - from planning and
-          setup to catering and technical support - ensuring a seamless
-          experience for guests.
+         {data.conference_ballroom_section_description}
         </p>
       </div>
       <div className="my-20">
         <Image
           priority={true}
-          src={meetingImg}
+           src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${data.conferenceImageUrl}`}
           alt="icon"
           width={1540}
           height={940}
