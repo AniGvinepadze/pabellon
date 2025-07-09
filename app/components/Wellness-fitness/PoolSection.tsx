@@ -1,3 +1,4 @@
+"use client";
 import {
   resImg,
   wellnessImg,
@@ -8,22 +9,58 @@ import {
   wellnessImg7,
 } from "@/app/assets";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { IWellness } from "./OurFacilitiesSection";
+import { axiosInstance } from "@/app/lib/axiosInstance";
 
 export default function PoolSection() {
+  const [data, setData] = useState<IWellness | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // if (!isClient) return;
+
+    const fetchData = async () => {
+      try {
+        const language = localStorage.getItem("language") || "en";
+        const response = await axiosInstance.get(
+          `/api/spa-wellness?lang=${language}`
+        );
+        const resData = await response.data;
+        if (response.data && response.data.length > 0) {
+          setData(response.data[0]);
+        }
+      } catch (err: any) {
+        setError(err.message ?? "Unknown error");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+  if (loading) {
+    return <div className="text-center py-10">Loading...</div>;
+  }
+  if (error) {
+    return <div className="text-center py-10 text-red-600">Error: {error}</div>;
+  }
+  if (!data) {
+    return <div className="text-center py-10">No data available.</div>;
+  }
+
   return (
     <div className="max-w-[1250px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
       <div className="max-w-[900px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-400:gap-3">
         <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
-          Pool
+          {data.pool_title}
         </h2>
         <h2 className="font-normal custom-font text-[30px] italic max-600:text-[22px] max-400:text-[18px]">
-          Let ancient worlds and wonder guide an unforgettable adventure
+          {data.pool_section_little_description}{" "}
         </h2>
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
-          Discover wellness at our hotel's beautifully designed pool areas,
-          where every guest - from early risers to playful little swimmers - can
-          find their perfect escape.
+          {data.pool_section_description}
         </p>
       </div>
       {/* <div className="my-20">
@@ -38,11 +75,7 @@ export default function PoolSection() {
       </div> */}
       <div className="max-w-[900px] w-full ">
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
-          Step outside and soak up the sun at our outdoor pool, surrounded by
-          natural beauty and open sky. Whether you're diving in for a refreshing
-          swim or lounging poolside with a cocktail from thePool Bar, this
-          inviting space blends relaxation with style. Sunbeds, umbrellas, and
-          full poolside service ensure a seamless experience under the sun.
+        {data.out_door_pool_section_description}
         </p>
       </div>
 
@@ -51,24 +84,21 @@ export default function PoolSection() {
           <div className="max-w-[470px] w-full max-h-[500px] flex flex-col justify-center items-center text-center max-1200:mt-9 max-750:max-w-[1000px]">
             <Image
               priority={true}
-              src={wellnessImg5}
+                src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${data.firstPoolImageUrl}`}
               alt="img"
               width={469}
               height={617}
               className=" max-w-[470px] w-full object-cover max-1200:max-w-[300px] max-850:max-w-[240px] max-750:max-w-[700px] max-750:max-h-[600px] max-450:max-h-[550px]"
             />
             <p className="font-light text-base my-7 max-750:min-h-[300px] max-400:min-h-[230px] max-300:min-h-[190px]">
-              Enjoy peaceful moments year-round in our heated indoor pool, a
-              serene retreat ideal for leisurely laps or quiet relaxation. With
-              soft lighting and a calming atmosphere it's the perfect space to
-              unwind, no matter the season.
+              {data.in_door_pool_section_description}
             </p>
           </div>
         </div>
         <div className="max-w-[700px] w-full">
           <Image
             priority={true}
-            src={wellnessImg6}
+           src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${data.secondPoolImageUrl}`}
             alt="img"
             width={700}
             height={920}
@@ -80,7 +110,7 @@ export default function PoolSection() {
       <div className="w-full m-auto my-10">
         <Image
           priority={true}
-          src={wellnessImg7}
+        src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${data.thirdPoolImageUrl}`}
           alt="wellness"
           width={1170}
           height={744}

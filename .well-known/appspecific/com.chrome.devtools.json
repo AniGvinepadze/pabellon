@@ -1,0 +1,5 @@
+{
+  "devtools": {
+    "protocol": "chrome-devtools://devtools/bundled/devtools_app.html"
+  }
+}

@@ -1,22 +1,48 @@
-import React from "react";
+"use client"
+import { axiosInstance } from "@/app/lib/axiosInstance";
+import React, { useEffect, useState } from "react";
+import { Home } from "./PabellonSection";
 
 export default function TextSection() {
+    const [homeData, setHomeData] = useState<Home | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
+    const language = "en";
+    useEffect(() => {
+      const fetchData = async () => {
+        const language = localStorage.getItem("language") || "en";
+  
+        try {
+          const response = await axiosInstance.get(`/api/home?lang=${language}`);
+          setHomeData(response.data);
+        } catch (err: any) {
+          setError(err.message ?? "Unknown error");
+        } finally {
+          setLoading(false);
+        }
+      };
+  
+      fetchData();
+    }, []);
+  
+    if (loading) {
+      return <div>Loading...</div>;
+    }
+  
+    if (error) {
+      return <div>Error: {error}</div>;
+    }
+  
+    if (!homeData) {
+      return <div>No data available.</div>;
+    }
   return (
     <div className="w-full max-w-[1250px] m-auto flex flex-col  items-center my-10 p-4 ">
-      <div className="max-w-[990px] w-full flex flex-col items-center justify-center text-center gap-7  mt-96 max-1050:mt-24 ">
+      <div className="max-w-[990px] w-full flex flex-col items-center justify-center text-center gap-7   max-1050:mt-24 ">
         <p className="font-notmal text-xl">
-          Nestled in the heart of Kakheti, Hotel Pabellón is a place that leaves
-          every guest filled with unforgettable impressions. Inspired by the
-          spirit of Chavchavadze and thoughtfully designed with modern comfort,
-          exceptional service, and a warm, welcoming atmosphere, Pabellón offers
-          the perfect blend of tradition and contemporary elegance — an ideal
-          setting for both relaxation and inspiration. The interior brings this
-          vision to life through carefully curated elements that reflect
-          Georgia's rich culture and heritage, creating an authentic and
-          memorable experience. But Pabellón's charm doesn't end within its
-          walls. Beyond the windows lies a stunning natural landscape — lush
-          vineyards and breathtaking mountain views that surround the hotel,
-          offering a serene escape and a sense of true tranquility.
+        {language === "en"
+            ? homeData.home_big_description_en
+            : homeData.home_big_description_ge}
         </p>
       </div>
     </div>

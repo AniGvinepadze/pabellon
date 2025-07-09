@@ -14,36 +14,71 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { meeting } from "@/app";
 import ContactUsSection from "../Home/ContactUsSection";
+import { IMakrine } from "./MakrineSection";
+import { axiosInstance } from "@/app/lib/axiosInstance";
 
 export default function MakrinerestaurantSection() {
+    const [restaurantData, setRestaurantData] = useState<IMakrine | null>(null);
+  
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
+    const language = "en";
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        const language = localStorage.getItem("language") || "en";
+  
+        try {
+          const response = await axiosInstance.get(
+            `/api/restaurantbar?lang=${language}`
+          );
+          setRestaurantData(response.data);
+  
+          if (response.data && response.data.length > 0) {
+            setRestaurantData(response.data[0]);
+          }
+        } catch (err: any) {
+          setError(err.message ?? "Unknown error");
+        } finally {
+          setLoading(false);
+        }
+      };
+  
+      fetchData();
+    }, []);
+  
+    if (loading) {
+      return <div>Loading...</div>;
+    }
+  
+    if (error) {
+      return <div>Error: {error}</div>;
+    }
+  
+    if (!restaurantData) {
+      return <div>No data available.</div>;
+    }
   return (
     <div className="max-w-[1250px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor my-20">
       <div className="max-w-[1000px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-400:gap-3">
         <h2 className="font-semibold text-[40px] italic  max-600:text-[32px] max-400:text-[26px]">
-          Makrine Restaurant
+          {restaurantData.makrine_restaurant_title}
         </h2>
         <p className="font-light text-[17px] max-600:text-[15px] max-400:text-[13px]">
-          In Kvareli, where Ilia Chavchavadze grew up, the atmosphere is steeped
-          in the nostalgic spirit of his time. The warmth and hospitality of the
-          space are enhanced by the persona of Makrine — Ilia’s aunt, who was
-          known for her extraordinary care and attentiveness. She also deeply
-          cherished the culture of delicious homemade food.
+               {restaurantData.makrine_restaurant_section_little_description}
         </p>
         <p className="text-[17px] font-light  max-600:text-[15px] max-400:text-[13px]">
-          Inspired by her legacy, the concept behind Makrine promises an
-          unforgettable experience. At the restaurant, you’ll enjoy exquisite
-          dishes thoughtfully selected for their authentic Georgian character
-          and rich flavors.
+  {restaurantData.makrine_section_little_description}
         </p>
       </div>
 
       <div className=" my-20 flex flex-col gap-14 justify-center items-center">
         <Image
           priority={true}
-          src={makrineImg3}
+          src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${restaurantData.makrineRestaurantImageUrl}`}
           alt="meetingImg"
           width={1420}
           height={877}
@@ -53,14 +88,10 @@ export default function MakrinerestaurantSection() {
       <div className="flex flex-col max-w-[900px] w-full gap-6 justify-center items-center">
         {" "}
         <p className="text-[17px] font-light max-w-[600px]  max-600:text-[15px] max-400:text-[13px]">
-          The "farm-to-table" philosophy highlights the importance of both food
-          quality and the involvement of the local community.
+         {restaurantData.makrine_restaurant_community_impact}
         </p>
         <p className="text-[17px] font-light  max-600:text-[15px] max-400:text-[13px]">
-          Pabellón’s own winery on the first floor and explore the Georgian
-          menu. Alongside Kakhetian specialties, from 12:00 PM to 12:00 AM
-          (kitchen until 11:30 PM), you can also enjoy a wide variety of wines
-          produced at Pabellón’s own winery in the restaurant’s bar.
+  {restaurantData.makrine_restaurant_menu}
         </p>
       </div>
     </div>

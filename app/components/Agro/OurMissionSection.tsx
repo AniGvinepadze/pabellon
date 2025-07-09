@@ -1,3 +1,4 @@
+"use client";
 import {
   agroImg,
   agroImg2,
@@ -6,23 +7,58 @@ import {
   agroImg5,
   walnut2,
 } from "@/app/assets";
+import { axiosInstance } from "@/app/lib/axiosInstance";
 import Image from "next/image";
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+type AgroData = {
+  agro_section_description: string;
+  agro_section_little_description: string;
+  our_mission_title: string;
+  our_mission_description: string;
+};
 export default function OurMissionSection() {
+     const [data, setData] = useState<AgroData | null>(null);
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState<string | null>(null);
+        useEffect(() => {
+          const fetchData = async () => {
+            try {
+              const language = localStorage.getItem("language") || "en";
+              const response = await axiosInstance.get(
+                `/api/agro?lang=${language}`
+              );
+              const resData = await response.data;
+              console.log(resData,'resDataresDataresDataresData');
+              setData(resData);
+            } catch (err: any) {
+              setError(err.message ?? "Unknown error");
+            } finally {
+              setLoading(false);
+            }
+          };
+      
+          fetchData();
+        }, []);
+      
+      
+        if (loading) {
+          return <div className="text-center py-10">Loading...</div>;
+        }
+        if (error) {
+          return <div className="text-center py-10 text-red-600">Error: {error}</div>;
+        }
+        if (!data) {
+          return <div className="text-center py-10">No data available.</div>;
+        }
   return (
     <div className="max-w-[1400px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
       <div className="max-w-[1250px] w-full flex  justify-between items-center text-center text-secondaryTextColor font-mono-serif gap-16 max-400:gap-3 max-700:flex-col">
         <div className="max-w-[400px] w-full">
           <h2 className="font-semibold text-[40px]  max-600:text-[32px] max-400:text-[26px]">
-            Our Mission
+            {data.our_mission_title}
           </h2>
           <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px] my-8">
-            Our mission is to cultivate beautiful gardens that provide fresh,
-            organic product for our hotel and restaurant, while practicing
-            sustainable agriculture. Our farmers know their soil intimately,
-            allowing us to bring the purest flavors of each season to your
-            plate.{" "}
+            {data.our_mission_description}
           </p>
         </div>
         <div className="max-w-[828px] w-full">
@@ -37,12 +73,7 @@ export default function OurMissionSection() {
       </div>
       <div className="max-w-[824px] w-full m-auto flex flex-col justify-center my-10">
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px] my-8">
-          Here, every meal is a celebration of place, people, and the timeless
-          bond between nature and culture. Agriculture here is not industry, it
-          is inheritance, love and quiet devotion passed down through
-          generations. Meals are born from the morning's gathering: crisp
-          vegetables pulled from the earth, tomatoes still warm from the sun,
-          basil freshly cut from the garden - a true celebration of life.
+          {}
         </p>
       </div>
       <div className="flex justify-center w-full my-10 ">

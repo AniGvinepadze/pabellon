@@ -1,16 +1,46 @@
 "use client";
 import { barImg, chefImg } from "@/app/assets";
+import { axiosInstance } from "@/app/lib/axiosInstance";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
-
+export interface IContact {
+  experience_title: string;
+  experience_description: string;
+  imageUrl: string;
+}
 export default function ContactInfo() {
   const [showNewPopup, setShowNewPopup] = useState<boolean>(false);
   const popupRef = useRef<HTMLDivElement | null>(null);
+  const [restaurantData, setRestaurantData] = useState<IContact | null>(null);
 
-  useEffect(() => {
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+  const language = "en";
+
+  const fetchData = async () => {
+    const language = localStorage.getItem("language") || "en";
+
+    try {
+      const response = await axiosInstance.get(`/api/contact?lang=${language}`);
+      setRestaurantData(response.data);
+
+      if (response.data && response.data.length > 0) {
+        setRestaurantData(response.data[0]);
+      }
+    } catch (err: any) {
+      setError(err.message ?? "Unknown error");
+    } finally {
+      setLoading(false);
+    }
+  };
+    useEffect(() => {
+    fetchData();
     const handleClickOutside = (event: MouseEvent) => {
-      if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
+      if (
+        popupRef.current &&
+        !popupRef.current.contains(event.target as Node)
+      ) {
         setShowNewPopup(false);
       }
     };
@@ -21,6 +51,19 @@ export default function ContactInfo() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (!restaurantData) {
+    return <div>No data available.</div>;
+  }
+
 
   return (
     <div className="max-w-[1250px] w-full m-auto text-black my-20">
@@ -68,21 +111,21 @@ export default function ContactInfo() {
               </div>
               <div className="flex gap-3 my-4">
                 <div>
-                <input
-                  type="checkbox"
-                  className="max-w-[20px] w-full accent-beige max-400:max-w-[17px] cursor-pointer"
-                />
+                  <input
+                    type="checkbox"
+                    className="max-w-[20px] w-full accent-beige max-400:max-w-[17px] cursor-pointer"
+                  />
                 </div>
                 <div className="flex gap-2">
-                <p className="text-xl font-normal max-450:text-lg max-400:text-base">
-                  I have read and accept the
-                </p>
-                <Link
-                  href={"/privacy-policy"}
-                  className="text-xl font-normal max-450:text-lg max-400:text-base underline"
-                >
-                  privacy policy.
-                </Link>
+                  <p className="text-xl font-normal max-450:text-lg max-400:text-base">
+                    I have read and accept the
+                  </p>
+                  <Link
+                    href={"/privacy-policy"}
+                    className="text-xl font-normal max-450:text-lg max-400:text-base underline"
+                  >
+                    privacy policy.
+                  </Link>
                 </div>
               </div>
               <div className="my-7">
@@ -97,15 +140,17 @@ export default function ContactInfo() {
             <div className="w-full flex flex-col justify-center text-center gap-6 items-center p-6 border-white border shadow-md shadow-gray-500">
               <Image
                 priority={true}
-                src={barImg}
+                src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${restaurantData.imageUrl}`}
                 alt="img"
                 width={528}
                 height={528}
               />
               <div className="w-full flex flex-col items-center justify-center p-6 gap-5">
-                <p className="italic font-normal text-[40px] custom-font">EXPERIENCES</p>
+                <p className="italic font-normal text-[40px] custom-font">
+                  {restaurantData.experience_title}
+                </p>
                 <p className="text-base font-normal">
-           Our mission is to create a haven of hospitality that ignites childlike wonder and unforgettable memories for our guests. 
+                  {restaurantData.experience_description}
                 </p>
                 <button
                   className="relative bg-transparent border border-black flex flex-col justify-center items-center px-10 py-1 my-7"
