@@ -1,6 +1,5 @@
-"use client";
+"use client"
 import React, { useState, useEffect } from "react";
-
 import { axiosInstance } from "@/app/lib/axiosInstance";
 
 type AboutUsData = {
@@ -13,21 +12,12 @@ export default function AboutUsSection() {
   const [data, setData] = useState<AboutUsData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  // const [isClient, setIsClient] = useState(false);
-
-  // useEffect(() => {
-  //   setIsClient(true);
-  // }, []);
 
   useEffect(() => {
-    // if (!isClient) return;
-
     const fetchData = async () => {
       try {
         const language = localStorage.getItem("language") || "en";
-        const response = await axiosInstance.get(
-          `/api/aboutUs?lang=${language}`
-        );
+        const response = await axiosInstance.get(`/api/aboutUs?lang=${language}`);
         const resData = await response.data;
         console.log(resData);
         setData(resData);
@@ -40,10 +30,6 @@ export default function AboutUsSection() {
 
     fetchData();
   }, []);
-
-  // if (!isClient) {
-  //   return null;
-  // }
 
   if (loading) {
     return <div className="text-center py-10">Loading...</div>;
@@ -66,10 +52,16 @@ export default function AboutUsSection() {
         </p>
         <p className="text-[17px]">{data.aboutus_section_description}</p>
       </div>
-      <div className="my-20">
-        <video className="max-w-[1600px] w-full" controls autoPlay loop muted>
-          <source src="/videos/PABELLON-STORY-NEW-V1-SD.mp4" type="video/mp4" />
-        </video>
+      <div className="my-20 max-w-[1200px] w-full">
+        <iframe
+          width="100%"
+          height="600px"
+          src="https://www.youtube.com/embed/BNJgeH_EflA"
+          title="YouTube video"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
     </div>
   );
