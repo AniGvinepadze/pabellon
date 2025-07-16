@@ -199,3 +199,113 @@ export default function ContactInfo() {
     </div>
   );
 }
+
+// import { useState, useEffect, useRef } from "react";
+// import { axiosInstance } from "@/app/lib/axiosInstance";
+// import Image from "next/image";
+// import Link from "next/link";
+
+// export default function ContactInfo() {
+//   const [showNewPopup, setShowNewPopup] = useState<boolean>(false);
+//   const popupRef = useRef<HTMLDivElement | null>(null);
+//   const [restaurantData, setRestaurantData] = useState<any | null>(null);
+
+//   const [name, setName] = useState<string>("");
+//   const [email, setEmail] = useState<string>("");
+//   const [phone, setPhone] = useState<string>("");
+//   const [message, setMessage] = useState<string>("");
+//   const [guests, setGuests] = useState<number>(0);
+//   const [date, setDate] = useState<string>("");
+
+//   const fetchData = async () => {
+//     try {
+//       const response = await axiosInstance.get("/api/contact?lang=en");
+//       setRestaurantData(response.data);
+//     } catch (err) {
+//       console.error("Error fetching data:", err);
+//     }
+//   };
+
+//   useEffect(() => {
+//     fetchData();
+//     const handleClickOutside = (event: MouseEvent) => {
+//       if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
+//         setShowNewPopup(false);
+//       }
+//     };
+
+//     document.addEventListener("mousedown", handleClickOutside);
+//     return () => {
+//       document.removeEventListener("mousedown", handleClickOutside);
+//     };
+//   }, []);
+
+//   const handleSubmit = async () => {
+//     try {
+//       const response = await axiosInstance.post("/contact", {
+//         name,
+//         email,
+//         phone,
+//         message,
+//         guests,
+//         date,
+//       });
+//       console.log("Email sent successfully", response);
+//     } catch (error) {
+//       console.error("Error sending email", error);
+//     }
+//   };
+
+//   if (!restaurantData) return <div>Loading...</div>;
+
+//   return (
+//     <div className="max-w-[1250px] w-full m-auto text-black my-20">
+//       {/* Rest of the UI here */}
+
+//       <div>
+//         <label>Name</label>
+//         <input
+//           type="text"
+//           value={name}
+//           onChange={(e) => setName(e.target.value)}
+//           className="input-class"
+//         />
+//         <label>Email</label>
+//         <input
+//           type="email"
+//           value={email}
+//           onChange={(e) => setEmail(e.target.value)}
+//           className="input-class"
+//         />
+//         <label>Phone</label>
+//         <input
+//           type="text"
+//           value={phone}
+//           onChange={(e) => setPhone(e.target.value)}
+//           className="input-class"
+//         />
+//         <label>Guests</label>
+//         <input
+//           type="number"
+//           value={guests}
+//           onChange={(e) => setGuests(Number(e.target.value))}
+//           className="input-class"
+//         />
+//         <label>Reservation Date</label>
+//         <input
+//           type="date"
+//           value={date}
+//           onChange={(e) => setDate(e.target.value)}
+//           className="input-class"
+//         />
+//         <label>Message</label>
+//         <textarea
+//           value={message}
+//           onChange={(e) => setMessage(e.target.value)}
+//           className="input-class"
+//         />
+//         <button onClick={handleSubmit}>SEND</button>
+//       </div>
+//     </div>
+//   );
+// }
