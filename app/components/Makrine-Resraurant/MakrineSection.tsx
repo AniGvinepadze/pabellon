@@ -29,7 +29,9 @@ export interface IMakrine {
   lobby_bar_description: string;
   pool_bar_title: string;
   pool_bar_section_description: string;
-
+  menuImageUrl?: string;
+  menuImageUrlSecondPart?: string;
+  menuLogoImageUrl?:string
   logoImageUrl?: string;
   mainImageUrl?: string;
   makrineRestaurantImageUrl?: string;
