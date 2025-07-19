@@ -1,3 +1,4 @@
+import MakrineMenu from "@/app/components/Makrine-Resraurant/MakrineMenu";
 import BarSection from "@/app/components/Services/BarSection";
 import FacilitiesSection from "@/app/components/Services/FacilitiesSection";
 import KidstSection from "@/app/components/Services/KidsSection";
@@ -12,15 +13,15 @@ export default function page() {
     <div className="max-w-[1600px] m-auto p-3">
       <div className="mt-28">
         <RestaurantSection />
-        <RestaurantBookSection/>
-        <div className="mt-40 max-850:mt-20 max-750:mt-0 max-700:mt-20">
-        <BarSection/>
-        
+        <RestaurantBookSection />
+        <MakrineMenu />
+        <div className="mt-20 max-850:mt-10 max-750:mt-0 max-700:mt-20">
+          <BarSection />
         </div>
-        <MeetingSection/>
-        <WellnessSection/>
-        <FacilitiesSection/>
-        <KidstSection/>
+        <MeetingSection />
+        <WellnessSection />
+        <FacilitiesSection />
+        <KidstSection />
       </div>
     </div>
   );
