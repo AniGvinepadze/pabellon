@@ -1,3 +1,4 @@
+import ContactUsSection from "@/app/components/Home/ContactUsSection";
 import MakrineBarSection from "@/app/components/Makrine-Resraurant/MakrineBarSection";
 import MakrineLobbyBartSection from "@/app/components/Makrine-Resraurant/MakrineLobbyBarSection";
 import MakrineMenu from "@/app/components/Makrine-Resraurant/MakrineMenu";
@@ -23,7 +24,9 @@ export default function page() {
           <MakrineBarSection />
           <MakrineLobbyBartSection />
           <MakrinePoolBarSection />
-          <FurtherQuestionSection />
+          <div className="mb-32">
+          <ContactUsSection/>
+          </div>
         </div>
       </div>
     </div>

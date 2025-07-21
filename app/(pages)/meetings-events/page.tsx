@@ -1,3 +1,4 @@
+import ContactUsSection from "@/app/components/Home/ContactUsSection";
 import ConferenceRoomsSection from "@/app/components/Meetings-events/ConferenceRoomsSection";
 import ConferenceSection from "@/app/components/Meetings-events/ConferenceSection";
 import FurtherQuestionSection from "@/app/components/Meetings-events/FurtherQuestionsSection";
@@ -10,9 +11,9 @@ export default function page() {
       <ConferenceSection />
       <SpacesSection />
       <ConferenceRoomsSection />
-      <div className="mt-44">
+      <div className="mb-20">
         {" "}
-        <FurtherQuestionSection />
+        <ContactUsSection />
       </div>
     </div>
   );

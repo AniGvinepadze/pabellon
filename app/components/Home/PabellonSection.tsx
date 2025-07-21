@@ -73,7 +73,7 @@ const PabellonSection = () => {
           height={158}
           className="max-500:w-[200px] max-350:w-[170px]"
         />
-        <p className="font-normal text-xl max-500:text-lg max-350:text-base">
+        <p className="max-w-[700px] w-full font-normal text-xl max-500:text-lg max-350:text-base custom-font">
           {language === "en"
             ? homeData.home_pabellon_section_little_description_en
             : homeData.home_pabellon_section_little_description_ge}

@@ -1,3 +1,4 @@
+import ContactUsSection from "@/app/components/Home/ContactUsSection";
 import FurtherQuestionSection from "@/app/components/Meetings-events/FurtherQuestionsSection";
 import FacilitiesSection from "@/app/components/Services/FacilitiesSection";
 import WellnessSection from "@/app/components/Services/WellnessSection";
@@ -14,7 +15,10 @@ export default function page() {
       <OurFacilitiesSection/>
       <SpaWellnessSection/>
       <PoolSection/>
-      <FurtherQuestionSection/>
+  <div className="mb-20">
+          {" "}
+          <ContactUsSection />
+        </div>
       </div>
     </div>
   );

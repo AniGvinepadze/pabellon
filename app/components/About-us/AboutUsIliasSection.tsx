@@ -91,7 +91,7 @@ export default function AboutUsIliasSection() {
             height={178}
           />
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 mb-32">
           <p className="font-light text-[17px] max-500:text-[15px]">
             {data.aboutus_family_tradition}
           </p>

@@ -52,7 +52,7 @@ export default function FurtherQuestionSection() {
     return <div>No data available.</div>;
   }
   return (
-    <div className="max-w-[600px] w-full m-auto my-20 flex flex-col items-center justify-center text-center text-secondaryTextColor  ">
+    <div className="max-w-[600px] w-full m-auto my-20 flex flex-col items-center justify-center text-center text-secondaryTextColor bg-ilialake ">
       <div className="flex flex-col gap-4 max-400:gap-2">
         <h2 className="font-semibold text-[40px] max-450:text-[32px]">
           {restaurantData.further_title}

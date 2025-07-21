@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500&display=swap");
 @import "react-datepicker/dist/react-datepicker.css";
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -70,10 +70,11 @@ body {
   src: url("/fonts/Biro_Script_reduced.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 .custom-font {
-  font-family: "custom-font", serif !important;
+  font-family: "custom-font", "Noto Sans", sans-serif !important;
 }
 @media only screen and (max-width: 700px) {
   .coming-soon-bg {
