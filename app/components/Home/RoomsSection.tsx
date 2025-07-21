@@ -78,15 +78,15 @@ export default function RoomsSection() {
             ? homeData.home_rooms_section_title_en
             : homeData.home_rooms_section_title_ge}
         </h2>
-        <h2 className="font-normal text-[30px] italic  max-600:text-[22px] max-400:text-[18px] custom-font">
-          {language === "en"
-            ? homeData.home_rooms_section_little_description_en
-            : homeData.home_rooms_section_little_description_ge}
-        </h2>
-        <p className="text-[17px] font-light max-w-[700px]  max-600:text-[15px] max-400:text-[13px]">
+        <h2 className="font-normal text-[24px] italic  max-600:text-[16px] max-400:text-[18px] custom-font">
           {language === "en"
             ? homeData.home_rooms_section_description_en
             : homeData.home_rooms_section_description_ge}
+        </h2>
+        <p className="text-[17px] font-light max-w-[700px]  max-600:text-[15px] max-400:text-[13px]">
+          {language === "en"
+            ? homeData.home_rooms_section_little_description_en
+            : homeData.home_rooms_section_little_description_ge}
         </p>
       </div>
 
