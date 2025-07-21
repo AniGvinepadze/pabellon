@@ -92,6 +92,7 @@ export default function SpaWellnessSection() {
             alt="wellness"
             width={800}
             height={500}
+            className="max-h-[300px]"
           />
         </div>
         <div className="max-w-[800px] w-full flex flex-col justify-center items-center text-center">
