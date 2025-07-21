@@ -109,7 +109,7 @@ export default function KidstSection() {
               alt="icon"
               width={388}
               height={419}
-              className=" max-800:max-w-[300px] w-full"
+              className=" max-800:max-w-[300px] w-full mt-6"
             />
             <Image
               priority={true}
@@ -123,9 +123,9 @@ export default function KidstSection() {
               priority={true}
               src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.thirdImageUrl}`}
               alt="icon"
-              width={322}
-              height={419}
-              className="object-contain max-h-[400px]  w-full max-800:max-w-[300px]"
+              width={388}
+              height={380}
+              className="object-contain max-h-[340px] mt-6 w-full max-800:max-w-[300px] max-800:hidden"
             />{" "}
             <Image
               priority={true}
@@ -134,6 +134,14 @@ export default function KidstSection() {
               width={388}
               height={508}
               className="max-800:max-w-[300px] w-full max-800:max-h-[380px] max-800:mt-3"
+            />
+                <Image
+              priority={true}
+              src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.fourthImageUrl}`}
+              alt="icon"
+              width={388}
+              height={380}
+              className="hidden object-contain max-h-[230px] mt-6  w-full max-800:max-w-[300px] max-800:flex max-400:max-h-[200px] max-350:max-h-[170px] "
             />
           </div>
         </div>
