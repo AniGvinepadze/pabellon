@@ -195,7 +195,7 @@ export default function Footer() {
                   </li>
                 </Link>
               </ul>
-              <div className="flex flex-col justify-between my-10">
+              <div className="flex flex-col justify-between max-650:my-10">
                 <ul className="flex flex-col gap-3">
                   <Link href={"https://www.instagram.com/pabellonhotel"}>
                     <li className="text-base font-normal hover:text-[17px] hover transition-all ease-in-out duration-300">
