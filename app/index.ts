@@ -211,7 +211,7 @@ export const footerSoc = [
   {
     id: 1,
     soc: "Instagram",
-    link: " https://www.instagram.com/pabellonhotel/",
+    link: "https://www.instagram.com/pabellonhotel",
   },
   {
     id: 2,
