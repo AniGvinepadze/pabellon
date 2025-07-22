@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +7,8 @@ import glovabIcon from "../../public/assets/Vector (10).svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { navbar } from "..";
 import { set } from "date-fns";
+import { HeaderType } from "./Header";
+import { axiosInstance } from "../lib/axiosInstance";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -36,8 +39,31 @@ export default function MobileMenu({
 }: MobileMenuProps) {
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
   const showNewPopupRef = useRef<HTMLDivElement | null>(null);
+  const [data, setData] = useState<HeaderType | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [language, setLanguage] = useState<"en" | "ge">("en");
 
   useEffect(() => {
+    const savedLanguage = localStorage.getItem("language") || "en";
+    setLanguage(savedLanguage as "en" | "ge");
+    const fetchData = async () => {
+      try {
+        const language = localStorage.getItem("language") || "en";
+        const response = await axiosInstance.get(
+          `/api/header?lang=${language}`
+        );
+        const resData = await response.data;
+        console.log(resData);
+        setData(resData);
+      } catch (err: any) {
+        setError(err.message ?? "Unknown error");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
     window.addEventListener("scroll", handleScroll);
 
     const handleClickOutside = (e: MouseEvent) => {
@@ -59,18 +85,28 @@ export default function MobileMenu({
       document.removeEventListener("click", handleClickOutside);
     };
   }, [handleScroll]);
-
-  const handleItemClick = (title: string) => {
-    if (title.toLowerCase() !== "Experiences") {
-      setIsOpen(true);
-      setMobShowNewPopup(true);
-    }
+  const toggleLanguage = (selectedLanguage: "en" | "ge") => {
+    setLanguage(selectedLanguage);
+    localStorage.setItem("language", selectedLanguage);
+    window.location.reload();
+    setPopup(false);
+  };
+  const handleItemClick = () => {
+    setIsOpen(true);
+    setMobShowNewPopup(true);
   };
 
   const handleItemOnClick = () => {
     setIsOpen(false);
     setMobShowNewPopup(false);
   };
+
+  if (error) {
+    return <div className="text-center py-10 text-red-600">Error: {error}</div>;
+  }
+  if (!data) {
+    return 
+  }
   return (
     <AnimatePresence>
       {isOpen && (
@@ -84,29 +120,51 @@ export default function MobileMenu({
         >
           <div className="w-full shadow-md p-4 max-350:p-2">
             <div className="flex flex-col justify-between h-full">
-              <div className={`flex flex-col gap-5 px-7 py-3`}>
-                {navbar.map((e) =>
-                  e.route ? (
-                    <Link
-                      key={e.id}
-                      href={e.route}
-                      className="max-w-[1000px] relative"
-                      onClick={() => handleItemClick(e.title)}
-                    >
-                      <p className="text-xl hover:text-[21px] transition-all ease-in-out duration-300 font-medium max-1250:text-lg max-1150:text-base">
-                        {e.title}
-                      </p>
-                    </Link>
-                  ) : (
-                    <p
-                      key={e.id}
-                      onClick={() => handleItemClick(e.title)}
-                      className="relative"
-                    >
-                      {e.title}
-                    </p>
-                  )
-                )}
+              <div className="flex flex-col gap-5 px-7 py-3">
+                <ul className="max-w-[1000px]   transition-all ease-in-out duration-300  flex flex-col text-start gap-7 w-full mt-1 relative ">
+                  <Link href={"/"}>
+                    <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300 ">
+                      {data.home}
+                    </li>
+                  </Link>
+                  <Link href={"/about-us"}>
+                    <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
+                      {data.aboutUs}
+                    </li>
+                  </Link>
+
+                  <Link href={"/rooms"}>
+                    <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
+                      {data.rooms}
+                    </li>
+                  </Link>
+                  <Link href={"/services"}>
+                    <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
+                      {data.services}
+                    </li>
+                  </Link>
+                  <button onClick={() => handleItemClick()}>
+                    <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer text-start hover:text-[18px] tranistion-all easy-in-out duration-300">
+                      {data.experiences}
+                    </li>
+                  </button>
+                  <Link href={"/wine"}>
+                    <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
+                      {data.wine}
+                    </li>
+                  </Link>
+
+                  <Link href={"/agro"}>
+                    <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
+                      {data.agro}
+                    </li>
+                  </Link>
+                  <Link href={"/contact"}>
+                    <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
+                      {data.contact}
+                    </li>
+                  </Link>
+                </ul>
                 {mobshowNewPopup && (
                   <div
                     ref={showNewPopupRef}
@@ -115,30 +173,26 @@ export default function MobileMenu({
                     <Link
                       href={"/makrine-restaurant"}
                       className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
-                      onClick={handleItemOnClick}
                     >
-                      Bars & Restaurants
+                      {data.barsRestaurant}
                     </Link>
                     <Link
                       href={"/meetings-events"}
                       className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
-                      onClick={handleItemOnClick}
                     >
-                      Meetings & Events
+                      {data.meetingEvents}
                     </Link>
                     <Link
                       href={"/wellness-fitness"}
                       className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
-                      onClick={handleItemOnClick}
                     >
-                      Spa & Wellness
+                      {data.spaWellness}
                     </Link>
                     <Link
                       href={"/kids-entertainment"}
                       className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
-                      onClick={handleItemOnClick}
                     >
-                      Kids Entertainment
+                      {data.kids}
                     </Link>
                   </div>
                 )}
@@ -157,10 +211,16 @@ export default function MobileMenu({
                     <div
                       className={`absolute top-12 left-0 w-[150px] p-4 shadow-md rounded-md z-50 ${mobbgColor} ${mobtextColor}`}
                     >
-                      <p className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300">
+                      <p
+                        className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+                        onClick={() => toggleLanguage("en")}
+                      >
                         English
                       </p>
-                      <p className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300">
+                      <p
+                        className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
+                        onClick={() => toggleLanguage("ge")}
+                      >
                         Georgia
                       </p>
                     </div>

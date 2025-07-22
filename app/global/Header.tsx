@@ -10,7 +10,7 @@ import MobileMenu from "./MobileMenu";
 import whiteMobileMenu from "../../public/assets/burgerwhite.svg";
 import { logo, whiteLogo } from "../assets";
 import { axiosInstance } from "../lib/axiosInstance";
-type HeaderType = {
+export type HeaderType = {
   home: string;
   aboutUs: string;
   rooms: string;
@@ -192,28 +192,6 @@ export default function Header() {
           className={`flex gap-6 mt-1 max-w-[1250px] w-full max-1250:hidden ${textColor} transition-all duration-500 ease-in-out`}
         >
           <div className="flex gap-7 w-full justify-end items-center mt-4 relative">
-            {/* {navbar.map((e) =>
-              e.route ? (
-                <Link
-                  key={e.id}
-                  href={e.route}
-                  className="max-w-[1000px]  hover:scale-110 transition-all ease-in-out duration-300 relative"
-                >
-                  <p className="text-xl font-medium max-1250:text-lg max-1150:text-base ">
-                    {e.title}
-                  </p>
-                </Link>
-              ) : (
-                <button
-                  key={e.id}
-                  onClick={() => handleItemClick(e.route)}
-                  className="text-xl font-medium max-1250:text-lg max-1150:text-base hover:text-[19px] transition-all duration-300 ease-in-out"
-                >
-                  {e.title}
-                </button>
-              )
-            )} */}
-
             <ul className="max-w-[1000px]   transition-all ease-in-out duration-300  flex gap-7 w-full justify-end items-center mt-1 relative ">
               <Link href={"/"}>
                 <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300 ">
@@ -312,13 +290,13 @@ export default function Header() {
                   onClick={() => toggleLanguage("en")}
                   className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
                 >
-                  ENG
+                  English
                 </p>
                 <p
                   onClick={() => toggleLanguage("ge")}
                   className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
                 >
-                  GEO
+                  Georgia
                 </p>
               </div>
             )}
