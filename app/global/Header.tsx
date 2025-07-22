@@ -220,7 +220,7 @@ export default function Header() {
                   {data.home}
                 </li>
               </Link>
-              <Link href={"/aboutUs"}>
+              <Link href={"/about-us"}>
                 <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
                   {data.aboutUs}
                 </li>
