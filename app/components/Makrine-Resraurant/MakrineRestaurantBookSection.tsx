@@ -8,6 +8,17 @@ interface EmailDetails {
   guests: number;
   userName: string;
 }
+type BookMakrineData = {
+  book_title: string;
+  check_in: string;
+  check_out: string;
+  bookBtn: string;
+
+  select_date: string;
+  adults: string;
+  name: string;
+};
+
 export default function MakrineRestaurantBookSection() {
   const [routerReady, setRouterReady] = useState(false);
   const [checkIn, setCheckIn] = useState<Date | null>(null);
@@ -19,8 +30,28 @@ export default function MakrineRestaurantBookSection() {
   const [guests, setGuests] = useState<number>(0);
   const [date, setDate] = useState<string>("");
   const [data, setData] = useState<EmailDetails | null>(null);
+  const [bookData, setBookData] = useState<BookMakrineData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const language = localStorage.getItem("language") || "en";
+        const response = await axiosInstance.get(
+          `/api/bookMakrine?lang=${language}`
+        );
+        const resData = await response.data;
+
+        setBookData(resData);
+      } catch (err: any) {
+        setError(err.message ?? "Unknown error");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
     const handleClickOutside = (event: MouseEvent) => {
       if (
         popupRef.current &&
@@ -73,15 +104,14 @@ export default function MakrineRestaurantBookSection() {
       <div className="max-w-[1250px] w-full m-auto flex flex-col justify-center">
         <div className="flex justify-center my-10 max-500:my-0">
           <h2 className="italic font-semibold text-[40px] max-500:text-[32px]">
-            Book Restaurant
+            {bookData?.book_title}
           </h2>
         </div>
         <div className="flex gap-10 items-center relative max-w-[1000px] m-auto w-full justify-between mt-6  max-600:px-5 max-450:px-3 max-450:gap-6 max-400:px-0 ">
-          
           <div className="w-full grid grid-cols-4 gap-7 max-750:grid-cols-2 mb-10 max-350:grid-cols-1">
             <div className="flex flex-col w-full">
               <p className="font-normal text-[17px] my-8 max-500:text-[15px] max-500:mb-3 ">
-                Select Date
+                {bookData?.select_date}
               </p>
               <DatePicker
                 selected={checkIn}
@@ -99,7 +129,7 @@ export default function MakrineRestaurantBookSection() {
 
             <div className="flex flex-col w-full transition-all ease-in-out duration-300  max-400:-mt-1">
               <p className="font-normal text-[17px] my-8 max-500:text-[15px] max-500:mb-0">
-                Adults
+                {bookData?.adults}
               </p>
               <input
                 type="text"
@@ -128,28 +158,25 @@ export default function MakrineRestaurantBookSection() {
             <div className="flex flex-col w-full transition-all ease-in-out duration-300  max-400:-mt-1">
               {" "}
               <p className="font-normal text-[17px] my-8 max-500:text-[15px] max-500:mb-0">
-                Name
+                {bookData?.name}
               </p>
               <input
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-
                 className="placeholder-black bg-beige outline-none font-serif max-w-[150px] w-full p-2 max-400:text-base cursor-pointer"
               />
               <div className="w-full h-[1px] bg-black" />
             </div>
-             <div className="w-full  mt-[90px] max-500:mt-[60px]">
-            <button
-              className="w-full px-2 py-2 text-base font-medium cursor-pointer hover:scale-110 transition-all ease-in-out duration-300 max-400:text-base text-beige bg-secondaryTextColor"
-              onClick={handleSubmit}
-            >
-              Make an Enquiry
-            </button>
+            <div className="w-full  mt-[90px] max-500:mt-[60px]">
+              <button
+                className="w-full px-2 py-2 text-base font-medium cursor-pointer hover:scale-110 transition-all ease-in-out duration-300 max-400:text-base text-beige bg-secondaryTextColor"
+                onClick={handleSubmit}
+              >
+                {bookData?.bookBtn}
+              </button>
+            </div>
           </div>
-          </div>
-
-         
         </div>
       </div>
     </div>
