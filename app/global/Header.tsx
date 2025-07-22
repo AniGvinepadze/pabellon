@@ -10,7 +10,20 @@ import MobileMenu from "./MobileMenu";
 import whiteMobileMenu from "../../public/assets/burgerwhite.svg";
 import { logo, whiteLogo } from "../assets";
 import { axiosInstance } from "../lib/axiosInstance";
-
+type HeaderType = {
+  home: string;
+  aboutUs: string;
+  rooms: string;
+  services: string;
+  experiences: string;
+  barsRestaurant: string;
+  meetingEvents: string;
+  spaWellness: string;
+  kids: string;
+  wine: string;
+  agro: string;
+  contact: string;
+};
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [popup, setPopup] = useState<boolean>(false);
@@ -34,9 +47,30 @@ export default function Header() {
   const [language, setLanguage] = useState<"en" | "ge">("en");
   const popupRef = useRef<HTMLDivElement | null>(null);
   const globalPopupRef = useRef<HTMLDivElement | null>(null);
+  const [data, setData] = useState<HeaderType | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language") || "en";
-    setLanguage(savedLanguage as "en" | "ge"); 
+    setLanguage(savedLanguage as "en" | "ge");
+    const fetchData = async () => {
+      try {
+        const language = localStorage.getItem("language") || "en";
+        const response = await axiosInstance.get(
+          `/api/header?lang=${language}`
+        );
+        const resData = await response.data;
+        console.log(resData);
+        setData(resData);
+      } catch (err: any) {
+        setError(err.message ?? "Unknown error");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const toggleLanguage = (selectedLanguage: "en" | "ge") => {
@@ -121,36 +155,21 @@ export default function Header() {
     }
   };
 
-  const handleItemClick = (route: string | undefined) => {
-    if (!route) {
-      setShowNewPopup((prev) => !prev);
-    } else {
-      setIsOpen(false);
-    }
+  const handleItemClick = () => {
+    setShowNewPopup((prev) => !prev);
+
+    setIsOpen(false);
   };
 
-  // const fetchData = async () => {
-  //     try {
-  //       const response = await axiosInstance.get(
-  //         `/api/aboutUs?lang=${language}`,
-  //         {
-  //           withCredentials: true,
-  //           headers: { "Content-Type": "application/json" },
-  //         }
-  //       );
-
-  //       const data = response.data;
-  //       console.log(data);
-  //       setData(data);
-  //     } catch (err: any) {
-  //       setError(err.message ?? "An error occurred while fetching data.");
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-
-  // fetchData();
-
+  if (loading) {
+    return <div className="text-center py-10">Loading...</div>;
+  }
+  if (error) {
+    return <div className="text-center py-10 text-red-600">Error: {error}</div>;
+  }
+  if (!data) {
+    return <div className="text-center py-10">No data available.</div>;
+  }
   return (
     <div
       className={`w-full ${bgColor} sticky top-0 z-50 transition-all ease-in-out duration-500 ${maxWidth} ${borderRadius} ${marginTop} mx-auto`}
@@ -173,7 +192,7 @@ export default function Header() {
           className={`flex gap-6 mt-1 max-w-[1250px] w-full max-1250:hidden ${textColor} transition-all duration-500 ease-in-out`}
         >
           <div className="flex gap-7 w-full justify-end items-center mt-4 relative">
-            {navbar.map((e) =>
+            {/* {navbar.map((e) =>
               e.route ? (
                 <Link
                   key={e.id}
@@ -193,7 +212,52 @@ export default function Header() {
                   {e.title}
                 </button>
               )
-            )}
+            )} */}
+
+            <ul className="max-w-[1000px]   transition-all ease-in-out duration-300  flex gap-7 w-full justify-end items-center mt-1 relative ">
+              <Link href={"/"}>
+                <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300 ">
+                  {data.home}
+                </li>
+              </Link>
+              <Link href={"/aboutUs"}>
+                <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
+                  {data.aboutUs}
+                </li>
+              </Link>
+
+              <Link href={"/rooms"}>
+                <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
+                  {data.rooms}
+                </li>
+              </Link>
+              <Link href={"/services"}>
+                <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
+                  {data.services}
+                </li>
+              </Link>
+              <button onClick={() => handleItemClick()}>
+                <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
+                  {data.experiences}
+                </li>
+              </button>
+              <Link href={"/wine"}>
+                <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
+                  {data.wine}
+                </li>
+              </Link>
+
+              <Link href={"/agro"}>
+                <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
+                  {data.agro}
+                </li>
+              </Link>
+              <Link href={"/contact"}>
+                <li className="text-base font-medium max-1250:text-lg max-1150:text-sm cursor-pointer hover:text-[18px] tranistion-all easy-in-out duration-300">
+                  {data.contact}
+                </li>
+              </Link>
+            </ul>
             {showNewPopup && (
               <div
                 ref={popupRef}
@@ -203,25 +267,25 @@ export default function Header() {
                   href={"/makrine-restaurant"}
                   className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
                 >
-                  Bars & Restaurants
+                  {data.barsRestaurant}
                 </Link>
                 <Link
                   href={"/meetings-events"}
                   className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
                 >
-                  Meetings & Events
+                  {data.meetingEvents}
                 </Link>
                 <Link
                   href={"/wellness-fitness"}
                   className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
                 >
-                  Spa & Wellness
+                  {data.spaWellness}
                 </Link>
                 <Link
                   href={"/kids-entertainment"}
                   className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
                 >
-                  Kids Entertainment
+                  {data.kids}
                 </Link>
               </div>
             )}
@@ -245,13 +309,13 @@ export default function Header() {
                 className={`absolute w-[150px]  items-center -right-2 ${textColor} ${bgColor} p-4 shadow-md`}
               >
                 <p
-                  onClick={() => toggleLanguage("en")} 
+                  onClick={() => toggleLanguage("en")}
                   className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
                 >
                   ENG
                 </p>
                 <p
-                  onClick={() => toggleLanguage("ge")} 
+                  onClick={() => toggleLanguage("ge")}
                   className="text-base font-medium my-2 cursor-pointer hover:text-lg transition-all ease-in-out duration-300"
                 >
                   GEO
