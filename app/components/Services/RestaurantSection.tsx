@@ -59,6 +59,10 @@ export interface IRestauramt {
   wellness_and_fitness_section_little_description: string;
   wellness_and_fitness_section_description: string;
   our_facilities_title: string;
+  our_facilities_spa: string;
+  our_facilities_indoorPool: string;
+  our_facilities_outdoorPool: string;
+  our_facilities_gym: string;
   kids_entertainment_title: string;
 
   kids_entertainment_section_little_description: string;
