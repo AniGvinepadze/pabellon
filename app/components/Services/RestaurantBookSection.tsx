@@ -103,7 +103,7 @@ export default function RestaurantBookSection() {
               </p>
               <input
                 type="text"
-                placeholder={selectedGuest ? selectedGuest.toString() : "1"}
+                placeholder={selectedGuest ? `${selectedGuest.toString()} Guests` : "Guests"}
                 onClick={handleInputClick}
                 className=" placeholder-black bg-beige outline-none font-serif max-w-[150px] w-full p-2 max-400:text-base cursor-pointer"
               />
