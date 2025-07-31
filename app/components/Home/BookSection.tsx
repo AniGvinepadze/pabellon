@@ -107,7 +107,7 @@ export default function BookSection() {
           <div className="flex flex-col  w-full -mt-3 cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 max-600:col-span-2">
             <input
               type="text"
-              placeholder={selectedGuest ? selectedGuest.toString() : "1"}
+              placeholder={selectedGuest ? `${selectedGuest.toString()} Guests` : "Guests"}
               onClick={handleInputClick}
               className=" placeholder-black bg-beige outline-none font-serif w-[150px] p-2 max-400:text-base"
             />

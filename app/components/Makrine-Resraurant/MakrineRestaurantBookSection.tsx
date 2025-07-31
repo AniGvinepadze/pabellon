@@ -129,11 +129,11 @@ export default function MakrineRestaurantBookSection() {
 
             <div className="flex flex-col w-full transition-all ease-in-out duration-300  max-400:-mt-1">
               <p className="font-normal text-[17px] my-8 max-500:text-[15px] max-500:mb-0">
-                {bookData?.adults}
+                {bookData?.adults} 
               </p>
               <input
                 type="text"
-                value={selectedGuest}
+                value={selectedGuest ? `${selectedGuest.toString()} Guests` : "Guests"}
                 onClick={handleInputClick}
                 className="placeholder-black bg-beige outline-none font-serif max-w-[150px] w-full p-2 max-400:text-base cursor-pointer"
               />
@@ -149,7 +149,7 @@ export default function MakrineRestaurantBookSection() {
                       className="p-[5px] hover:bg-gray-200 cursor-pointer"
                       onClick={() => handleSelect(number)}
                     >
-                      <p>{number} People</p>
+                      <p>{number} Guest</p>
                     </div>
                   ))}
                 </div>
