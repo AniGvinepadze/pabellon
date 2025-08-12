@@ -78,7 +78,7 @@ export default function BookSection() {
         <h2 className="text-[32px] font-normal my-10 max-500:my-4 max-550:text-[28px] max-450:text-[24px]  max-350:text-[21px] max-300:text-[18px] max-300:my-1">
           {data.book_title}
         </h2>
-        <div className="grid grid-cols-4 gap-10 items-center relative max-w-[800px] m-auto w-full justify-between mt-6 max-600:grid-cols-2 max-600:px-10 max-450:px-3 max-450:gap-6 max-400:px-0">
+        <div className="grid grid-cols-3 gap-10 items-center relative max-w-[800px] m-auto w-full justify-between mt-6 max-600:grid-cols-2 max-600:px-10 max-450:px-3 max-450:gap-6 max-400:px-0">
           <div className="flex flex-col w-full cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 ">
             <DatePicker
               selected={checkIn}
@@ -104,7 +104,7 @@ export default function BookSection() {
             />
             <div className="w-full h-[1px] bg-black my-3" />
           </div>
-          <div className="flex flex-col  w-full -mt-3 cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 max-600:col-span-2">
+          {/* <div className="flex flex-col  w-full -mt-3 cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 max-600:col-span-2">
             <input
               type="text"
               placeholder={selectedGuest ? `${selectedGuest.toString()} Guests` : "Guests"}
@@ -128,7 +128,7 @@ export default function BookSection() {
                 ))}
               </div>
             )}
-          </div>
+          </div> */}
           <Link
             href={`https://live.ipms247.com/booking/book-rooms-pabellonhotel`}
             className="max-600:col-span-2"

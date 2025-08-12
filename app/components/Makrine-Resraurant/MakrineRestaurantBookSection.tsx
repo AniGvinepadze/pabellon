@@ -127,7 +127,7 @@ export default function MakrineRestaurantBookSection() {
               <div className="w-full h-[1px] bg-black my-3 max-500:my-0" />
             </div>
 
-            <div className="flex flex-col w-full transition-all ease-in-out duration-300  max-400:-mt-1">
+            {/* <div className="flex flex-col w-full transition-all ease-in-out duration-300  max-400:-mt-1">
               <p className="font-normal text-[17px] my-8 max-500:text-[15px] max-500:mb-0">
                 {bookData?.adults} 
               </p>
@@ -154,7 +154,7 @@ export default function MakrineRestaurantBookSection() {
                   ))}
                 </div>
               )}
-            </div>
+            </div> */}
             <div className="flex flex-col w-full transition-all ease-in-out duration-300  max-400:-mt-1">
               {" "}
               <p className="font-normal text-[17px] my-8 max-500:text-[15px] max-500:mb-0">
