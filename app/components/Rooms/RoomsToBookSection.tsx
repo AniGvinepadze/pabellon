@@ -121,7 +121,7 @@ export default function RoomsToBookSection() {
                         )}
                         <p className="font-medium text-sm mt-[1px]">
                           {e.rooms_sofa || e.rooms_bath
-                            ? e.rooms_bath || e.rooms_bath
+                            ? e.rooms_sofa || e.rooms_bath
                             : ""}
                         </p>
                       </div>
