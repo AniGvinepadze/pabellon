@@ -12,7 +12,6 @@ export default function SpaWellnessSection() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-
     const fetchData = async () => {
       try {
         const language = localStorage.getItem("language") || "en";
@@ -92,7 +91,7 @@ export default function SpaWellnessSection() {
             alt="wellness"
             width={800}
             height={500}
-            className="max-h-[300px]"
+            className="max-h-[300px] object-center max-w-[800px] w-full object-cover"
           />
         </div>
         <div className="max-w-[800px] w-full flex flex-col justify-center items-center text-center">
