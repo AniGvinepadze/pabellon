@@ -43,7 +43,7 @@ export default function AboutUsIliasSection() {
     };
 
     fetchData();
-  }, []); 
+  }, []);
 
   if (loading) {
     return <div className="text-center py-10">Loading...</div>;
@@ -79,16 +79,16 @@ export default function AboutUsIliasSection() {
           height={602}
         />
       </div>
-      <div className="flex flex-col gap-14 justify-center mt-7 max-450:gap-12">
+      <div className="flex flex-col justify-center mt-7 ">
         <p className="font-light text-[17px] max-500:text-[15px]">
           {data.aboutus_historical_culture_heritage}
         </p>
-        <div className="flex justify-center">
+        <div className="flex justify-center -my-16 max-500:-my-5 max-400:my-2">
           <img
             src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${data.artWorkImageUrl}`}
             alt="artwork"
-            width={460}
-            height={178}
+            width={860}
+            height={478}
           />
         </div>
         <div className="flex flex-col gap-6 mb-32">
