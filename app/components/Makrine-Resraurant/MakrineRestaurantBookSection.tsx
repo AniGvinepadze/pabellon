@@ -108,7 +108,7 @@ export default function MakrineRestaurantBookSection() {
           </h2>
         </div>
         <div className="flex gap-10 items-center relative max-w-[1000px] m-auto w-full justify-between mt-6  max-600:px-5 max-450:px-3 max-450:gap-6 max-400:px-0 ">
-          <div className="w-full grid grid-cols-4 gap-7 max-750:grid-cols-2 mb-10 max-350:grid-cols-1">
+          <div className="w-full grid grid-cols-3 gap-7 max-750:grid-cols-2 mb-10 max-350:grid-cols-1">
             <div className="flex flex-col w-full">
               <p className="font-normal text-[17px] my-8 max-500:text-[15px] max-500:mb-3 ">
                 {bookData?.select_date}
