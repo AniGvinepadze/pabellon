@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { roomsBook } from "@/app";
 import Image from "next/image";
 import Link from "next/link";
@@ -63,6 +63,7 @@ export default function RoomsToBookSection() {
                   alt={e.rooms_title_en}
                   width={714}
                   height={429}
+                  className="max-w-[7140px] w-full object-cover min-h-[430px] max-850:min-h-[350px] max-500:min-h-[250px] max-350:min-h-[200px]  "
                 />
               </div>
 
