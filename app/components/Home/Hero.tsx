@@ -52,7 +52,7 @@ export default function Hero() {
   }
 
   return (
-    <div className="max-w-[1250px] w-full m-auto ">
+    <div className="max-w-[1000px] w-full m-auto ">
       <div className="w-full m-auto">
       <Image
         priority={true}
@@ -60,7 +60,7 @@ export default function Hero() {
         alt="hero"
         width={1600}
         height={400}
-        className="max-w-[1000px] w-full object-contain "
+        className="max-w-[1000px] w-full object-contain m-auto "
       />
       </div>
     </div>
