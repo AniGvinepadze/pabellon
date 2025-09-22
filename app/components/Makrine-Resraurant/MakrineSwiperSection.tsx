@@ -30,10 +30,10 @@ export default function MakrineSwiperSection() {
         if (resData && resData.length > 0) {
           setImgsData(resData[0]);
         }
-        setLoading(false);  // Set loading to false after fetching data
+        setLoading(false);
       } catch (err: any) {
         setError(err.message ?? "Unknown error");
-        setLoading(false);  // Set loading to false if there's an error
+        setLoading(false);
       }
     };
 
@@ -68,6 +68,7 @@ export default function MakrineSwiperSection() {
                   alt="img"
                   width={615}
                   height={760}
+                  className="min-h-[400px] h-[400px] object-cover"
                 />
               </SwiperSlide>
               <SwiperSlide className="w-full">
