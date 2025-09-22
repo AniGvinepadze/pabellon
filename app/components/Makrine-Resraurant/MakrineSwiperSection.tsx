@@ -78,6 +78,7 @@ export default function MakrineSwiperSection() {
                   alt="img"
                   width={615}
                   height={760}
+                   className="min-h-[400px] h-[400px] object-cover"
                 />
               </SwiperSlide>
               <SwiperSlide className="w-full">
@@ -87,6 +88,7 @@ export default function MakrineSwiperSection() {
                   alt="img"
                   width={615}
                   height={760}
+                   className="min-h-[400px] h-[400px] object-cover"
                 />
               </SwiperSlide>
               <SwiperSlide className="w-full">
@@ -96,6 +98,7 @@ export default function MakrineSwiperSection() {
                   alt="img"
                   width={615}
                   height={760}
+                   className="min-h-[400px] h-[400px] object-cover"
                 />
               </SwiperSlide>
             </>
