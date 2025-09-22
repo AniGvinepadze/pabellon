@@ -59,7 +59,7 @@ export default function Hero() {
         alt="hero"
         width={1600}
         height={400}
-        className="max-w-[1200px] w-full object-contain max-h-[500px] "
+        className="max-w-[1000px] w-full object-contain "
       />
     </div>
   );

@@ -83,7 +83,7 @@ export default function MakrineSection() {
   }
   return (
     <div className="max-w-[1250px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
-      <div className="max-w-[850px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-h-[500px] max-400:gap-3 ">
+      <div className="max-w-[850px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 h-[700px] max-1150:h-[550px] max-800:h-[500px] max-600:h-[400px] max-450:h-[3000] max-400:gap-3 ">
         <Image
           priority={true}
           src={makrineLogo}
