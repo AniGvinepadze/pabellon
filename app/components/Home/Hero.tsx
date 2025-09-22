@@ -53,6 +53,7 @@ export default function Hero() {
 
   return (
     <div className="max-w-[1250px] w-full m-auto ">
+      <div className="w-full m-auto">
       <Image
         priority={true}
         src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${data.hero_imageUrl}`}
@@ -61,6 +62,7 @@ export default function Hero() {
         height={400}
         className="max-w-[1000px] w-full object-contain "
       />
+      </div>
     </div>
   );
 }
