@@ -69,7 +69,7 @@ export default function MakrineSwiperSection() {
                   alt="img"
                   width={615}
                   height={760}
-                  className="min-h-[400px] h-[400px] object-cover"
+                  className="min-h-[350px] h-[350px] object-cover"
                 />
               </SwiperSlide>
               <SwiperSlide key="slide2" className="w-full">
@@ -79,7 +79,7 @@ export default function MakrineSwiperSection() {
                   alt="img"
                   width={615}
                   height={760}
-                  className="min-h-[400px] h-[400px] object-cover"
+                  className="min-h-[350px] h-[350px] object-cover"
                 />
               </SwiperSlide>
               <SwiperSlide key="slide3" className="w-full">
@@ -89,7 +89,7 @@ export default function MakrineSwiperSection() {
                   alt="img"
                   width={615}
                   height={760}
-                  className="min-h-[400px] h-[400px] object-cover"
+                  className="min-h-[350px] h-[350px] object-cover"
                 />
               </SwiperSlide>
               <SwiperSlide key="slide4" className="w-full">
@@ -99,7 +99,27 @@ export default function MakrineSwiperSection() {
                   alt="img"
                   width={615}
                   height={760}
-                  className="min-h-[400px] h-[400px] object-cover"
+                  className="min-h-[350px] h-[350px] object-cover"
+                />
+              </SwiperSlide>
+                <SwiperSlide key="slide2" className="w-full">
+                <Image
+                  priority={true}
+                  src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData.fourthImageUrl}`}
+                  alt="img"
+                  width={615}
+                  height={760}
+                  className="min-h-[350px] h-[350px] object-cover"
+                />
+              </SwiperSlide>
+ <SwiperSlide key="slide6" className="w-full">
+                <Image
+                  priority={true}
+                  src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData.imageUrl}`}
+                  alt="img"
+                  width={615}
+                  height={760}
+                  className="min-h-[350px] h-[350px] object-cover"
                 />
               </SwiperSlide>
             </>

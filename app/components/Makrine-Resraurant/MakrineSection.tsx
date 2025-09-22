@@ -31,7 +31,7 @@ export interface IMakrine {
   pool_bar_section_description: string;
   menuImageUrl?: string;
   menuImageUrlSecondPart?: string;
-  menuLogoImageUrl?:string
+  menuLogoImageUrl?: string;
   logoImageUrl?: string;
   mainImageUrl?: string;
   makrineRestaurantImageUrl?: string;
@@ -83,7 +83,7 @@ export default function MakrineSection() {
   }
   return (
     <div className="max-w-[1250px] w-full m-auto flex flex-col justify-center items-center text-center text-secondaryTextColor">
-      <div className="max-w-[850px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-400:gap-3">
+      <div className="max-w-[850px] w-full flex flex-col justify-center items-center text-center text-secondaryTextColor font-mono-serif gap-6 max-h-[500px] max-400:gap-3 ">
         <Image
           priority={true}
           src={makrineLogo}
@@ -92,16 +92,16 @@ export default function MakrineSection() {
           height={190}
         />
         <h2 className="font-normal text-[30px] italic max-600:text-[22px] max-400:text-[18px] custom-font">
-        {restaurantData.makrine_section_little_description}
+          {restaurantData.makrine_section_little_description}
         </h2>
         <p className="text-[17px] font-light max-w-[780px] max-600:text-[15px] max-400:text-[13px]">
-         {restaurantData.makrine_section_description}
+          {restaurantData.makrine_section_description}
         </p>
       </div>
       <div className="my-20">
         <Image
           priority={true}
-           src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${restaurantData.mainImageUrl}`}
+          src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${restaurantData.mainImageUrl}`}
           alt="icon"
           width={1440}
           height={890}

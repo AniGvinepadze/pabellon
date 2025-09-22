@@ -105,7 +105,7 @@ export default function RoomsSection() {
                   alt={e.rooms_title_en}
                   width={680}
                   height={429}
-                  className="max-w-[388px] w-full  min-h-[370px] h-[370px] max-1250:max-w-[690px] "
+                  className="max-w-[388px] w-full  min-h-[320px] h-[320px] max-1250:max-w-[690px] "
                 />
               </div>
 
