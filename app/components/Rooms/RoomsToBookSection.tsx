@@ -63,7 +63,7 @@ export default function RoomsToBookSection() {
                   alt={e.rooms_title_en}
                   width={714}
                   height={429}
-                  className="max-w-[7140px] w-full object-cover min-h-[430px] max-850:min-h-[350px] max-500:min-h-[250px] max-350:min-h-[200px]  "
+                  className="max-w-[714px] w-full object-cover h-[430px] max-h-[430px] max-850:max-h-[350px] max-500:max-h-[250px] max-350:max-h-[200px]  "
                 />
               </div>
 
