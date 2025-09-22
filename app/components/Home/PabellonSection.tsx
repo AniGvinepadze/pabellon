@@ -92,7 +92,7 @@ const PabellonSection = () => {
           alt="icon"
           width={1540}
           height={928}
-          className="max-w-[1600px] w-full"
+          className="max-w-[1000px] w-full"
         />
       </div>
     </div>
