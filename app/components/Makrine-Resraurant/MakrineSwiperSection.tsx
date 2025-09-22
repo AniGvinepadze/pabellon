@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from 'swiper/modules'; 
+
 import "swiper/css";
 import "swiper/css/pagination";
 import { axiosInstance } from "@/app/lib/axiosInstance";
@@ -61,7 +62,7 @@ export default function MakrineSwiperSection() {
         >
           {imgsData && (
             <>
-              <SwiperSlide className="w-full">
+              <SwiperSlide key="slide1" className="w-full">
                 <Image
                   priority={true}
                   src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData.fourthImageUrl}`}
@@ -71,34 +72,34 @@ export default function MakrineSwiperSection() {
                   className="min-h-[400px] h-[400px] object-cover"
                 />
               </SwiperSlide>
-              <SwiperSlide className="w-full">
+              <SwiperSlide key="slide2" className="w-full">
                 <Image
                   priority={true}
                   src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData.imageUrl}`}
                   alt="img"
                   width={615}
                   height={760}
-                   className="min-h-[400px] h-[400px] object-cover"
+                  className="min-h-[400px] h-[400px] object-cover"
                 />
               </SwiperSlide>
-              <SwiperSlide className="w-full">
+              <SwiperSlide key="slide3" className="w-full">
                 <Image
                   priority={true}
                   src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData.secondImageUrl}`}
                   alt="img"
                   width={615}
                   height={760}
-                   className="min-h-[400px] h-[400px] object-cover"
+                  className="min-h-[400px] h-[400px] object-cover"
                 />
               </SwiperSlide>
-              <SwiperSlide className="w-full">
+              <SwiperSlide key="slide4" className="w-full">
                 <Image
                   priority={true}
                   src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData.thirdImageUrl}`}
                   alt="img"
                   width={615}
                   height={760}
-                   className="min-h-[400px] h-[400px] object-cover"
+                  className="min-h-[400px] h-[400px] object-cover"
                 />
               </SwiperSlide>
             </>
