@@ -105,7 +105,7 @@ export default function MakrineSection() {
           alt="icon"
           width={1440}
           height={890}
-          className="max-w-[1200px] w-full  h-[700px] max-1150:h-[550px] max-800:h-[500px] max-600:h-[400px] max-450:h-[3000]"
+          className="max-w-[1200px] w-full"
         />
       </div>
     </div>
