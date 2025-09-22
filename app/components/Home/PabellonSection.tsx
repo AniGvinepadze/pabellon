@@ -88,7 +88,7 @@ const PabellonSection = () => {
       <div className="my-20">
         <Image
           priority={true}
-          src={pabellonSvg}
+          src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${homeData?.pabellon_imageUrl}`}
           alt="icon"
           width={1540}
           height={928}
