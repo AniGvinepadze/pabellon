@@ -98,14 +98,14 @@ export default function MakrineSection() {
           {restaurantData.makrine_section_description}
         </p>
       </div>
-      <div className="my-20 m-auto">
+      <div className="my-20 m-auto ">
         <Image
           priority={true}
           src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${restaurantData.mainImageUrl}`}
           alt="icon"
           width={1440}
           height={890}
-          className="max-w-[1000px] w-full "
+          className="max-w-[1200px] w-full  h-[700px] max-1150:h-[550px] max-800:h-[500px] max-600:h-[400px] max-450:h-[3000]"
         />
       </div>
     </div>
