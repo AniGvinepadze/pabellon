@@ -26,11 +26,13 @@ export default function MakrineSwiperSection() {
         const response = await axiosInstance.get(
           `/api/makrineImg?lang=${lang}`
         );
+     const resData = await response.data;
+        if (response.data && response.data.length > 0) {
         setImgsData(response.data[0]);
-        setLoading(false); // Set loading to false when data is fetched
+        }
       } catch (err: any) {
         setError(err.message ?? "Unknown error");
-        setLoading(false); // Set loading to false when there's an error
+        setLoading(false);
       }
     };
 
@@ -56,24 +58,60 @@ export default function MakrineSwiperSection() {
           modules={[Autoplay, Pagination]}
           className="w-full flex"
         >
-          {imgsData && [
-            imgsData.imageUrl,
-            imgsData.secondImageUrl,
-            imgsData.thirdImageUrl,
-            imgsData.fourthImageUrl,
-          ].map((img, index) => (
-            <SwiperSlide className="w-full" key={index}>
-              {img && (
-                <Image
-                  priority={true}
-                  src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${img}`}
-                  alt={`image-${index}`}
-                  width={615}
-                  height={760}
-                />
-              )}
-            </SwiperSlide>
-          ))}
+        <SwiperSlide className="w-full">
+            <Image
+              priority={true}
+            src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.fourthImageUrl}`}
+              alt="img"
+              width={615}
+              height={760}
+            />
+          </SwiperSlide>
+          <SwiperSlide className="w-full">
+            <Image
+              priority={true}
+              src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.imageUrl}`}
+              alt="img"
+              width={615}
+              height={760}
+            />
+          </SwiperSlide>
+          <SwiperSlide className="w-full">
+            <Image
+              priority={true}
+               src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.secondImageUrl}`}
+              alt="img"
+              width={615}
+              height={760}
+            />
+          </SwiperSlide>
+          <SwiperSlide className="w-full">
+            <Image
+              priority={true}
+              src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.thirdImageUrl}`}
+              alt="img"
+              width={615}
+              height={760}
+            />
+          </SwiperSlide>
+          <SwiperSlide className="w-full">
+            <Image
+              priority={true}
+               src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.fourthImageUrl}`}
+              alt="img"
+              width={615}
+              height={760}
+            />
+          </SwiperSlide>
+          <SwiperSlide className="w-full">
+            <Image
+              priority={true}
+          src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.thirdImageUrl}`}
+              alt="img"
+              width={615}
+              height={760}
+            />
+          </SwiperSlide>
         </Swiper>
       </div>
     </div>
