@@ -26,13 +26,14 @@ export default function MakrineSwiperSection() {
         const response = await axiosInstance.get(
           `/api/makrineImg?lang=${lang}`
         );
-     const resData = await response.data;
-        if (response.data && response.data.length > 0) {
-        setImgsData(response.data[0]);
+        const resData = await response.data;
+        if (resData && resData.length > 0) {
+          setImgsData(resData[0]);
         }
+        setLoading(false);  // Set loading to false after fetching data
       } catch (err: any) {
         setError(err.message ?? "Unknown error");
-        setLoading(false);
+        setLoading(false);  // Set loading to false if there's an error
       }
     };
 
@@ -58,60 +59,46 @@ export default function MakrineSwiperSection() {
           modules={[Autoplay, Pagination]}
           className="w-full flex"
         >
-        <SwiperSlide className="w-full">
-            <Image
-              priority={true}
-            src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.fourthImageUrl}`}
-              alt="img"
-              width={615}
-              height={760}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="w-full">
-            <Image
-              priority={true}
-              src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.imageUrl}`}
-              alt="img"
-              width={615}
-              height={760}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="w-full">
-            <Image
-              priority={true}
-               src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.secondImageUrl}`}
-              alt="img"
-              width={615}
-              height={760}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="w-full">
-            <Image
-              priority={true}
-              src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.thirdImageUrl}`}
-              alt="img"
-              width={615}
-              height={760}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="w-full">
-            <Image
-              priority={true}
-               src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.fourthImageUrl}`}
-              alt="img"
-              width={615}
-              height={760}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="w-full">
-            <Image
-              priority={true}
-          src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.thirdImageUrl}`}
-              alt="img"
-              width={615}
-              height={760}
-            />
-          </SwiperSlide>
+          {imgsData && (
+            <>
+              <SwiperSlide className="w-full">
+                <Image
+                  priority={true}
+                  src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData.fourthImageUrl}`}
+                  alt="img"
+                  width={615}
+                  height={760}
+                />
+              </SwiperSlide>
+              <SwiperSlide className="w-full">
+                <Image
+                  priority={true}
+                  src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData.imageUrl}`}
+                  alt="img"
+                  width={615}
+                  height={760}
+                />
+              </SwiperSlide>
+              <SwiperSlide className="w-full">
+                <Image
+                  priority={true}
+                  src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData.secondImageUrl}`}
+                  alt="img"
+                  width={615}
+                  height={760}
+                />
+              </SwiperSlide>
+              <SwiperSlide className="w-full">
+                <Image
+                  priority={true}
+                  src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData.thirdImageUrl}`}
+                  alt="img"
+                  width={615}
+                  height={760}
+                />
+              </SwiperSlide>
+            </>
+          )}
         </Swiper>
       </div>
     </div>
