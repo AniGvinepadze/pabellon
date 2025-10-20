@@ -110,7 +110,7 @@ export default function KidstSection() {
             // width={388}
             // height={419}
             fill
-       className="max-w-[388px] max-h-[419px] max-800:max-h-[370px] object-cover  w-full"
+       className="max-w-[388px] min-h-[419px] max-800:max-h-[370px] object-cover  w-full"
           />
           <Image
             priority={true}
@@ -119,7 +119,7 @@ export default function KidstSection() {
             // width={388}
             // height={419}
             fill
-            className="max-w-[388px] max-h-[419px] max-800:max-h-[370px] object-cover  w-full"
+            className="max-w-[388px] min-h-[419px] max-800:max-h-[370px] object-cover  w-full"
           />{" "}
           <Image
             priority={true}
@@ -128,7 +128,7 @@ export default function KidstSection() {
             // width={388}
             // height={419}
             fill
-            className="max-w-[388px] max-h-[419px] max-800:max-h-[370px] object-cover  w-full"
+            className="max-w-[388px] min-h-[419px] max-800:max-h-[370px] object-cover  w-full"
           />{" "}
           <Image
             priority={true}
@@ -137,7 +137,7 @@ export default function KidstSection() {
             // width={388}
             // height={419}
             fill
-           className="max-w-[388px] max-h-[419px] max-800:max-h-[370px] object-cover  w-full"
+           className="max-w-[388px] min-h-[419px] max-800:max-h-[370px] object-cover  w-full"
           />
           {/* <Image
               priority={true}
