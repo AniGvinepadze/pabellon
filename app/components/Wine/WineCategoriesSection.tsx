@@ -93,6 +93,7 @@ export default function WineCategoriesSection() {
           alt="artwork"
           width={1500}
           height={850}
+               className="max-w-[1100px] w-full "
         />
       </div>
       <div className="max-w-[800px] w-full m-auto flex flex-col justify-center items-center my-10">

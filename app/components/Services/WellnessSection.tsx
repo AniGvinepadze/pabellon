@@ -67,8 +67,8 @@ export default function WellnessSection() {
           src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${restaurantData.wellnessAndFitnessImageUrl}`}
           alt="icon"
           width={1540}
-          height={940}
-          className="max-w-[1600px] w-full "
+          height={540}
+          className="max-w-[1100px] w-full "
         />
       </div>
     </div>

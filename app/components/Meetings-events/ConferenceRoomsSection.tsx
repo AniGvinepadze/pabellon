@@ -11,7 +11,7 @@ import Image from "next/image";
 
 import React, { useEffect, useState } from "react";
 import { meeting } from "@/app";
-import ContactUsSection from "../Home/ContactUsSection";
+import ContactUsSection from "../Home/ContactUsSection";``
 import m1 from "../../../public/assets/meeting1 (1).png";
 import m2 from "../../../public/assets/meeting1 (2).png";
 import m3 from "../../../public/assets/meeting1 (3).png";
