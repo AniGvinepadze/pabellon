@@ -102,40 +102,44 @@ export default function KidstSection() {
         />
       </div>
       <div className="flex justify-center w-full ">
-          <div className="  grid grid-cols-4 gap-5 w-full my-8 max-750:my-0 max-800:grid-cols-2 ">
-            <Image
-              priority={true}
-              src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.imageUrl}`}
-              alt="icon"
-              width={388}
-              height={419}
-              className="max-800:max-w-[388px] w-full "
-            />
-            <Image
-              priority={true}
-              src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.secondImageUrl}`}
-              alt="icon"
-              width={388}
-              height={508}
-              className="max-800:max-w-[388px] max-800:max-h-[370px]  w-full"
-            />{" "} 
-            <Image
-              priority={true}
-              src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.thirdImageUrl}`}
-              alt="icon"
-              width={388}
-              height={380}
-              className="object-contain max-h-[340px] w-full max-800:max-w-[388px] max-800:hidden"
-            />{" "}
-            <Image
-              priority={true}
-              src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.fourthImageUrl}`}
-              alt="icon"
-              width={388}
-              height={508}
-              className="max-800:max-w-[388px] w-full max-800:max-h-[380px] "
-            />
-                {/* <Image
+        <div className="  grid grid-cols-4 gap-5 w-full my-8 max-750:my-0 max-800:grid-cols-2 ">
+          <Image
+            priority={true}
+            src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.imageUrl}`}
+            alt="icon"
+            // width={388}
+            // height={419}
+            fill
+       className="max-w-[388px] max-h-[419px] max-800:max-h-[370px] object-cover  w-full"
+          />
+          <Image
+            priority={true}
+            src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.secondImageUrl}`}
+            alt="icon"
+            // width={388}
+            // height={419}
+            fill
+            className="max-w-[388px] max-h-[419px] max-800:max-h-[370px] object-cover  w-full"
+          />{" "}
+          <Image
+            priority={true}
+            src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.thirdImageUrl}`}
+            alt="icon"
+            // width={388}
+            // height={419}
+            fill
+            className="max-w-[388px] max-h-[419px] max-800:max-h-[370px] object-cover  w-full"
+          />{" "}
+          <Image
+            priority={true}
+            src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.fourthImageUrl}`}
+            alt="icon"
+            // width={388}
+            // height={419}
+            fill
+           className="max-w-[388px] max-h-[419px] max-800:max-h-[370px] object-cover  w-full"
+          />
+          {/* <Image
               priority={true}
               src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.thirdImageUrl}`}
               alt="icon"
@@ -143,8 +147,8 @@ export default function KidstSection() {
               height={380}
               className="hidden object-contain max-h-[230px] mt-6  w-full max-800:max-w-[300px] max-800:flex max-400:max-h-[200px] max-350:max-h-[170px] "
             /> */}
-          </div>
         </div>
+      </div>
     </div>
   );
 }
