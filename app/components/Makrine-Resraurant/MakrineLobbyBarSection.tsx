@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from "react";
 import { IMakrine } from "./MakrineSection";
 import { axiosInstance } from "@/app/lib/axiosInstance";
 
-const MakrineLobbyBarSection = () => {
+const  MakrineLobbyBarSection = () => {
   const swiperRef = useRef<any>(null);
   const [restaurantData, setRestaurantData] = useState<IMakrine | null>(null);
 

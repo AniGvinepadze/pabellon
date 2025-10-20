@@ -112,7 +112,7 @@ export default function KidsEntertainmentSection() {
               src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData.secondImageUrl}`}
               alt="Kids Entertainment Image 2"
               width={388}
-              height={508}
+              height={419}
               className="max-800:max-w-[300px] max-800:max-h-[370px] max-800:mt-3 w-full"
             />
           )}
@@ -121,7 +121,7 @@ export default function KidsEntertainmentSection() {
               priority={true}
               src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData.thirdImageUrl}`}
               alt="Kids Entertainment Image 3"
-              width={322}
+              width={388}
               height={419}
               className="object-contain max-h-[400px] w-full max-800:max-w-[300px]"
             />
@@ -132,7 +132,7 @@ export default function KidsEntertainmentSection() {
               src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData.fourthImageUrl}`}
               alt="Kids Entertainment Image 4"
               width={388}
-              height={508}
+              height={419}
               className="max-800:max-w-[300px] w-full max-800:max-h-[380px] max-800:mt-3"
             />
           )}
