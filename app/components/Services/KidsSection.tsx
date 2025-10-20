@@ -107,8 +107,8 @@ export default function KidstSection() {
             priority={true}
             src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.imageUrl}`}
             alt="icon"
-            // width={388}
-            // height={419}
+            width={388}
+            height={419}
             fill
        className="max-w-[388px] min-h-[419px] max-800:max-h-[370px] object-cover  w-full"
           />
@@ -116,8 +116,8 @@ export default function KidstSection() {
             priority={true}
             src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.secondImageUrl}`}
             alt="icon"
-            // width={388}
-            // height={419}
+            width={388}
+            height={419}
             fill
             className="max-w-[388px] min-h-[419px] max-800:max-h-[370px] object-cover  w-full"
           />{" "}
@@ -125,17 +125,17 @@ export default function KidstSection() {
             priority={true}
             src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.thirdImageUrl}`}
             alt="icon"
-            // width={388}
-            // height={419}
-            fill
+            width={388}
+            height={419}
+            // fill
             className="max-w-[388px] min-h-[419px] max-800:max-h-[370px] object-cover  w-full"
           />{" "}
           <Image
             priority={true}
             src={`https://pabellona-admin.s3.us-east-1.amazonaws.com/${imgsData?.fourthImageUrl}`}
             alt="icon"
-            // width={388}
-            // height={419}
+            width={388}
+            height={419}
             fill
            className="max-w-[388px] min-h-[419px] max-800:max-h-[370px] object-cover  w-full"
           />
